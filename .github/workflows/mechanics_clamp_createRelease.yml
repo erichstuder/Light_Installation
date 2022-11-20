@@ -1,0 +1,45 @@
+name: mechanics_clamp_createRelease
+
+on:
+  workflow_dispatch:
+  push:
+    tags: 'mechanics_clamp_v*.*.*'
+
+
+jobs:
+  build:
+    uses: ./.github/workflows/mechanics_clamp_build.yml
+
+  create_release:
+    runs-on: ubuntu-22.04
+    needs: build
+    steps:
+      - name: create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref_name }} # tag_name is the same tag name the triggered this workflow
+          release_name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          
+      - name: download build data
+        uses: actions/download-artifact@v3
+        with:
+          name: clamp
+          path: ./clamp_data
+          
+      - name: zip fabrication data
+        run: zip -jr clamp ./clamp_data
+          
+      - name: upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # references to the step with id 'create_release'
+          asset_path: ./clamp.zip
+          asset_name: ${{ github.event.repository.name }}__${{ github.ref_name }}__clamp.zip
+          asset_content_type: application/zip
