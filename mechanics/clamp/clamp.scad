@@ -1,64 +1,29 @@
 $fn = 180;
 
+/*
+calculation of connector height:
+- 12mm plate + 20mm cage + 10mm of led strip => 42mm
+*/
+
 plate_height = 3;
-ver = "vX.X.X";
+connector_height = 42;
+ver = "vXX.XX.XX";
 
 
-
-back();
-translate([50, 0, 0]){
-	front();
-}
+part();
 
 
-
-
-module front(){
-	difference(){
-		intersection(){
-			base();
-			cut();
-		}
-		xAbs = 9;
-		for(x = [-xAbs, xAbs]){
-			translate([x, 0, 38.5])
-				rotate([90, 0, 0]){
-					#cylinder(d=3.9, h=15);
-					translate([0, 0, 5])
-						#cylinder(d=7.9, h=10);
-				}
-		}
-	}
-}
-
-module back(){
-	difference(){
-		base();
-		cut();
-		xAbs = 9;
-		for(x = [-xAbs, xAbs]){
-			translate([x, 0, 38.5])
-				rotate([-90, 0, 0])
-					#cylinder(d=2.6, h=15);
-		}
-	}
-}
-
-
-module cut(){
-	translate([0, -7.5, 38.5])
-		cube([50, 15, 10], center=true);
-}
-
-
-module base(){
+module part(){
 	difference(){
 		union(){
 			cube([100, 100, plate_height], center=true);
-			cylinder(d=29.9, h=42+plate_height/2);
+			cylinder(d=29.9, h=connector_height+plate_height/2);
 		}
-		translate([0, 0, 15])
-			cube([12, 4, 60], center=true);
+		#translate([0, 0, connector_height/2])
+			cube([15.8, 7.1, connector_height+plate_height], center=true);
+		ledStrip_depth = 10;
+		#translate([0, 0, connector_height+plate_height/2-ledStrip_depth/2])
+			cube([17.2, 8.5, ledStrip_depth], center=true);
 
 		for(angle = [0:90:270]){
 			rotate([0, 0, angle])
@@ -67,7 +32,8 @@ module base(){
 		}
 
 		xyAbs = 40;
-		for(x=[-xyAbs, xyAbs], y=[-xyAbs, xyAbs]){
+		xy = [-xyAbs, xyAbs];
+		for(x=xy, y=xy){
 			translate([x, y]){
 				cylinder(d=2.6, h=plate_height+1, center=true);
 				translate([0, 0, -plate_height/2+1])
@@ -75,18 +41,14 @@ module base(){
 			}
 		}
 
-		version_ids();
+		version_id();
 	}
 }
 
 
-module version_ids(){
+module version_id(){
 	translate([0, 20, -plate_height/2])
 		rotate([180])
 			linear_extrude(1, center=true)
-				text(ver, size=10, halign="center");
-
-	translate([0, -8, 42+plate_height/2])
-		linear_extrude(1, center=true)
-			text(ver, size=4, halign="center");
+				text(ver, size=7, halign="center");
 }
