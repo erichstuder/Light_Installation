@@ -17,7 +17,6 @@
 #define Leds12_pin 29
 #define Leds13_pin 50
 #define Leds14_pin 40
-
 #define Leds15_pin 28
 #define Leds16_pin 48
 #define Leds17_pin 38
@@ -30,33 +29,33 @@
 #define Leds24_pin 22
 #define Leds25_pin 42
 
-WS2812FX ledStrips[] = {
-	WS2812FX(Leds_count, Leds1_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds2_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds3_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds4_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds5_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds6_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds7_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds8_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds9_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds10_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds11_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds12_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds13_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds14_pin, NEO_GRB + NEO_KHZ800),
 
-	/*WS2812FX(Leds_count, Leds15_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds16_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds17_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds18_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds19_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds20_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds21_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds22_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds23_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds24_pin, NEO_GRB + NEO_KHZ800),
-	WS2812FX(Leds_count, Leds25_pin, NEO_GRB + NEO_KHZ800),*/
+WS2812FX ledStrips[] = {
+	WS2812FX(Leds_count, Leds1_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds2_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds3_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds4_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds5_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds6_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds7_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds8_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds9_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds10_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds11_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds12_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds13_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds14_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds15_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds16_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds17_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds18_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds19_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds20_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds21_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds22_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds23_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds24_pin, NEO_GRB + NEO_KHZ800, 1, 1),
+	WS2812FX(Leds_count, Leds25_pin, NEO_GRB + NEO_KHZ800, 1, 1),
 };
 
 void setup(){
