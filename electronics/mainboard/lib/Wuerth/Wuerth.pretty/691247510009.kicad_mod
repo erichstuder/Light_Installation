@@ -2,6 +2,7 @@
   (layer "F.Cu")
   (tedit 0)
   (descr "<b>WR-TBL Serie 2475 - 5.08 mm Horizontal Entry w. Rising Cage Clamp\n<br></b>Max Height =45mm , Pitch 5.08mm , 9 Pins")
+  (attr through_hole)
   (fp_text reference ">NAME" (at -1 -14) (layer "F.SilkS")
     (effects (font (size 1.1684 1.1684) (thickness 0.1016)) (justify bottom))
     (tstamp b8b7ecfb-af3b-47e0-8fe6-5dab14a4b95e)
