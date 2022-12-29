@@ -4,6 +4,14 @@
 
   (paper "A4")
 
+  (title_block
+    (title "Mainboard")
+    (comment 1 "${PROJECT}")
+    (comment 2 "${PROJECT-URL}")
+    (comment 3 "${GIT-COMMIT-HASH}")
+    (comment 4 "${GIT-COMMIT-TAG}")
+  )
+
   (lib_symbols
     (symbol "Conn_01x10_1" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "J" (id 0) (at 0 12.7 0)

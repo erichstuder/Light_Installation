@@ -5,6 +5,14 @@
   )
 
   (paper "A4")
+  (title_block
+    (title "Mainboard")
+    (comment 1 "${PROJECT}")
+    (comment 2 "${PROJECT-URL}")
+    (comment 3 "${GIT-COMMIT-HASH}")
+    (comment 4 "${GIT-COMMIT-TAG}")
+  )
+
   (layers
     (0 "F.Cu" signal)
     (31 "B.Cu" signal)
@@ -73,6 +81,11 @@
       (outputdirectory "")
     )
   )
+
+  (property "GIT-COMMIT-HASH" "noHash")
+  (property "GIT-COMMIT-TAG" "noTag")
+  (property "PROJECT" "Light Installation - Mainboard")
+  (property "PROJECT-URL" "https://github.com/erichstuder/Light_Installation")
 
   (net 0 "")
   (net 1 "+5V")
@@ -3364,6 +3377,9 @@
   (gr_line (start 47.625 62.23) (end 199.39 62.23) (layer "Edge.Cuts") (width 0.1) (tstamp a698a84a-fce3-48b3-b5af-7b307522bd8a))
   (gr_line (start 199.39 116.84) (end 47.625 116.84) (layer "Edge.Cuts") (width 0.1) (tstamp cd53720e-3911-4ccf-8477-5a7a0625c6aa))
   (gr_line (start 199.39 62.23) (end 199.39 116.84) (layer "Edge.Cuts") (width 0.1) (tstamp d753d23d-e736-433b-8093-00a818824c2b))
+  (gr_text "${PROJECT}\n${PROJECT-URL}\ntag: ${GIT-COMMIT-TAG} | commit: ${GIT-COMMIT-HASH}" (at 57.15 66.04) (layer "F.SilkS") (tstamp a2d054d0-7d56-45c0-ae91-7843afbefc16)
+    (effects (font (size 1.2 1.2) (thickness 0.15)) (justify left))
+  )
 
   (segment (start 56.515 81.28) (end 57.5075 81.28) (width 0.25) (layer "B.Cu") (net 2) (tstamp 100e46b0-2572-434f-a5b1-58787024ff14))
   (segment (start 56.18 80.945) (end 56.515 81.28) (width 0.25) (layer "B.Cu") (net 2) (tstamp 4a913b69-f4cc-4ece-9713-84d7fe50951c))
