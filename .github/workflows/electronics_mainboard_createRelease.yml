@@ -4,7 +4,6 @@ on:
   push:
     # only mainboard tags
     tags: 'electronics_mainboard_v*.*.*'
-  workflow_dispatch:
 
 
 jobs:
@@ -25,7 +24,7 @@ jobs:
         run: zip -jr fabrication_data fabrication_data
 
       - name: release
-        uses: softprop/action-gh-release@v1
+        uses: softprops/action-gh-release@v1
         with:
           files: fabrication_data.zip
           tag_name: ${{ github.ref_name }}
