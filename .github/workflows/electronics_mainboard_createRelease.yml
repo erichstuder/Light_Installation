@@ -21,12 +21,12 @@ jobs:
           path: ./fabrication_data
           
       - name: zip fabrication data
-        run: zip -jr fabrication_data fabrication_data
+        run: zip -jr fabrication_data ${{ github.event.repository.name }}__${{ github.ref_name }}__fabrication_data
 
       - name: release
         uses: softprops/action-gh-release@v1
         with:
-          files: fabrication_data.zip
+          files: ${{ github.event.repository.name }}__${{ github.ref_name }}__fabrication_data.zip
           tag_name: ${{ github.ref_name }}
           draft: false
           prerelease: false
