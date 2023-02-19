@@ -12,10 +12,10 @@
 			<_id type="a">GUID 6590d4f5-f105-4261-be64-c04d96874968</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Default</_name>
-			<_modifiedTimeWeak type="a">2.19.2023::16:46:4</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">2.19.2023::17:30:58</_modifiedTimeWeak>
 			<_modifiedTime type="a">2.19.2023::17:11:17</_modifiedTime>
 			<_lastID type="a">5</_lastID>
-			<weakCGTime type="a">2.19.2023::16:46:4</weakCGTime>
+			<weakCGTime type="a">2.19.2023::17:30:58</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_defaultComposite type="s">GUID fcb8969f-ea8e-46a4-ae03-a9f298fa5170</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -54,7 +54,7 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Light_Installation</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::16:38:21</_modifiedTime>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
 			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_itsStateChart type="r">
@@ -62,10 +62,6 @@
 				</IHandle>
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
-			<UseCaseStereoTypes type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</UseCaseStereoTypes>
 			<_EntryPoints type="c">
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
@@ -77,9 +73,9 @@
 		<IAssociationEnd type="e">
 			<_id type="a">GUID 1a892242-e84e-4901-8ee1-f33b0455e25c</_id>
 			<_myState type="a">10240</_myState>
-			<_name type="a">itsUser</_name>
+			<_name type="a">itsComputer</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::16:38:21</_modifiedTime>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -101,7 +97,7 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">set light pattern</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::17:11:2</_modifiedTime>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
 			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_itsStateChart type="r">
@@ -109,10 +105,6 @@
 				</IHandle>
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
-			<UseCaseStereoTypes type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</UseCaseStereoTypes>
 			<_EntryPoints type="c">
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
@@ -124,9 +116,9 @@
 		<IAssociationEnd type="e">
 			<_id type="a">GUID b46ae1e4-6b89-4fdc-9ec5-dcbc193b8df6</_id>
 			<_myState type="a">10240</_myState>
-			<_name type="a">itsUser</_name>
+			<_name type="a">itsComputer</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::17:11:2</_modifiedTime>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -146,11 +138,11 @@
 		<IActor type="e">
 			<_id type="a">GUID 6b16844b-b119-47eb-bf39-684db6a09b75</_id>
 			<_myState type="a">8192</_myState>
-			<_name type="a">User</_name>
-			<_modifiedTimeWeak type="a">2.19.2023::17:11:2</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::17:11:2</_modifiedTime>
-			<weakCGTime type="a">2.19.2023::17:11:2</weakCGTime>
-			<strongCGTime type="a">2.19.2023::16:36:49</strongCGTime>
+			<_name type="a">Computer</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::17:30:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
+			<weakCGTime type="a">2.19.2023::17:30:58</weakCGTime>
+			<strongCGTime type="a">2.19.2023::17:30:58</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -168,9 +160,9 @@
 		<IAssociationEnd type="e">
 			<_id type="a">GUID 0ff14b49-41b1-49c4-91a7-4ccc6dbda0d5</_id>
 			<_myState type="a">10240</_myState>
-			<_name type="a">itsUser</_name>
-			<_modifiedTimeWeak type="a">2.19.2023::16:37:56</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::16:37:56</_modifiedTime>
+			<_name type="a">itsComputer_1</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::17:30:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -190,9 +182,9 @@
 		<IAssociationEnd type="e">
 			<_id type="a">GUID 659e636c-a393-48a1-adbe-757773eaf2cb</_id>
 			<_myState type="a">10240</_myState>
-			<_name type="a">itsUser_1</_name>
-			<_modifiedTimeWeak type="a">2.19.2023::16:37:56</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::16:37:56</_modifiedTime>
+			<_name type="a">itsComputer_2</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::17:30:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -212,9 +204,9 @@
 		<IAssociationEnd type="e">
 			<_id type="a">GUID 54bcd3b8-3785-4667-aa34-f847c95b64b9</_id>
 			<_myState type="a">10240</_myState>
-			<_name type="a">itsUser_2</_name>
-			<_modifiedTimeWeak type="a">2.19.2023::16:38:3</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::16:38:3</_modifiedTime>
+			<_name type="a">itsComputer_3</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::17:30:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -234,9 +226,9 @@
 		<IAssociationEnd type="e">
 			<_id type="a">GUID ed1c4dd0-1b6b-48c7-b1a7-16139fde8407</_id>
 			<_myState type="a">10240</_myState>
-			<_name type="a">itsUser_3</_name>
-			<_modifiedTimeWeak type="a">2.19.2023::16:38:3</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::16:38:3</_modifiedTime>
+			<_name type="a">itsComputer</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::17:30:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -258,7 +250,7 @@
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsLight_Installation</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::16:38:21</_modifiedTime>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -280,7 +272,7 @@
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsSet light pattern</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::17:11:2</_modifiedTime>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">

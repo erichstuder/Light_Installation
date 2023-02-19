@@ -12,8 +12,8 @@
 			<_id type="a">GUID 5fd9ea47-7581-4468-86b8-dfe31c7450be</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">firmware</_name>
-			<_modifiedTimeWeak type="a">2.19.2023::16:43:45</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::17:11:17</_modifiedTime>
+			<_modifiedTimeWeak type="a">2.19.2023::17:30:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
@@ -432,8 +432,8 @@
 			</_properties>
 			<_name type="a">use_case_diagram</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::17:11:23</_modifiedTime>
-			<_lastModifiedTime type="a">2.19.2023::17:11:23</_lastModifiedTime>
+			<_modifiedTime type="a">2.19.2023::17:30:58</_modifiedTime>
+			<_lastModifiedTime type="a">2.19.2023::17:30:58</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -625,14 +625,14 @@
 				<IHandle type="e">
 					<_hm2Class type="a">IActor</_hm2Class>
 					<_hsubsystem type="a">Default</_hsubsystem>
-					<_hname type="a">User</_hname>
+					<_hname type="a">Computer</_hname>
 					<_hid type="a">GUID 6b16844b-b119-47eb-bf39-684db6a09b75</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s">GUID ce9c114b-759f-46f3-bc5e-b75433341867</m_pParent>
 			<m_name type="p">
 				<CGIText type="e">
-					<m_str type="a">User</m_str>
+					<m_str type="a">Computer</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -758,7 +758,7 @@
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
 					<_hsubsystem type="a">Default</_hsubsystem>
-					<_hclass type="a">User</_hclass>
+					<_hclass type="a">Computer</_hclass>
 					<_hname type="a">itsSet light pattern</_hname>
 					<_hid type="a">GUID bbdc63c9-bd98-4dcd-9a97-f7aebd754c09</_hid>
 				</IHandle>
@@ -813,7 +813,7 @@
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
 					<_hsubsystem type="a">Default</_hsubsystem>
 					<_hclass type="a">set light pattern</_hclass>
-					<_hname type="a">itsUser</_hname>
+					<_hname type="a">itsComputer</_hname>
 					<_hid type="a">GUID b46ae1e4-6b89-4fdc-9ec5-dcbc193b8df6</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
@@ -836,7 +836,7 @@
 			<m_bShowQualifier2 type="a">0</m_bShowQualifier2>
 			<m_sourceRole type="p">
 				<CGIText type="e">
-					<m_str type="a">itsUser</m_str>
+					<m_str type="a">itsComputer</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
