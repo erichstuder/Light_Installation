@@ -12,10 +12,10 @@
 			<_id type="a">GUID 6590d4f5-f105-4261-be64-c04d96874968</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Default</_name>
-			<_modifiedTimeWeak type="a">2.19.2023::17:30:58</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.19.2023::17:11:17</_modifiedTime>
-			<_lastID type="a">5</_lastID>
-			<weakCGTime type="a">2.19.2023::17:30:58</weakCGTime>
+			<_modifiedTimeWeak type="a">2.19.2023::18:39:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::18:39:45</_modifiedTime>
+			<_lastID type="a">7</_lastID>
+			<weakCGTime type="a">2.19.2023::18:39:45</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_defaultComposite type="s">GUID fcb8969f-ea8e-46a4-ae03-a9f298fa5170</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -23,6 +23,8 @@
 			<AggregatesList type="e">
 				<value>GUID 06a11caf-cdc9-414a-a49d-fdec673d3f56</value>
 				<value>GUID fcb8969f-ea8e-46a4-ae03-a9f298fa5170</value>
+				<value>GUID 2563730b-3dac-4552-b416-790367e3d669</value>
+				<value>GUID 29b92ce8-ce29-4816-8bce-c289be792b71</value>
 				<value>GUID 56e7340e-fcbf-4d79-9e04-0230517c9eda</value>
 				<value>GUID 335df611-a8de-44b6-a91c-f2b61c652a32</value>
 				<value>GUID 6b16844b-b119-47eb-bf39-684db6a09b75</value>
@@ -49,6 +51,179 @@
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 		</IClass>
+		<IType type="e">
+			<_id type="a">GUID 2563730b-3dac-4552-b416-790367e3d669</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">tLed</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::18:39:45</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Defines the position and state of an Led.%0D
+Shall be used by the communication interface to control the Leds.</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">2.19.2023::18:39:45</_modifiedTime>
+			<_lastID type="a">7</_lastID>
+			<_kind type="a">Structure</_kind>
+			<AggregatesList type="e">
+				<value>GUID 501fdff4-91ee-4acf-995c-8b9fe0572ea6</value>
+				<value>GUID c49ac10c-02f2-44db-979e-893a20a92fde</value>
+				<value>GUID 3db3e70e-39f3-46a0-9d78-a95e0a63523c</value>
+				<value>GUID e102e03a-2a39-46a4-9b06-233a87a5c1a3</value>
+				<value>GUID 2496f72b-cf98-4b36-86e3-f9900e099b1b</value>
+				<value>GUID f0c460cb-09c4-4f04-8dc7-2c296c8157b7</value>
+				<value>GUID 22f3bb25-daa4-489d-97f2-0ab2235eb214</value>
+			</AggregatesList>
+		</IType>
+		<IAttribute type="e">
+			<_id type="a">GUID 501fdff4-91ee-4acf-995c-8b9fe0572ea6</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">x</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::18:32:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::18:32:20</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hid type="a">GUID 29b92ce8-ce29-4816-8bce-c289be792b71</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_protection type="a">iPublic</_protection>
+			<_static type="a">0</_static>
+			<_isReferenceAttr type="a">0</_isReferenceAttr>
+			<_isConstant type="a">0</_isConstant>
+		</IAttribute>
+		<IAttribute type="e">
+			<_id type="a">GUID c49ac10c-02f2-44db-979e-893a20a92fde</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">y</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::18:36:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::18:36:0</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hid type="a">GUID 29b92ce8-ce29-4816-8bce-c289be792b71</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_protection type="a">iPublic</_protection>
+			<_static type="a">0</_static>
+			<_isReferenceAttr type="a">0</_isReferenceAttr>
+			<_isConstant type="a">0</_isConstant>
+		</IAttribute>
+		<IAttribute type="e">
+			<_id type="a">GUID 3db3e70e-39f3-46a0-9d78-a95e0a63523c</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">z</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::18:36:1</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::18:36:1</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hid type="a">GUID 29b92ce8-ce29-4816-8bce-c289be792b71</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_protection type="a">iPublic</_protection>
+			<_static type="a">0</_static>
+			<_isReferenceAttr type="a">0</_isReferenceAttr>
+			<_isConstant type="a">0</_isConstant>
+		</IAttribute>
+		<IAttribute type="e">
+			<_id type="a">GUID e102e03a-2a39-46a4-9b06-233a87a5c1a3</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">brightness</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::18:36:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::18:36:10</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hid type="a">GUID 29b92ce8-ce29-4816-8bce-c289be792b71</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_protection type="a">iPublic</_protection>
+			<_static type="a">0</_static>
+			<_isReferenceAttr type="a">0</_isReferenceAttr>
+			<_isConstant type="a">0</_isConstant>
+		</IAttribute>
+		<IAttribute type="e">
+			<_id type="a">GUID 2496f72b-cf98-4b36-86e3-f9900e099b1b</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">red</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::18:36:14</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::18:36:14</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hid type="a">GUID 29b92ce8-ce29-4816-8bce-c289be792b71</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_protection type="a">iPublic</_protection>
+			<_static type="a">0</_static>
+			<_isReferenceAttr type="a">0</_isReferenceAttr>
+			<_isConstant type="a">0</_isConstant>
+		</IAttribute>
+		<IAttribute type="e">
+			<_id type="a">GUID f0c460cb-09c4-4f04-8dc7-2c296c8157b7</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">green</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::18:32:47</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::18:32:47</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hid type="a">GUID 29b92ce8-ce29-4816-8bce-c289be792b71</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_protection type="a">iPublic</_protection>
+			<_static type="a">0</_static>
+			<_isReferenceAttr type="a">0</_isReferenceAttr>
+			<_isConstant type="a">0</_isConstant>
+		</IAttribute>
+		<IAttribute type="e">
+			<_id type="a">GUID 22f3bb25-daa4-489d-97f2-0ab2235eb214</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">blue</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::18:32:52</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.19.2023::18:32:52</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hid type="a">GUID 29b92ce8-ce29-4816-8bce-c289be792b71</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_protection type="a">iPublic</_protection>
+			<_static type="a">0</_static>
+			<_isReferenceAttr type="a">0</_isReferenceAttr>
+			<_isConstant type="a">0</_isConstant>
+		</IAttribute>
+		<IType type="e">
+			<_id type="a">GUID 29b92ce8-ce29-4816-8bce-c289be792b71</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">uint8_t</_name>
+			<_modifiedTimeWeak type="a">2.19.2023::18:36:59</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">TODO: std library verwenden</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">2.19.2023::18:36:59</_modifiedTime>
+			<_typedefBaseType type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesC</_hsubsystem>
+					<_hname type="a">unsigned char</_hname>
+					<_hid type="a">GUID e7c5c9a0-fdc0-11d4-a0a1-000102191a82</_hid>
+				</IClassifierHandle>
+			</_typedefBaseType>
+			<_typedefMultiplicity type="a">1</_typedefMultiplicity>
+			<_typedefIsOrdered type="a">0</_typedefIsOrdered>
+			<_typedefIsReference type="a">0</_typedefIsReference>
+			<_typedefIsConstant type="a">0</_typedefIsConstant>
+			<_kind type="a">Typedef</_kind>
+		</IType>
 		<IUseCase type="e">
 			<_id type="a">GUID 56e7340e-fcbf-4d79-9e04-0230517c9eda</_id>
 			<_myState type="a">8192</_myState>
