@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "Wuerth")(type "KiCad")(uri "${KIPRJMOD}/lib/Wuerth/Wuerth.pretty")(options "")(descr ""))
+  (lib (name "TSM-105-03-T-DV")(type "KiCad")(uri "${KIPRJMOD}/lib/Samtec/TSM-105-03-T-DV")(options "")(descr ""))
+)
