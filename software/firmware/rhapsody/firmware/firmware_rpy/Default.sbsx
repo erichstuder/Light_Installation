@@ -11,15 +11,17 @@
 			<_id type="a">GUID 3f0773c8-c3a2-4e47-96df-0316e3c9ad73</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Default</_name>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
-			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<_modifiedTimeWeak type="a">5.13.2023::11:10:19</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.13.2023::11:10:19</_modifiedTime>
+			<_lastID type="a">1</_lastID>
+			<weakCGTime type="a">5.13.2023::11:10:19</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_defaultComposite type="s">GUID bc078101-681f-45c5-8cd3-f9bf742c21ea</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
-			<_configurationRelatedTime type="a">1.1.1970::1:0:0</_configurationRelatedTime>
+			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
 			<AggregatesList type="e">
 				<value>GUID bc078101-681f-45c5-8cd3-f9bf742c21ea</value>
+				<value>GUID 8ede1d71-9ce6-4459-99aa-1281c0b5cad2</value>
 			</AggregatesList>
 		</ISubsystem>
 		<IClass type="e">
@@ -27,7 +29,7 @@
 			<_myState type="a">40960</_myState>
 			<_name type="a">TopLevel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_itsStateChart type="r">
@@ -36,6 +38,121 @@
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 		</IClass>
+		<IClass type="e">
+			<_id type="a">GUID 8ede1d71-9ce6-4459-99aa-1281c0b5cad2</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Blink</_name>
+			<_modifiedTimeWeak type="a">5.13.2023::11:12:28</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IDiagram</_hm2Class>
+					<_hname type="a">Model1</_hname>
+					<_hid type="a">GUID 84261723-8643-45a1-99af-b54226989ed2</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">5.13.2023::11:12:28</_modifiedTime>
+			<_lastID type="a">2</_lastID>
+			<weakCGTime type="a">5.13.2023::11:12:28</weakCGTime>
+			<strongCGTime type="a">5.13.2023::11:12:17</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 3bf8fd3d-81e2-4f91-93dc-dfa4cc212d93</value>
+				<value>GUID e931cd6f-38ce-4f4f-b0f1-3e2279b5d74b</value>
+				<value>GUID 58a8617b-a2ac-406b-875a-78b9b8c5f756</value>
+			</AggregatesList>
+		</IClass>
+		<IPrimitiveOperation type="e">
+			<_id type="a">GUID 3bf8fd3d-81e2-4f91-93dc-dfa4cc212d93</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">led_on</_name>
+			<_modifiedTimeWeak type="a">5.13.2023::11:11:46</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.13.2023::11:11:46</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Args>
+			<_returnType type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
+					<_hname type="a">void</_hname>
+					<_hid type="a">GUID c6b70728-b655-45a0-abb7-8ea5d3da94be</_hid>
+				</IHandle>
+			</_returnType>
+			<_abstract type="a">0</_abstract>
+			<_final type="a">0</_final>
+			<_concurrency type="a">Sequential</_concurrency>
+			<_protection type="a">iPublic</_protection>
+			<_static type="a">0</_static>
+			<_constant type="a">0</_constant>
+			<_itsBody type="p"><IBody type="e">
+				<_bodyData type="a">digitalWrite(LED_BUILTIN, LOW);</_bodyData>
+			</IBody>
+			</_itsBody>
+		</IPrimitiveOperation>
+		<IPrimitiveOperation type="e">
+			<_id type="a">GUID e931cd6f-38ce-4f4f-b0f1-3e2279b5d74b</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">led_off</_name>
+			<_modifiedTimeWeak type="a">5.13.2023::11:11:26</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.13.2023::11:11:26</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Args>
+			<_returnType type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
+					<_hname type="a">void</_hname>
+					<_hid type="a">GUID c6b70728-b655-45a0-abb7-8ea5d3da94be</_hid>
+				</IHandle>
+			</_returnType>
+			<_abstract type="a">0</_abstract>
+			<_final type="a">0</_final>
+			<_concurrency type="a">Sequential</_concurrency>
+			<_protection type="a">iPublic</_protection>
+			<_static type="a">0</_static>
+			<_constant type="a">0</_constant>
+			<_itsBody type="p"><IBody type="e">
+				<_bodyData type="a">digitalWrite(LED_BUILTIN, HIGH);</_bodyData>
+			</IBody>
+			</_itsBody>
+		</IPrimitiveOperation>
+		<IConstructor type="e">
+			<_id type="a">GUID 58a8617b-a2ac-406b-875a-78b9b8c5f756</_id>
+			<_myState type="a">8192</_myState>
+			<_modifiedTimeWeak type="a">5.13.2023::11:12:28</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.13.2023::11:12:28</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Args>
+			<_returnType type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_returnType>
+			<_abstract type="a">0</_abstract>
+			<_final type="a">0</_final>
+			<_concurrency type="a">Sequential</_concurrency>
+			<_protection type="a">iPublic</_protection>
+			<_static type="a">0</_static>
+			<_constant type="a">0</_constant>
+			<_itsBody type="p"><IBody type="e">
+				<_bodyData type="a"> pinMode(LED_BUILTIN, OUTPUT);</_bodyData>
+			</IBody>
+			</_itsBody>
+		</IConstructor>
 		
 	</RHAPSODY-MODEL>
 	<OslcLinks type="c">

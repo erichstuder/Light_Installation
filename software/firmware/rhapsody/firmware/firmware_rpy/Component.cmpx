@@ -11,9 +11,9 @@
 			<_id type="a">GUID 1e499f98-6051-4dcc-be89-d1bd07568b37</_id>
 			<_myState type="a">139264</_myState>
 			<_name type="a">Component</_name>
-			<_modifiedTimeWeak type="a">5.13.2023::9:17:39</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.13.2023::9:17:39</_modifiedTime>
-			<m_buildType type="a">Executable</m_buildType>
+			<_modifiedTimeWeak type="a">5.13.2023::12:0:5</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.13.2023::12:0:5</_modifiedTime>
+			<m_buildType type="a">Library</m_buildType>
 			<m_configActive type="r">
 				<ICodeGenConfigInfoHandle type="e">
 					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
@@ -59,8 +59,8 @@
 					<size type="a">0</size>
 				</IRPYRawContainer>
 			</SelectedVariants>
-			<weakCGTime type="a">5.13.2023::9:17:39</weakCGTime>
-			<strongCGTime type="a">5.13.2023::9:17:39</strongCGTime>
+			<weakCGTime type="a">5.13.2023::12:0:5</weakCGTime>
+			<strongCGTime type="a">5.13.2023::11:3:13</strongCGTime>
 			<AggregatesList type="e">
 				<value>GUID b7ca5032-2138-4cf9-9ec3-14da7c00387a</value>
 				<value>GUID 63c1f334-1f13-4d83-8486-1326a20d191c</value>
@@ -70,11 +70,19 @@
 			<_id type="a">GUID b7ca5032-2138-4cf9-9ec3-14da7c00387a</_id>
 			<_myState type="a">73728</_myState>
 			<_name type="a">Files</_name>
-			<_modifiedTimeWeak type="a">5.13.2023::8:54:46</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.13.2023::8:54:46</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.13.2023::11:1:31</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.13.2023::11:1:31</_modifiedTime>
 			<Elements type="c">
 				<IRPYRawContainer type="e">
-					<size type="a">0</size>
+					<size type="a">1</size>
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\Default.sbsx</_hfilename>
+							<_hname type="a">Default</_hname>
+							<_hid type="a">GUID 3f0773c8-c3a2-4e47-96df-0316e3c9ad73</_hid>
+						</IHandle>
+					
 				</IRPYRawContainer>
 			</Elements>
 			<Files type="c">
@@ -86,9 +94,57 @@
 		<ICodeGenConfigInfo type="e">
 			<_id type="a">GUID 63c1f334-1f13-4d83-8486-1326a20d191c</_id>
 			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<size type="a">1</size>
+						<IPropertySubject type="e">
+							<_Name type="a">CPP_CG</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">2</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Configuration</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">1</size>
+												<IProperty type="e">
+													<_Name type="a">Environment</_Name>
+													<_Value type="a">Linux</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">MSVC,MSVCDLL,MSVCStandardLibrary,VxWorks,VxWorks6diab,VxWorks6gnu,VxWorks6diab_RTP,VxWorks6gnu_RTP,Solaris2,Cygwin,MicrosoftWinCE600,OseSfk,Linux,Solaris2GNU,QNXNeutrinoGCC, QNXNeutrinoMomentics,NucleusPLUS-PPC,WorkbenchManaged,WorkbenchManaged653,WorkbenchManaged_RTP</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Framework</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">1</size>
+												<IProperty type="e">
+													<_Name type="a">HeaderFile</_Name>
+													<_Value type="a">Arduino.h</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
 			<_name type="a">Config</_name>
-			<_modifiedTimeWeak type="a">5.13.2023::9:17:44</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.13.2023::9:17:44</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.13.2023::12:0:5</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.13.2023::12:0:5</_modifiedTime>
 			<_scopeType type="a">Explicit</_scopeType>
 			<_instrumentation type="a">None</_instrumentation>
 			<_timeModel type="a">RealTime</_timeModel>
@@ -106,8 +162,8 @@
 					<size type="a">0</size>
 				</IRPYRawContainer>
 			</InitialInstances>
-			<weakCGTime type="a">5.13.2023::9:17:44</weakCGTime>
-			<strongCGTime type="a">5.13.2023::9:17:44</strongCGTime>
+			<weakCGTime type="a">5.13.2023::12:0:5</weakCGTime>
+			<strongCGTime type="a">5.13.2023::12:0:5</strongCGTime>
 			<AnimScopeElements type="c">
 				<IRPYRawContainer type="e">
 					<size type="a">0</size>
@@ -117,7 +173,6 @@
 			<m_generateUsecases type="a">0</m_generateUsecases>
 			<AggregatesList type="e">
 				<value>GUID 6fa3433d-cb1f-4eca-82d5-a5c0831a0d3c</value>
-				<value>GUID 3eb070a8-889c-4c14-8ce9-3f1b2f952e50</value>
 				<value>GUID ce440863-9ef8-4803-b564-97bc042d0e74</value>
 			</AggregatesList>
 		</ICodeGenConfigInfo>
@@ -132,19 +187,6 @@
 			<_linkDispName type="a">Edit Makefile</_linkDispName>
 			<_linkType type="a">FREE</_linkType>
 			<_linkTarget type="a">Component.mak</_linkTarget>
-			<isConfigurationFileHyperLink type="a">1</isConfigurationFileHyperLink>
-		</IMHyperLink>
-		<IMHyperLink type="e">
-			<_id type="a">GUID 3eb070a8-889c-4c14-8ce9-3f1b2f952e50</_id>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.13.2023::9:17:33</_modifiedTime>
-			<_dependsOn type="r">
-				<INObjectHandle type="e">
-				</INObjectHandle>
-			</_dependsOn>
-			<_linkDispName type="a">Edit Main File</_linkDispName>
-			<_linkType type="a">FREE</_linkType>
-			<_linkTarget type="a">MainComponent</_linkTarget>
 			<isConfigurationFileHyperLink type="a">1</isConfigurationFileHyperLink>
 		</IMHyperLink>
 		<IFolder type="e">
