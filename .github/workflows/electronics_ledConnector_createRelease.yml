@@ -1,0 +1,31 @@
+name: electronics_ledConnector_createRelease
+
+on:
+  push:
+    tags: 'electronics_ledConnector_v*.*.*'
+
+
+jobs:
+  create_fabrication_data:
+    uses: ./.github/workflows/electronics_ledConnector_createFabricationData.yml
+    
+  create_release:
+    runs-on: ubuntu-latest
+    needs: create_fabrication_data
+    steps:
+      - name: download fabrication data
+        uses: actions/download-artifact@v3
+        with:
+          name: fabrication_data
+          path: ./fabrication_data
+
+      - name: zip fabrication data
+        run: zip -jr ${{ github.event.repository.name }}__${{ github.ref_name }}__fabrication_data.zip fabrication_data
+
+      - name: release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ github.event.repository.name }}__${{ github.ref_name }}__fabrication_data.zip
+          tag_name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false

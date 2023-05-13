@@ -1,0 +1,13 @@
+kibot:
+  version: 1
+
+outputs:
+  - name: '3d model'
+    type: step
+    dir: 'project/mechanics/assembly/temp/3d_models'
+  - name: blender
+    type: blender_export
+    dir: 'project/mechanics/assembly/temp/3d_models'
+    options:
+      outputs:
+        type: stl

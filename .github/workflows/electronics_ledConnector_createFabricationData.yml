@@ -1,0 +1,30 @@
+name: electronics_ledConnector_createFabricationData
+
+
+on:
+  push:
+    # only trigger on branches, not on tags
+    branches: '**'
+  pull_request:
+  workflow_call:
+
+
+jobs:
+  create_fabrication_outputs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - uses: INTI-CMNB/KiBot@v2_k6
+      with:
+        config: electronics/led_connector/led_connector.kibot.yaml
+        dir: fabrication_data
+        schema: electronics/led_connector/led_connector.kicad_sch
+        board: electronics/led_connector/led_connector.kicad_pcb
+
+    - name: upload results
+      uses: actions/upload-artifact@v3
+      with:
+        name: fabrication_data
+        path: fabrication_data
