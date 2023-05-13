@@ -44,8 +44,8 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">firmware</_name>
-			<_modifiedTimeWeak type="a">5.13.2023::9:6:21</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.13.2023::9:6:21</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.13.2023::9:17:39</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.13.2023::9:17:39</_modifiedTime>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
 					<size type="a">16</size>
@@ -77,7 +77,7 @@
 			<_component type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IComponent</_hm2Class>
-					<_hname type="a">DefaultComponent</_hname>
+					<_hname type="a">Component</_hname>
 					<_hid type="a">GUID 1e499f98-6051-4dcc-be89-d1bd07568b37</_hid>
 				</IHandle>
 			</_component>
@@ -271,7 +271,7 @@
 			</Operations>
 		</CGIClass>
 		<IComponent type="e">
-			<fileName type="a">DefaultComponent</fileName>
+			<fileName type="a">Component</fileName>
 			<_id type="a">GUID 1e499f98-6051-4dcc-be89-d1bd07568b37</_id>
 		</IComponent>
 		
