@@ -10,9 +10,42 @@
 	<IComponent type="e">
 			<_id type="a">GUID 1e499f98-6051-4dcc-be89-d1bd07568b37</_id>
 			<_myState type="a">139264</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<size type="a">1</size>
+						<IPropertySubject type="e">
+							<_Name type="a">CPP_CG</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">1</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Framework</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">1</size>
+												<IProperty type="e">
+													<_Name type="a">IncludeHeaderFile</_Name>
+													<_Value type="a">No</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Yes,OnlyOnAnimation,No</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
 			<_name type="a">Component</_name>
-			<_modifiedTimeWeak type="a">5.13.2023::12:0:5</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.13.2023::12:0:5</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.20.2023::11:19:53</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.20.2023::11:19:53</_modifiedTime>
 			<m_buildType type="a">Library</m_buildType>
 			<m_configActive type="r">
 				<ICodeGenConfigInfoHandle type="e">
@@ -22,7 +55,7 @@
 			</m_configActive>
 			<HandlesInMe type="c">
 				<IRPYRawContainer type="e">
-					<size type="a">3</size>
+					<size type="a">4</size>
 					
 						<IHandle type="e">
 							<_hm2Class type="a">ISubsystem</_hm2Class>
@@ -47,6 +80,14 @@
 							<_hid type="a">GUID c4330c76-1cd6-4dbd-bdff-600355b9f34d</_hid>
 						</IHandle>
 					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\_Overview.sbsx</_hfilename>
+							<_hname type="a">_Overview</_hname>
+							<_hid type="a">GUID 4c76d60f-4c98-42e0-b168-2441ba3a5283</_hid>
+						</IHandle>
+					
 				</IRPYRawContainer>
 			</HandlesInMe>
 			<VariationPoints type="c">
@@ -59,8 +100,8 @@
 					<size type="a">0</size>
 				</IRPYRawContainer>
 			</SelectedVariants>
-			<weakCGTime type="a">5.13.2023::12:0:5</weakCGTime>
-			<strongCGTime type="a">5.13.2023::11:3:13</strongCGTime>
+			<weakCGTime type="a">5.20.2023::11:19:53</weakCGTime>
+			<strongCGTime type="a">5.20.2023::11:19:53</strongCGTime>
 			<AggregatesList type="e">
 				<value>GUID b7ca5032-2138-4cf9-9ec3-14da7c00387a</value>
 				<value>GUID 63c1f334-1f13-4d83-8486-1326a20d191c</value>
@@ -102,7 +143,7 @@
 							<_Name type="a">CPP_CG</_Name>
 							<Metaclasses type="c">
 								<IRPYRawContainer type="e">
-									<size type="a">2</size>
+									<size type="a">1</size>
 									<IPropertyMetaclass type="e">
 										<_Name type="a">Configuration</_Name>
 										<Properties type="c">
@@ -119,21 +160,6 @@
 										</Properties>
 									</IPropertyMetaclass>
 									
-									<IPropertyMetaclass type="e">
-										<_Name type="a">Framework</_Name>
-										<Properties type="c">
-											<IRPYRawContainer type="e">
-												<size type="a">1</size>
-												<IProperty type="e">
-													<_Name type="a">HeaderFile</_Name>
-													<_Value type="a">Arduino.h</_Value>
-													<_Type type="a">String</_Type>
-												</IProperty>
-												
-											</IRPYRawContainer>
-										</Properties>
-									</IPropertyMetaclass>
-									
 								</IRPYRawContainer>
 							</Metaclasses>
 						</IPropertySubject>
@@ -143,8 +169,8 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">Config</_name>
-			<_modifiedTimeWeak type="a">5.13.2023::12:0:5</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.13.2023::12:0:5</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.20.2023::11:18:9</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.20.2023::11:18:9</_modifiedTime>
 			<_scopeType type="a">Explicit</_scopeType>
 			<_instrumentation type="a">None</_instrumentation>
 			<_timeModel type="a">RealTime</_timeModel>
@@ -162,8 +188,8 @@
 					<size type="a">0</size>
 				</IRPYRawContainer>
 			</InitialInstances>
-			<weakCGTime type="a">5.13.2023::12:0:5</weakCGTime>
-			<strongCGTime type="a">5.13.2023::12:0:5</strongCGTime>
+			<weakCGTime type="a">5.20.2023::11:18:9</weakCGTime>
+			<strongCGTime type="a">5.20.2023::11:18:9</strongCGTime>
 			<AnimScopeElements type="c">
 				<IRPYRawContainer type="e">
 					<size type="a">0</size>

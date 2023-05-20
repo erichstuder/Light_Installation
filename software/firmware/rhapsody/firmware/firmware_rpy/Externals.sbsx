@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>100.840.0</version>
+	<lang>C++</lang>
+	<BuildNo>9841247</BuildNo>
+	
+	<RHAPSODY-MODEL>
+	<ISubsystem type="e">
+			<_id type="a">GUID 1ea650cf-484f-4299-a89c-a63a661f5ba6</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<size type="a">1</size>
+						<IPropertySubject type="e">
+							<_Name type="a">CG</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">2</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Class</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">2</size>
+												<IProperty type="e">
+													<_Name type="a">FileName</_Name>
+													<_Value type="a">%25USERPROFILE%25\.platformio\packages\framework-arduino-avr\cores\arduino\</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">UseAsExternal</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Package</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">1</size>
+												<IProperty type="e">
+													<_Name type="a">UseAsExternal</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_name type="a">Externals</_name>
+			<_modifiedTimeWeak type="a">5.20.2023::7:45:50</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.20.2023::7:45:50</_modifiedTime>
+			<weakCGTime type="a">5.20.2023::7:45:50</weakCGTime>
+			<strongCGTime type="a">5.20.2023::7:45:50</strongCGTime>
+			<_defaultComposite type="s">GUID 60871add-ef6c-42bd-b6cc-637b4761ab26</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">5.20.2023::7:34:29</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 60871add-ef6c-42bd-b6cc-637b4761ab26</value>
+			</AggregatesList>
+		</ISubsystem>
+		<IClass type="e">
+			<_id type="a">GUID 60871add-ef6c-42bd-b6cc-637b4761ab26</_id>
+			<_myState type="a">40960</_myState>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">5.20.2023::7:34:29</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.20.2023::7:34:29</_modifiedTime>
+			<weakCGTime type="a">5.20.2023::7:34:29</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID b63b0b39-fcbc-413a-baf2-f41dca3b4593</value>
+			</AggregatesList>
+		</IClass>
+		<IModule type="e">
+			<_id type="a">GUID b63b0b39-fcbc-413a-baf2-f41dca3b4593</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">file_1</_name>
+			<_modifiedTimeWeak type="a">5.20.2023::7:34:29</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.20.2023::7:34:29</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hid type="a">GUID 1eef3a57-9ee0-4e44-ba54-8ee5fa63a1ec</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_inverse>
+			<_implicitClass type="p"><IClass type="e">
+				<_id type="a">GUID 1eef3a57-9ee0-4e44-ba54-8ee5fa63a1ec</_id>
+				<_myState type="a">10240</_myState>
+				<_name type="a">file_1</_name>
+				<_modifiedTimeWeak type="a">5.20.2023::7:34:29</_modifiedTimeWeak>
+				<_modifiedTime type="a">5.20.2023::7:34:29</_modifiedTime>
+				<weakCGTime type="a">5.20.2023::7:34:29</weakCGTime>
+				<strongCGTime type="a">5.20.2023::7:34:29</strongCGTime>
+				<_itsStateChart type="r">
+					<IHandle type="e">
+					</IHandle>
+				</_itsStateChart>
+				<_classModifier type="a">Unspecified</_classModifier>
+			</IClass>
+			</_implicitClass>
+			<_partKind type="a">Block</_partKind>
+		</IModule>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+			<size type="a">0</size>
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

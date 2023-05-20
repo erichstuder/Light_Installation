@@ -23,12 +23,24 @@
 										<_Name type="a">Settings</_Name>
 										<Properties type="c">
 											<IRPYRawContainer type="e">
-												<size type="a">1</size>
+												<size type="a">3</size>
 												<IProperty type="e">
 													<_Name type="a">DisplayMode</_Name>
 													<_Value type="a">Flat</_Value>
 													<_Type type="a">Enum</_Type>
 													<_ExtraTypeInfo type="a">Flat,Meta-class</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowImplementationArgument</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowLabels</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
 												</IProperty>
 												
 											</IRPYRawContainer>
@@ -44,9 +56,9 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">firmware</_name>
-			<_modifiedTimeWeak type="a">5.13.2023::13:22:35</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.13.2023::13:22:35</_modifiedTime>
-			<_lastID type="a">1</_lastID>
+			<_modifiedTimeWeak type="a">5.20.2023::12:42:37</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.20.2023::12:42:37</_modifiedTime>
+			<_lastID type="a">4</_lastID>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
 					<size type="a">16</size>
@@ -87,7 +99,7 @@
 					<size type="a">4</size>
 					<IMultiplicityItem type="e">
 						<_name type="a">1</_name>
-						<_count type="a">-1</_count>
+						<_count type="a">6</_count>
 					</IMultiplicityItem>
 					
 					<IMultiplicityItem type="e">
@@ -227,8 +239,8 @@
 			</_properties>
 			<_name type="a">Model1</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.13.2023::11:12:17</_modifiedTime>
-			<_lastModifiedTime type="a">5.13.2023::11:12:17</_lastModifiedTime>
+			<_modifiedTime type="a">5.20.2023::12:42:37</_modifiedTime>
+			<_lastModifiedTime type="a">5.20.2023::12:42:37</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -358,14 +370,14 @@
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
 					<_hsubsystem type="a">Default</_hsubsystem>
-					<_hname type="a">Blink</_hname>
+					<_hname type="a">Application</_hname>
 					<_hid type="a">GUID 8ede1d71-9ce6-4459-99aa-1281c0b5cad2</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s">GUID f384b4ec-9e72-4772-8d08-98ae4e075ff1</m_pParent>
 			<m_name type="p">
 				<CGIText type="e">
-					<m_str type="a">Blink</m_str>
+					<m_str type="a">Application</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">

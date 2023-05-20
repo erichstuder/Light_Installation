@@ -1,7 +1,8 @@
 #include <Arduino.h>
-#include <WS2812FX.h>
-#include "../rhapsody/firmware/Component/Config/Blink.h"
+//#include <WS2812FX.h>
+#include "../rhapsody/firmware/Component/Config/Application.h"
 
+/*
 #define Leds_per_strip 15
 
 //see schematic for connector names
@@ -58,9 +59,9 @@ WS2812FX ledStrips[] = {
 	WS2812FX(Leds_per_strip, Leds_J5_3, NEO_GRB + NEO_KHZ800, 1, 1),
 	WS2812FX(Leds_per_strip, Leds_J5_4, NEO_GRB + NEO_KHZ800, 1, 1),
 	WS2812FX(Leds_per_strip, Leds_J5_5, NEO_GRB + NEO_KHZ800, 1, 1),
-};
+};*/
 
-static Blink blink;
+Application* application;
 
 void setup(){
 	/*for(WS2812FX &strip : ledStrips){
@@ -71,7 +72,9 @@ void setup(){
 		strip.start();
 	}*/
 
-	blink = Blink();
+	//blink = Blink();
+
+	application = new Application();
 }
 
 void loop(){
@@ -79,8 +82,10 @@ void loop(){
 		strip.service();
 	}*/
 
-	blink.led_on();
+	/*blink.led_on();
 	delay(500);
 	blink.led_off();
-	delay(500);
+	delay(500);*/
+
+	application->tick();
 }
