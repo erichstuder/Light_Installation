@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>100.840.0</version>
+	<lang>C++</lang>
+	<BuildNo>9841247</BuildNo>
+	
+	<RHAPSODY-MODEL>
+	<IComponent type="e">
+			<_id type="a">GUID bcc55b24-fb2d-4892-aa66-bef4dfab8d4a</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">TPkg_Led_Strips_Comp</_name>
+			<_modifiedTimeWeak type="a">5.23.2023::14:8:15</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.23.2023::14:16:44</_modifiedTime>
+			<m_buildType type="a">Executable</m_buildType>
+			<m_includePath type="a">$(OMROOT)/../TestConductor</m_includePath>
+			<m_configActive type="r">
+				<ICodeGenConfigInfoHandle type="e">
+					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
+					<_hid type="a">GUID c8b40236-b9bc-415d-821a-5609d6d7adb3</_hid>
+				</ICodeGenConfigInfoHandle>
+			</m_configActive>
+			<VariationPoints type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</VariationPoints>
+			<SelectedVariants type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</SelectedVariants>
+			<weakCGTime type="a">5.23.2023::14:8:15</weakCGTime>
+			<strongCGTime type="a">5.23.2023::14:4:16</strongCGTime>
+			<AggregatesList type="e">
+				<value>GUID 555c715a-2876-4565-af2f-f8d25cd4bea4</value>
+				<value>GUID c8b40236-b9bc-415d-821a-5609d6d7adb3</value>
+			</AggregatesList>
+		</IComponent>
+		<IFolder type="e">
+			<_id type="a">GUID 555c715a-2876-4565-af2f-f8d25cd4bea4</_id>
+			<_myState type="a">73728</_myState>
+			<_name type="a">Files</_name>
+			<_modifiedTimeWeak type="a">5.23.2023::14:4:16</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.23.2023::14:4:16</_modifiedTime>
+			<Elements type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">7</size>
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IClass</_hm2Class>
+							<_hfilename type="a">.\TCon_Led_Strips_Architecture.sbsx</_hfilename>
+							<_hsubsystem type="a">TPkg_Led_Strips::TCon_Led_Strips_Architecture</_hsubsystem>
+							<_hname type="a">TCon_Led_Strips</_hname>
+							<_hid type="a">GUID 31d9344e-0d82-4e85-a1ff-09070c16b47a</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IClass</_hm2Class>
+							<_hfilename type="a">.\TCon_Led_Strips_TestControl.sbsx</_hfilename>
+							<_hsubsystem type="a">TPkg_Led_Strips::TCon_Led_Strips_TestControl</_hsubsystem>
+							<_hname type="a">TCon_Led_Strips_Scheduler</_hname>
+							<_hid type="a">GUID 4440eb94-ed78-4d51-b531-e22ea1f67f33</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IClass</_hm2Class>
+							<_hfilename type="a">.\Default.sbsx</_hfilename>
+							<_hsubsystem type="a">Default</_hsubsystem>
+							<_hname type="a">Led_Strips</_hname>
+							<_hid type="a">GUID c5ec24af-e279-468b-bda6-5f789a853968</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IClass</_hm2Class>
+							<_hfilename type="a">.\Default.sbsx</_hfilename>
+							<_hsubsystem type="a">Default</_hsubsystem>
+							<_hname type="a">Application</_hname>
+							<_hid type="a">GUID 8ede1d71-9ce6-4459-99aa-1281c0b5cad2</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IClass</_hm2Class>
+							<_hfilename type="a">.\TCon_Led_Strips_Architecture.sbsx</_hfilename>
+							<_hsubsystem type="a">TPkg_Led_Strips::TCon_Led_Strips_Architecture</_hsubsystem>
+							<_hname type="a">DummyDriver_of_Led_Strips</_hname>
+							<_hid type="a">GUID ef7c990b-3144-4fb4-a243-e94fb272ab52</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\TCon_Led_Strips_Architecture.sbsx</_hfilename>
+							<_hsubsystem type="a">TPkg_Led_Strips</_hsubsystem>
+							<_hname type="a">TCon_Led_Strips_Architecture</_hname>
+							<_hid type="a">GUID dd81eb41-3454-4606-9765-af28e47ee931</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\TPkg_Led_Strips.sbsx</_hfilename>
+							<_hname type="a">TPkg_Led_Strips</_hname>
+							<_hid type="a">GUID b0539f88-247b-48db-8ff1-48c481e32e5b</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Elements>
+			<Files type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Files>
+		</IFolder>
+		<ICodeGenConfigInfo type="e">
+			<_id type="a">GUID c8b40236-b9bc-415d-821a-5609d6d7adb3</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<size type="a">1</size>
+						<IPropertySubject type="e">
+							<_Name type="a">CPP_CG</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">2</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Configuration</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">1</size>
+												<IProperty type="e">
+													<_Name type="a">Environment</_Name>
+													<_Value type="a">MSVC</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Microsoft,Cygwin,Linux,</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">MSVC</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">1</size>
+												<IProperty type="e">
+													<_Name type="a">IDEVersion</_Name>
+													<_Value type="a">VC11</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">VC10,VC11,VC14,VC15</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_name type="a">DefaultConfig</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">1</size>
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\TestingProfile\TestingProfile_rpy\TestingProfile.sbs</_hfilename>
+							<_hsubsystem type="a">TestingProfile::RTC::TestArchitecture</_hsubsystem>
+							<_hname type="a">TestingConfiguration</_hname>
+							<_hid type="a">GUID ca6ceb25-8c98-48e5-a54b-ab3ad25ded67</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">5.23.2023::14:8:15</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.23.2023::14:8:15</_modifiedTime>
+			<_lastID type="a">1</_lastID>
+			<_scopeType type="a">Explicit</_scopeType>
+			<_includePath type="a">../../Mocks</_includePath>
+			<_instrumentation type="a">Animation</_instrumentation>
+			<_timeModel type="a">RealTime</_timeModel>
+			<m_generateActors type="a">1</m_generateActors>
+			<_statechartImplementation type="a">Flat</_statechartImplementation>
+			<_checksList type="a">0 ,</_checksList>
+			<_checksList_Default type="a">1</_checksList_Default>
+			<ScopeElements type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</ScopeElements>
+			<InitialInstances type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</InitialInstances>
+			<weakCGTime type="a">5.23.2023::14:8:15</weakCGTime>
+			<strongCGTime type="a">5.23.2023::14:6:41</strongCGTime>
+			<AnimScopeElements type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</AnimScopeElements>
+			<m_allInAnimScope type="a">1</m_allInAnimScope>
+			<m_generateUsecases type="a">0</m_generateUsecases>
+			<AggregatesList type="e">
+				<value>GUID ab1a96a8-307d-4bf3-bc6a-cb2df96b8304</value>
+				<value>GUID d3c45321-0866-424f-8c98-86eb7b9fafb8</value>
+				<value>GUID daf29f3d-8e45-4a8f-8dae-9900714bdf41</value>
+				<value>GUID 319dadb3-0cf5-4783-8ecd-3300dde3241e</value>
+			</AggregatesList>
+		</ICodeGenConfigInfo>
+		<IDependency type="e">
+			<_id type="a">GUID ab1a96a8-307d-4bf3-bc6a-cb2df96b8304</_id>
+			<_name type="a">theScheduler</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">1</size>
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hsubsystem type="a">PredefinedTypes</_hsubsystem>
+							<_hname type="a">Usage</_hname>
+							<_hid type="a">GUID 42aa4325-6112-4e88-87ce-66008878f1db</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">5.23.2023::14:4:16</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.23.2023::14:4:16</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hfilename type="a">.\TCon_Led_Strips_TestControl.sbsx</_hfilename>
+					<_hsubsystem type="a">TPkg_Led_Strips::TCon_Led_Strips_TestControl</_hsubsystem>
+					<_hname type="a">TCon_Led_Strips_Scheduler</_hname>
+					<_hid type="a">GUID 4440eb94-ed78-4d51-b531-e22ea1f67f33</_hid>
+				</INObjectHandle>
+			</_dependsOn>
+			<_dependent type="r">
+				<INObjectHandle type="e">
+					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
+					<_hid type="a">GUID c8b40236-b9bc-415d-821a-5609d6d7adb3</_hid>
+				</INObjectHandle>
+			</_dependent>
+		</IDependency>
+		<IMHyperLink type="e">
+			<_id type="a">GUID d3c45321-0866-424f-8c98-86eb7b9fafb8</_id>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.23.2023::14:5:3</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+				</INObjectHandle>
+			</_dependsOn>
+			<_linkDispName type="a">Edit Makefile</_linkDispName>
+			<_linkType type="a">FREE</_linkType>
+			<_linkTarget type="a">TPkg_Led_Strips_Comp.mak</_linkTarget>
+			<isConfigurationFileHyperLink type="a">1</isConfigurationFileHyperLink>
+		</IMHyperLink>
+		<IMHyperLink type="e">
+			<_id type="a">GUID daf29f3d-8e45-4a8f-8dae-9900714bdf41</_id>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.23.2023::14:5:3</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+				</INObjectHandle>
+			</_dependsOn>
+			<_linkDispName type="a">Edit Main File</_linkDispName>
+			<_linkType type="a">FREE</_linkType>
+			<_linkTarget type="a">MainTPkg_Led_Strips_Comp</_linkTarget>
+			<isConfigurationFileHyperLink type="a">1</isConfigurationFileHyperLink>
+		</IMHyperLink>
+		<IFolder type="e">
+			<_id type="a">GUID 319dadb3-0cf5-4783-8ecd-3300dde3241e</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">DefaultConfig</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.23.2023::14:4:16</_modifiedTime>
+			<Elements type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Elements>
+			<Files type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Files>
+		</IFolder>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+			<size type="a">0</size>
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

@@ -13,7 +13,7 @@
 			<_properties type="p"><IPropertyContainer type="e">
 				<Subjects type="c">
 					<IRPYRawContainer type="e">
-						<size type="a">1</size>
+						<size type="a">2</size>
 						<IPropertySubject type="e">
 							<_Name type="a">Browser</_Name>
 							<Metaclasses type="c">
@@ -51,13 +51,103 @@
 							</Metaclasses>
 						</IPropertySubject>
 						
+						<IPropertySubject type="e">
+							<_Name type="a">TestConductor</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">1</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Settings</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">11</size>
+												<IProperty type="e">
+													<_Name type="a">AcknowledgeApplyChanges</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">AddQuotesToCharAndStringArguments</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">CreateTestArchitectureMode</_Name>
+													<_Value type="a">Standard</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Standard,Advanced</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">CreateTestArchitectureTransparency</_Name>
+													<_Value type="a">BlackBox</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">BlackBox,GreyBox</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">CreateTestArchitectureUsingGlobalObjects</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">MapSDToTestArchitectureMode</_Name>
+													<_Value type="a">Strict</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Strict,Weak</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">OverwriteTestContextDiagram</_Name>
+													<_Value type="a">Never</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Never,Always,AskUser</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ReplacementCreationMode</_Name>
+													<_Value type="a">Wrapper</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Wrapper,Stub</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ReportLocation</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">TestCaseExecutionOrder</_Name>
+													<_Value type="a">BrowserOrder</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">BrowserOrder,DeclarationOrder</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">TestingMode</_Name>
+													<_Value type="a">AssertionBased</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">AnimationBased,AssertionBased</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
 					</IRPYRawContainer>
 				</Subjects>
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">firmware</_name>
-			<_modifiedTimeWeak type="a">5.20.2023::12:42:37</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.20.2023::12:42:37</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.23.2023::14:4:16</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.23.2023::14:4:16</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
@@ -90,8 +180,9 @@
 			<_component type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IComponent</_hm2Class>
-					<_hname type="a">Component</_hname>
-					<_hid type="a">GUID 1e499f98-6051-4dcc-be89-d1bd07568b37</_hid>
+					<_hsubsystem type="a">TPkg_Led_Strips</_hsubsystem>
+					<_hname type="a">TPkg_Led_Strips_Comp</_hname>
+					<_hid type="a">GUID bcc55b24-fb2d-4892-aa66-bef4dfab8d4a</_hid>
 				</IHandle>
 			</_component>
 			<Multiplicities type="c">
@@ -135,6 +226,8 @@
 				<value>GUID d24d9192-bc4f-48a2-a4e1-fdaebbdfa6b6</value>
 				<value>GUID c4330c76-1cd6-4dbd-bdff-600355b9f34d</value>
 				<value>GUID 4c76d60f-4c98-42e0-b168-2441ba3a5283</value>
+				<value>GUID 74ef0591-fbb4-4279-a005-822d9597ffc8</value>
+				<value>GUID b0539f88-247b-48db-8ff1-48c481e32e5b</value>
 				<value>GUID 84261723-8643-45a1-99af-b54226989ed2</value>
 				<value>GUID 1e499f98-6051-4dcc-be89-d1bd07568b37</value>
 			</AggregatesList>
@@ -159,6 +252,16 @@
 		<ISubsystem type="e">
 			<fileName type="a">_Overview</fileName>
 			<_id type="a">GUID 4c76d60f-4c98-42e0-b168-2441ba3a5283</_id>
+		</ISubsystem>
+		<IProfile type="e">
+			<fileName type="a">TestingProfile</fileName>
+			<_persistAs type="a">$OMROOT\Profiles\TestingProfile\TestingProfile_rpy</_persistAs>
+			<_id type="a">GUID 74ef0591-fbb4-4279-a005-822d9597ffc8</_id>
+			<_partOfTheModelKind type="a">referenceunit</_partOfTheModelKind>
+		</IProfile>
+		<ISubsystem type="e">
+			<fileName type="a">TPkg_Led_Strips</fileName>
+			<_id type="a">GUID b0539f88-247b-48db-8ff1-48c481e32e5b</_id>
 		</ISubsystem>
 		<IDiagram type="e">
 			<_id type="a">GUID 84261723-8643-45a1-99af-b54226989ed2</_id>
@@ -239,8 +342,8 @@
 			</_properties>
 			<_name type="a">Model1</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.20.2023::12:42:37</_modifiedTime>
-			<_lastModifiedTime type="a">5.20.2023::12:42:37</_lastModifiedTime>
+			<_modifiedTime type="a">5.23.2023::14:4:14</_modifiedTime>
+			<_lastModifiedTime type="a">5.23.2023::14:4:14</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
