@@ -11,10 +11,10 @@
 			<_id type="a">GUID 3f0773c8-c3a2-4e47-96df-0316e3c9ad73</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Default</_name>
-			<_modifiedTimeWeak type="a">5.20.2023::18:6:11</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.20.2023::18:6:11</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.23.2023::9:55:7</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.23.2023::9:55:7</_modifiedTime>
 			<_lastID type="a">4</_lastID>
-			<weakCGTime type="a">5.20.2023::18:6:11</weakCGTime>
+			<weakCGTime type="a">5.23.2023::9:55:7</weakCGTime>
 			<strongCGTime type="a">5.20.2023::12:42:12</strongCGTime>
 			<_defaultComposite type="s">GUID bc078101-681f-45c5-8cd3-f9bf742c21ea</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -1609,16 +1609,16 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_id type="a">GUID c5ec24af-e279-468b-bda6-5f789a853968</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Led_Strips</_name>
-			<_modifiedTimeWeak type="a">5.20.2023::18:1:31</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.23.2023::9:57:33</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID 9bebf891-130e-4c41-956b-5fab4073f535</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">5.20.2023::18:1:31</_modifiedTime>
+			<_modifiedTime type="a">5.23.2023::9:57:33</_modifiedTime>
 			<_lastID type="a">13</_lastID>
-			<weakCGTime type="a">5.20.2023::18:1:31</weakCGTime>
+			<weakCGTime type="a">5.23.2023::9:57:33</weakCGTime>
 			<strongCGTime type="a">5.20.2023::12:46:57</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -1705,34 +1705,38 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				</Subjects>
 			</IPropertyContainer>
 			</_properties>
-			<_name type="a">Led_ID</_name>
-			<_modifiedTimeWeak type="a">5.20.2023::18:0:55</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.20.2023::18:0:55</_modifiedTime>
-			<_declaration type="a">/*const*/ uint8_t Leds_J1_1 = 15;%0D
-/*const*/ uint8_t Leds_J1_2 = 16;%0D
-/*const*/ uint8_t Leds_J1_3 = 14;%0D
-/*const*/ uint8_t Leds_J1_4 = 17;%0D
-/*const*/ uint8_t Leds_J1_5 = 18;%0D
-/*const*/ uint8_t Leds_J2_1 = 6;%0D
-/*const*/ uint8_t Leds_J2_2 = 5;%0D
-/*const*/ uint8_t Leds_J2_3 = 7;%0D
-/*const*/ uint8_t Leds_J2_4 = 4;%0D
-/*const*/ uint8_t Leds_J2_5 = 3;%0D
-/*const*/ uint8_t Leds_J3_1 = 11;%0D
-/*const*/ uint8_t Leds_J3_2 = 10;%0D
-/*const*/ uint8_t Leds_J3_3 = 12;%0D
-/*const*/ uint8_t Leds_J3_4 = 9;%0D
-/*const*/ uint8_t Leds_J3_5 = 8;%0D
-/*const*/ uint8_t Leds_J4_1 = 52;%0D
-/*const*/ uint8_t Leds_J4_2 = 44;%0D
-/*const*/ uint8_t Leds_J4_3 = 50;%0D
-/*const*/ uint8_t Leds_J4_4 = 46;%0D
-/*const*/ uint8_t Leds_J4_5 = 48;%0D
-/*const*/ uint8_t Leds_J5_1 = 42;%0D
-/*const*/ uint8_t Leds_J5_2 = 34;%0D
-/*const*/ uint8_t Leds_J5_3 = 40;%0D
-/*const*/ uint8_t Leds_J5_4 = 36;%0D
-/*const*/ uint8_t Leds_J5_5 = 38;</_declaration>
+			<_name type="a">Strip_ID</_name>
+			<_modifiedTimeWeak type="a">5.23.2023::9:57:33</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.23.2023::9:57:33</_modifiedTime>
+			<_declaration type="a">struct %25s {%0D
+	enum{%0D
+		J1_J1,%0D
+		J1_J2,%0D
+		J1_J3,%0D
+		J1_J4,%0D
+		J1_J5,%0D
+		J2_J1,%0D
+		J2_J2,%0D
+		J2_J3,%0D
+		J2_J4,%0D
+		J2_J5,%0D
+		J3_J1,%0D
+		J3_J2,%0D
+		J3_J3,%0D
+		J3_J4,%0D
+		J3_J5,%0D
+		J4_J1,%0D
+		J4_J2,%0D
+		J4_J3,%0D
+		J4_J4,%0D
+		J4_J5,%0D
+		J5_J1,%0D
+		J5_J2,%0D
+		J5_J3,%0D
+		J5_J4,%0D
+		J5_J5%0D
+	}; %0D
+};</_declaration>
 			<_kind type="a">Language</_kind>
 		</IType>
 		<IType type="e">
