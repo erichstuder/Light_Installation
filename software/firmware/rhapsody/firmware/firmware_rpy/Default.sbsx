@@ -11,10 +11,10 @@
 			<_id type="a">GUID 3f0773c8-c3a2-4e47-96df-0316e3c9ad73</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Default</_name>
-			<_modifiedTimeWeak type="a">5.23.2023::14:47:45</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:55:47</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.24.2023::5:3:3</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.24.2023::5:3:3</_modifiedTime>
 			<_lastID type="a">4</_lastID>
-			<weakCGTime type="a">5.23.2023::14:47:45</weakCGTime>
+			<weakCGTime type="a">5.24.2023::5:3:3</weakCGTime>
 			<strongCGTime type="a">5.20.2023::12:42:12</strongCGTime>
 			<_defaultComposite type="s">GUID bc078101-681f-45c5-8cd3-f9bf742c21ea</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -1609,16 +1609,16 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_id type="a">GUID c5ec24af-e279-468b-bda6-5f789a853968</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Led_Strips</_name>
-			<_modifiedTimeWeak type="a">5.23.2023::15:5:17</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.24.2023::5:3:3</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID 9bebf891-130e-4c41-956b-5fab4073f535</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">5.23.2023::15:5:17</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::5:3:3</_modifiedTime>
 			<_lastID type="a">15</_lastID>
-			<weakCGTime type="a">5.23.2023::15:5:17</weakCGTime>
+			<weakCGTime type="a">5.24.2023::5:3:3</weakCGTime>
 			<strongCGTime type="a">5.20.2023::12:46:57</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -1893,41 +1893,9 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 		<IPrimitiveOperation type="e">
 			<_id type="a">GUID 26c52e26-0180-49ae-bd32-bbd6667a70a9</_id>
 			<_myState type="a">8192</_myState>
-			<_properties type="p"><IPropertyContainer type="e">
-				<Subjects type="c">
-					<IRPYRawContainer type="e">
-						<size type="a">1</size>
-						<IPropertySubject type="e">
-							<_Name type="a">CPP_CG</_Name>
-							<Metaclasses type="c">
-								<IRPYRawContainer type="e">
-									<size type="a">1</size>
-									<IPropertyMetaclass type="e">
-										<_Name type="a">Class</_Name>
-										<Properties type="c">
-											<IRPYRawContainer type="e">
-												<size type="a">1</size>
-												<IProperty type="e">
-													<_Name type="a">ReturnType</_Name>
-													<_Value type="a">$type*</_Value>
-													<_Type type="a">String</_Type>
-												</IProperty>
-												
-											</IRPYRawContainer>
-										</Properties>
-									</IPropertyMetaclass>
-									
-								</IRPYRawContainer>
-							</Metaclasses>
-						</IPropertySubject>
-						
-					</IRPYRawContainer>
-				</Subjects>
-			</IPropertyContainer>
-			</_properties>
 			<_name type="a">strips</_name>
-			<_modifiedTimeWeak type="a">5.20.2023::18:1:31</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.20.2023::18:1:31</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.24.2023::4:40:47</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.24.2023::4:41:18</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -1936,8 +1904,10 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			</Args>
 			<_returnType type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IClass</_hm2Class>
-					<_hid type="a">GUID b52e647f-bed5-464b-a6f6-2e30a9cbfeca</_hid>
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
+					<_hname type="a">void</_hname>
+					<_hid type="a">GUID c6b70728-b655-45a0-abb7-8ea5d3da94be</_hid>
 				</IHandle>
 			</_returnType>
 			<_abstract type="a">0</_abstract>
@@ -1947,15 +1917,15 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_static type="a">0</_static>
 			<_constant type="a">0</_constant>
 			<_itsBody type="p"><IBody type="e">
-				<_bodyData type="a">return _strips;</_bodyData>
+				<_bodyData type="a">//return _strips;</_bodyData>
 			</IBody>
 			</_itsBody>
 		</IPrimitiveOperation>
 		<IConstructor type="e">
 			<_id type="a">GUID de63709d-faf4-49c5-b40d-fb9670f02fc5</_id>
 			<_myState type="a">8192</_myState>
-			<_modifiedTimeWeak type="a">5.23.2023::15:5:17</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::15:5:17</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.24.2023::5:3:3</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.24.2023::5:3:3</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -1973,6 +1943,60 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_static type="a">0</_static>
 			<_constant type="a">0</_constant>
 			<_itsBody type="p"><IBody type="e">
+				<_bodyData type="a">this-&gt;_strips[0] = new Strip(15);%0D
+/*this-&gt;_strips[1] = Strip(16);%0D
+this-&gt;_strips[2] = Strip(14);%0D
+this-&gt;_strips[3] = Strip(17);%0D
+this-&gt;_strips[4] = Strip(18);%0D
+this-&gt;_strips[5] = Strip(6);%0D
+this-&gt;_strips[6] = Strip(5);%0D
+this-&gt;_strips[7] = Strip(7);%0D
+this-&gt;_strips[8] = Strip(4);%0D
+this-&gt;_strips[9] = Strip(3);%0D
+this-&gt;_strips[10] = Strip(11);%0D
+this-&gt;_strips[11] = Strip(10);%0D
+this-&gt;_strips[12] = Strip(12);%0D
+this-&gt;_strips[13] = Strip(9);%0D
+this-&gt;_strips[14] = Strip(8);%0D
+this-&gt;_strips[15] = Strip(52);%0D
+this-&gt;_strips[16] = Strip(44);%0D
+this-&gt;_strips[17] = Strip(50);%0D
+this-&gt;_strips[18] = Strip(46);%0D
+this-&gt;_strips[19] = Strip(48);%0D
+this-&gt;_strips[20] = Strip(42);%0D
+this-&gt;_strips[21] = Strip(34);%0D
+this-&gt;_strips[22] = Strip(40);%0D
+this-&gt;_strips[23] = Strip(36);%0D
+this-&gt;_strips[24] = Strip(38);*/%0D
+%0D
+/*this-&gt;_strips = {%0D
+	Strip(15),%0D
+	Strip(16),%0D
+	Strip(14),%0D
+	Strip(17),%0D
+	Strip(18),%0D
+	Strip(6),%0D
+	Strip(5),%0D
+	Strip(7),%0D
+	Strip(4),%0D
+	Strip(3),%0D
+	Strip(11),%0D
+	Strip(10),%0D
+	Strip(12),%0D
+	Strip(9),%0D
+	Strip(8),%0D
+	Strip(52),%0D
+	Strip(44),%0D
+	Strip(50),%0D
+	Strip(46),%0D
+	Strip(48),%0D
+	Strip(42),%0D
+	Strip(34),%0D
+	Strip(40),%0D
+	Strip(36),%0D
+	Strip(38)%0D
+};*/%0D
+</_bodyData>
 			</IBody>
 			</_itsBody>
 		</IConstructor>
@@ -1980,32 +2004,27 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_id type="a">GUID 2053cb9d-acdd-4e51-a621-621d84e0ef21</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">_strips</_name>
-			<_modifiedTimeWeak type="a">5.23.2023::14:58:27</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:58:27</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.24.2023::5:2:27</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.24.2023::5:2:27</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hid type="a">GUID b52e647f-bed5-464b-a6f6-2e30a9cbfeca</_hid>
+					<_hid type="a">GUID c10cc54c-d62e-4e39-bf52-ef6bd2207567</_hid>
 				</IHandle>
 			</_typeOf>
 			<_multiplicity type="a">25</_multiplicity>
 			<_isOrdered type="a">0</_isOrdered>
 			<_protection type="a">iPrivate</_protection>
 			<_static type="a">0</_static>
-			<_isReferenceAttr type="a">0</_isReferenceAttr>
+			<_isReferenceAttr type="a">1</_isReferenceAttr>
 			<_isConstant type="a">0</_isConstant>
 		</IAttribute>
 		<IFile type="e">
 			<_id type="a">GUID 30b35ff2-d0c6-4102-b2f5-f0e2e11fdd55</_id>
 			<_myState type="a">139264</_myState>
 			<_name type="a">Led_Strips</_name>
-			<OwnedDependencies type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</OwnedDependencies>
-			<_modifiedTimeWeak type="a">5.23.2023::14:58:14</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:47:56</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.24.2023::5:2:27</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.24.2023::5:2:27</_modifiedTime>
 			<m_type type="a">specFile</m_type>
 			<AggregatesList type="e">
 				<value>GUID 5767afb4-20ae-41cb-acc5-a3f5cfb039a1</value>
@@ -2032,11 +2051,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 7a40001b-bb2b-4358-8de9-ca6640e27a01</_id>
@@ -2053,11 +2067,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 13f224bd-9e89-4b88-a4a2-9b4ff3ec0900</_id>
@@ -2074,11 +2083,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 14674bd3-6b89-4bde-b575-36cc16dac95c</_id>
@@ -2096,11 +2100,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 					<_hid type="a">GUID 0003a18a-3e8f-4e6a-9698-3f46639b401c</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 3f2f5857-44c7-4dba-8fde-a6b4e306f255</_id>
@@ -2117,11 +2116,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID dac4f7df-b722-430d-9edf-75f4ac6592dc</_id>
@@ -2138,17 +2132,12 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 8000e874-fa92-4f08-bf2a-d4e57f63db63</_id>
 			<_name type="a">Led_Strips</_name>
-			<_modifiedTimeWeak type="a">5.23.2023::14:58:14</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.24.2023::5:2:27</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.24.2023::5:2:27</_modifiedTime>
 			<m_type type="a">specFragment</m_type>
 			<m_startRow type="a">30</m_startRow>
 			<m_startCol_Short type="a">1</m_startCol_Short>
@@ -2240,7 +2229,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_id type="a">GUID fa2ef123-88fc-4da9-942b-3447b7ea2253</_id>
 			<_name type="a">Strip</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:26:44</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::5:0:33</_modifiedTime>
 			<m_type type="a">specFragment</m_type>
 			<m_startRow type="a">34</m_startRow>
 			<m_startCol_Short type="a">5</m_startCol_Short>
@@ -2339,11 +2328,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 24607bee-c40d-4cfb-b21a-3a28b08afd5e</_id>
@@ -2361,16 +2345,12 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID ed80555b-2687-4e6f-97a7-f44f6d85f96a</_id>
+			<_name type="a">Strip</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:26:44</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::5:1:58</_modifiedTime>
 			<m_type type="a">specFragment</m_type>
 			<m_startRow type="a">46</m_startRow>
 			<m_startCol_Short type="a">9</m_startCol_Short>
@@ -2382,11 +2362,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 					<_hid type="a">GUID e277e3e7-d277-4f6e-9f95-4481c6823c72</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 617c8f60-5afc-4b39-9662-f14d35327b39</_id>
@@ -2403,11 +2378,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 6a934a87-bbac-44d4-97c7-30b0fde0a57c</_id>
@@ -2424,11 +2394,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID f5064d7d-beab-411f-9776-5a24eb6fd39e</_id>
@@ -2446,11 +2411,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 9a60b43e-c381-4166-973c-6ccfabadb848</_id>
@@ -2468,11 +2428,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 					<_hid type="a">GUID f4664f02-983a-4851-a51d-7678907d653b</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID f13bfa1a-775c-4ed5-91a6-71d186bedaa9</_id>
@@ -2490,11 +2445,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID f8995fbc-2731-44cd-8897-9e4f1e4ac7bb</_id>
@@ -2511,11 +2461,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID b77c3fd0-cfd0-4d98-81a9-06f270583ec0</_id>
@@ -2532,11 +2477,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID bd5242ca-23f1-447d-92cf-f89b3adc5247</_id>
@@ -2553,11 +2493,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 6465b1b8-534f-4901-9ede-cbdb452b1142</_id>
@@ -2574,11 +2509,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 65731721-5eb8-4c92-9412-689d10bab743</_id>
@@ -2596,11 +2526,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 1700a829-04ea-4274-93e2-459e30d48847</_id>
@@ -2618,11 +2543,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 					<_hid type="a">GUID cf4638a0-67aa-4ac6-a19c-a18428e3c699</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID a0e2e34a-300c-4ecb-b1a1-1296ccc492e0</_id>
@@ -2640,11 +2560,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 					<_hid type="a">GUID 9391190b-20f7-4e37-840f-1a2be74763bb</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID a8f95d42-86cd-4b4a-a77f-e0ab66c9b2bd</_id>
@@ -2662,11 +2577,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 					<_hid type="a">GUID 0081ff27-0cb1-447e-b62e-b3c39804f413</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 3add4eea-fbb7-48e2-8c16-fc370bdab42a</_id>
@@ -2684,11 +2594,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID d417255e-8007-4d03-9bd8-8bb2ce2d901c</_id>
@@ -2706,11 +2611,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 08b0c53f-5faa-49ce-ba8a-b5b165d88758</_id>
@@ -2727,11 +2627,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 5d2a58b8-d2a0-45dc-ba95-fdd9321584da</_id>
@@ -2749,11 +2644,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 1d8ae4b0-aa98-4bbb-a05e-22d2966fbf92</_id>
@@ -2771,33 +2661,23 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 					<_hid type="a">GUID cffd677a-2da8-43d2-acd4-7ab66bec4774</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 6425e909-68dd-451d-82f8-4f6de7f76ba4</_id>
 			<_name type="a">strips</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:41:18</_modifiedTime>
 			<m_type type="a">specFragment</m_type>
 			<m_startRow type="a">103</m_startRow>
-			<m_startCol_Short type="a">15</m_startCol_Short>
+			<m_startCol_Short type="a">10</m_startCol_Short>
 			<m_endRow type="a">103</m_endRow>
-			<m_endCol_Short type="a">23</m_endCol_Short>
+			<m_endCol_Short type="a">18</m_endCol_Short>
 			<m_subject type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">IPrimitiveOperation</_hm2Class>
 					<_hid type="a">GUID 26c52e26-0180-49ae-bd32-bbd6667a70a9</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID bb0a42c3-708c-40ed-8b3a-2cce2bc81c2d</_id>
@@ -2815,11 +2695,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID fa105187-3d4a-4b46-a00b-26e6b9834844</_id>
@@ -2836,11 +2711,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 8f2b7bd5-5835-4dc7-9c2b-1369463c3133</_id>
@@ -2857,11 +2727,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 68f37206-cf59-4daa-9461-4387f39fdc42</_id>
@@ -2878,17 +2743,12 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID cd77bdbe-3c74-412f-8bce-f4cd099f8eff</_id>
 			<_name type="a">get_strips:spec</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<m_type type="a">textFragment</m_type>
 			<m_text type="a">//## auto:operation get_strips() const:spec</m_text>
 			<m_startRow type="a">121</m_startRow>
@@ -2899,11 +2759,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID e34ffe53-0ce5-4765-9d71-2747bc97f77e</_id>
@@ -2921,33 +2776,23 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID cf6005af-38da-4f6d-8df5-90cfdda3752d</_id>
 			<_name type="a">_strips</_name>
-			<_modifiedTimeWeak type="a">5.23.2023::14:58:14</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.24.2023::5:2:27</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.24.2023::5:2:27</_modifiedTime>
 			<m_type type="a">specFragment</m_type>
 			<m_startRow type="a">127</m_startRow>
-			<m_startCol_Short type="a">14</m_startCol_Short>
+			<m_startCol_Short type="a">11</m_startCol_Short>
 			<m_endRow type="a">127</m_endRow>
-			<m_endCol_Short type="a">25</m_endCol_Short>
+			<m_endCol_Short type="a">22</m_endCol_Short>
 			<m_subject type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">IAttribute</_hm2Class>
 					<_hid type="a">GUID 2053cb9d-acdd-4e51-a621-621d84e0ef21</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 27811666-2f4a-4362-b1bb-bac9fd848fce</_id>
@@ -2965,11 +2810,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 67b1a1fc-6e92-41df-8359-3f8bbed55fdf</_id>
@@ -2987,11 +2827,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 					<_hid type="a">GUID f38bbf20-7a58-4cc6-a04d-260cf3036361</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID f9a2aa9d-5421-4e57-aa14-3044df186b43</_id>
@@ -3009,11 +2844,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID d603495e-6623-4a9b-961e-c7012183fc38</_id>
@@ -3030,11 +2860,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID d59e87fd-eef0-4578-a8e3-d3bac6c27ea5</_id>
@@ -3051,11 +2876,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 078bc258-6294-4c05-b3b0-662804d9945d</_id>
@@ -3072,16 +2892,12 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 66756e47-3f48-4973-a30c-515a3c8d3a31</_id>
+			<_name type="a">Led_Strips</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::5:1:58</_modifiedTime>
 			<m_type type="a">specFragment</m_type>
 			<m_startRow type="a">147</m_startRow>
 			<m_startCol_Short type="a">5</m_startCol_Short>
@@ -3098,13 +2914,8 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_id type="a">GUID f7b80d74-4463-4d2f-82e9-0a7c04d29969</_id>
 			<_myState type="a">139264</_myState>
 			<_name type="a">Led_Strips</_name>
-			<OwnedDependencies type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</OwnedDependencies>
-			<_modifiedTimeWeak type="a">5.23.2023::14:58:14</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:47:56</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.24.2023::5:2:27</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.24.2023::5:2:27</_modifiedTime>
 			<m_type type="a">implFile</m_type>
 			<AggregatesList type="e">
 				<value>GUID 501d9e21-d374-427e-8b74-8d14bc1c047f</value>
@@ -3127,11 +2938,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID bc602aeb-1ec4-49bf-b0d0-4372859232cf</_id>
@@ -3148,17 +2954,12 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 44ab7d17-7606-4c9e-ab2a-9e1fcbbff207</_id>
 			<_name type="a">Led_Strips</_name>
-			<_modifiedTimeWeak type="a">5.23.2023::14:58:14</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.24.2023::5:2:27</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.24.2023::5:2:27</_modifiedTime>
 			<m_type type="a">implFragment</m_type>
 			<m_startRow type="a">37</m_startRow>
 			<m_startCol_Short type="a">20</m_startCol_Short>
@@ -3189,7 +2990,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_id type="a">GUID 78a45970-61b3-4c15-a1af-5f62a930d47c</_id>
 			<_name type="a">Strip</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:27:38</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::5:0:33</_modifiedTime>
 			<m_type type="a">implFragment</m_type>
 			<m_startRow type="a">37</m_startRow>
 			<m_startCol_Short type="a">20</m_startCol_Short>
@@ -3227,11 +3028,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID d5dea766-a114-47d0-bdf5-9ddee4b4f417</value>
 				<value>GUID eb24d1f7-08ae-4ee2-b96e-f364cc2a5d68</value>
@@ -3302,11 +3098,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID f460c74f-ad0b-4a0e-8f77-26c3e4f98659</value>
 				<value>GUID c7b56591-0ca0-465a-a2e0-81b4cf877ae0</value>
@@ -3378,11 +3169,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 					<_hid type="a">GUID f4664f02-983a-4851-a51d-7678907d653b</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID ba1fb0ab-f237-4aee-b7a7-1b910541e546</value>
 				<value>GUID 9498cc5f-1341-448f-8f2b-f1530ac8cb5c</value>
@@ -3453,11 +3239,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 673458ae-1704-4647-a607-d1507186e0d7</value>
 				<value>GUID ed82fa6a-147c-4f0e-8cad-10b1473ec89d</value>
@@ -3528,11 +3309,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 0dee17fe-6c28-4732-8add-7925869e0f4e</value>
 				<value>GUID 590180fa-450d-4427-bb49-20cfc8577ac5</value>
@@ -3603,11 +3379,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 47f7ba55-5581-4214-8576-b8f0d36d4b75</value>
 				<value>GUID 8270f155-85ec-4c4b-95ec-a40bebbe6db7</value>
@@ -3678,11 +3449,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 8468ca06-5b76-4662-b2cb-edbf78b1891b</value>
 				<value>GUID 8ff21984-2137-4621-8118-3e3d4743c88d</value>
@@ -3740,8 +3506,9 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 		</ILiteralSpecification>
 		<IFileFragment type="e">
 			<_id type="a">GUID d11017ea-a6cf-4a6a-a49d-29ecaa87db72</_id>
+			<_name type="a">Strip</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:27:38</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::5:1:58</_modifiedTime>
 			<m_type type="a">implFragment</m_type>
 			<m_startRow type="a">68</m_startRow>
 			<m_startCol_Short type="a">20</m_startCol_Short>
@@ -3823,11 +3590,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 51051849-bc81-4fdf-89c5-6c7074316c4c</value>
 				<value>GUID adf82120-a43e-4c82-abc1-8db4c455d170</value>
@@ -3899,11 +3661,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 					<_hid type="a">GUID cffd677a-2da8-43d2-acd4-7ab66bec4774</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 7dfd1060-6ab0-440d-9644-14bca069a7dc</value>
 				<value>GUID e4e5474a-a706-4af0-b99d-18cef7ef8863</value>
@@ -3963,10 +3720,10 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_id type="a">GUID 3f0b67c2-6263-4c59-b87f-07817df5e3b6</_id>
 			<_name type="a">strips</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:41:18</_modifiedTime>
 			<m_type type="a">implFragment</m_type>
 			<m_startRow type="a">86</m_startRow>
-			<m_startCol_Short type="a">32</m_startCol_Short>
+			<m_startCol_Short type="a">27</m_startCol_Short>
 			<m_endRow type="a">91</m_endRow>
 			<m_endCol_Short type="a">1</m_endCol_Short>
 			<m_subject type="r">
@@ -3975,11 +3732,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 					<_hid type="a">GUID 26c52e26-0180-49ae-bd32-bbd6667a70a9</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 53880ff6-b7a9-436e-b5bf-77a02d8f4f3a</value>
 				<value>GUID 8d634c33-ad7d-4dc9-8fdb-fb7e8be0a6ae</value>
@@ -4015,7 +3767,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:41:18</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4032,8 +3784,8 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 56570ae8-e7dc-44f3-9408-63affc1dd60b</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
-			<_value type="a">32</_value>
+			<_modifiedTime type="a">5.24.2023::4:41:18</_modifiedTime>
+			<_value type="a">27</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
 			<_id type="a">GUID 50f9acd2-d3eb-45ac-9a3b-43d4e61be2a5</_id>
@@ -4050,11 +3802,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 96c86a0c-2cb6-4a6d-bd60-7745dab1dd6e</value>
 				<value>GUID 3ec06ca9-11c4-4244-ba86-787cfc8133fa</value>
@@ -4125,11 +3872,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 30e259a0-e808-4719-99e1-9928801324cc</value>
 				<value>GUID f37ee132-5cde-4f2f-ac6b-01c2e66eb8dd</value>
@@ -4200,11 +3942,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 08551ada-9606-4608-9f90-f8af7888e5d8</value>
 				<value>GUID ce6c1be5-7ab1-41d4-a819-848faa8bbea7</value>
@@ -4264,7 +4001,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_id type="a">GUID 8ed44035-d6f0-434c-8645-b17395d0cf6a</_id>
 			<_name type="a">get_strips:impl</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<m_type type="a">textFragment</m_type>
 			<m_text type="a">//## auto:operation get_strips() const:impl</m_text>
 			<m_startRow type="a">109</m_startRow>
@@ -4275,11 +4012,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 3c5b7a73-0967-4b2e-b274-95190dff82e8</value>
 				<value>GUID c697d369-bf57-43bd-acf3-43406523dd2c</value>
@@ -4315,7 +4047,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4332,14 +4064,14 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 034a0021-5e0a-4940-9659-b53d1848b1fe</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<_value type="a">36</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
 			<_id type="a">GUID 655d0258-fbbb-40a2-bce1-d09210946e46</_id>
 			<_name type="a">__setItsApplication:impl</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<m_type type="a">textFragment</m_type>
 			<m_text type="a">//## auto:operation __setItsApplication(Application *):impl</m_text>
 			<m_startRow type="a">114</m_startRow>
@@ -4350,11 +4082,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 486f9d1a-6602-4df8-8ebd-44220ead4c00</value>
 				<value>GUID 181472fb-0178-4934-86a2-bc636569c653</value>
@@ -4365,7 +4092,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4382,7 +4109,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 57a8ff14-b145-4625-9ce2-1fbe931f6f20</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<_value type="a">114</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -4414,7 +4141,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_id type="a">GUID 86fb1e35-2b5a-4e65-a7a5-073ccce4d0bd</_id>
 			<_name type="a">_setItsApplication:impl</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<m_type type="a">textFragment</m_type>
 			<m_text type="a">//## auto:operation _setItsApplication(Application *):impl</m_text>
 			<m_startRow type="a">126</m_startRow>
@@ -4425,11 +4152,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID e85e38da-8d43-415a-9d5b-9c41589cdba3</value>
 				<value>GUID 98076422-9417-423e-8205-2b5ac9d290bf</value>
@@ -4440,7 +4162,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4457,7 +4179,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 84416b75-8ab8-4be7-be2f-71a6b9cff582</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<_value type="a">126</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -4489,7 +4211,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_id type="a">GUID b76cf685-8f63-4dd8-8623-53d62fcbae0c</_id>
 			<_name type="a">_clearItsApplication:impl</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<m_type type="a">textFragment</m_type>
 			<m_text type="a">//## auto:operation _clearItsApplication():impl</m_text>
 			<m_startRow type="a">130</m_startRow>
@@ -4500,11 +4222,6 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 7fade74b-b2cc-4ee2-b689-c1346cc794e8</value>
 				<value>GUID 276b3be4-32c2-418e-9444-352a815b2bab</value>
@@ -4515,7 +4232,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4532,7 +4249,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 0b94b7e9-21bf-4c1c-b892-422e4102116c</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::4:53:7</_modifiedTime>
 			<_value type="a">130</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -4562,12 +4279,13 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 		</ILiteralSpecification>
 		<IFileFragment type="e">
 			<_id type="a">GUID 97b10e41-4646-4e3f-adbd-d5abff310e82</_id>
+			<_name type="a">Led_Strips</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.23.2023::14:48:45</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::5:1:58</_modifiedTime>
 			<m_type type="a">implFragment</m_type>
 			<m_startRow type="a">135</m_startRow>
 			<m_startCol_Short type="a">13</m_startCol_Short>
-			<m_endRow type="a">168</m_endRow>
+			<m_endRow type="a">194</m_endRow>
 			<m_endCol_Short type="a">1</m_endCol_Short>
 			<m_subject type="r">
 				<INObjectHandle type="e">
@@ -4585,7 +4303,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::5:0:33</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4602,7 +4320,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 1b522b29-08c4-445e-81ff-c687ac235016</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::5:0:33</_modifiedTime>
 			<_value type="a">135</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -4610,7 +4328,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::5:0:33</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4627,7 +4345,7 @@ for(int i=0; i&lt;itsLed_Strips.nr_of_strips(); i++){%0D
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 0931e59a-9be8-4e7f-823d-8b1388aa5e9a</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<_modifiedTime type="a">5.24.2023::5:0:33</_modifiedTime>
 			<_value type="a">26</_value>
 		</ILiteralSpecification>
 		<IAssociationEnd type="e">
