@@ -25,10 +25,10 @@
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:34</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.25.2023::8:25:7</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.24.2023::15:55:34</_modifiedTime>
 			<_lastID type="a">1</_lastID>
-			<weakCGTime type="a">5.24.2023::15:55:34</weakCGTime>
+			<weakCGTime type="a">5.25.2023::8:25:7</weakCGTime>
 			<strongCGTime type="a">5.24.2023::15:36:44</strongCGTime>
 			<_defaultComposite type="s">GUID 66352bec-34fc-48e9-989e-c262e57e79a1</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -268,10 +268,10 @@
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:34</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:34</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.25.2023::8:29:34</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.25.2023::8:29:34</_modifiedTime>
 			<_lastID type="a">3</_lastID>
-			<weakCGTime type="a">5.24.2023::15:55:34</weakCGTime>
+			<weakCGTime type="a">5.25.2023::8:29:34</weakCGTime>
 			<strongCGTime type="a">5.24.2023::15:39:17</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -1277,8 +1277,8 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:30</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:30</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.25.2023::8:29:34</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.25.2023::8:29:34</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
@@ -1309,9 +1309,9 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 				<value>GUID a4413af7-8ce5-48ba-a2d6-0e67e301985e</value>
 				<value>GUID e00b9f38-13bb-4497-a697-963e02df9e76</value>
 				<value>GUID d63dfeb3-0c53-46ad-be7e-605a4882a43c</value>
-				<value>GUID ec8e164e-f44a-47c1-b49a-eac33fed0b56</value>
+				<value>GUID a0ba1e03-4d8c-43e9-a4af-9a694915e1e0</value>
 				<value>GUID dc89e7b7-7962-47f8-951f-8fb6d42330af</value>
-				<value>GUID e20df338-e42f-44ae-aa8a-eec42d33fc33</value>
+				<value>GUID f6cd21dc-8a54-41bd-8948-c10a4b45cb15</value>
 			</AggregatesList>
 		</IPrimitiveOperation>
 		<IDependency type="e">
@@ -1471,7 +1471,7 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 			</_dependent>
 		</IDependency>
 		<IEmbededFile type="e">
-			<_id type="a">GUID ec8e164e-f44a-47c1-b49a-eac33fed0b56</_id>
+			<_id type="a">GUID a0ba1e03-4d8c-43e9-a4af-9a694915e1e0</_id>
 			<_name type="a">SD_tc_nr_of_strips_0.html</_name>
 			<Stereotypes type="c">
 				<IRPYRawContainer type="e">
@@ -1487,19 +1487,19 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:30</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:30</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.25.2023::8:29:22</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.25.2023::8:29:22</_modifiedTime>
 			<_lastID type="a">2</_lastID>
 			<_MayNeedToRelocate type="a">0</_MayNeedToRelocate>
 			<_LastKnownFullPath type="a">C:\Users\e.studer\Documents\repos\Light_Installation\software\firmware\rhapsody\firmware\firmware_rpy\SD_tc_nr_of_strips_0.html</_LastKnownFullPath>
 			<AggregatesList type="e">
-				<value>GUID bba37be7-5c18-4c4b-b125-da887f043e23</value>
-				<value>GUID 81940b3c-dbd3-4148-88e7-aaa316a0932d</value>
-				<value>GUID b3d04a4f-16e9-4276-a950-37fdaf9945d4</value>
+				<value>GUID 283c839a-50e2-4449-91a1-497a4cc1c5de</value>
+				<value>GUID 02b6bf8f-b4a6-4469-abc4-b8b5f77dad7e</value>
+				<value>GUID 1c0aa78c-00ab-4753-b73f-9125f04f4b2b</value>
 			</AggregatesList>
 		</IEmbededFile>
 		<IDependency type="e">
-			<_id type="a">GUID bba37be7-5c18-4c4b-b125-da887f043e23</_id>
+			<_id type="a">GUID 283c839a-50e2-4449-91a1-497a4cc1c5de</_id>
 			<_name type="a">itsTestElement</_name>
 			<Stereotypes type="c">
 				<IRPYRawContainer type="e">
@@ -1515,8 +1515,8 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:30</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:30</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.25.2023::8:29:22</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.25.2023::8:29:22</_modifiedTime>
 			<_dependsOn type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">IPrimitiveOperation</_hm2Class>
@@ -1526,12 +1526,12 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 			<_dependent type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">IEmbededFile</_hm2Class>
-					<_hid type="a">GUID ec8e164e-f44a-47c1-b49a-eac33fed0b56</_hid>
+					<_hid type="a">GUID a0ba1e03-4d8c-43e9-a4af-9a694915e1e0</_hid>
 				</INObjectHandle>
 			</_dependent>
 		</IDependency>
 		<IDependency type="e">
-			<_id type="a">GUID 81940b3c-dbd3-4148-88e7-aaa316a0932d</_id>
+			<_id type="a">GUID 02b6bf8f-b4a6-4469-abc4-b8b5f77dad7e</_id>
 			<_myState type="a">2048</_myState>
 			<_name type="a">DefaultConfig</_name>
 			<Stereotypes type="c">
@@ -1548,8 +1548,8 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:30</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:30</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.25.2023::8:29:22</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.25.2023::8:29:22</_modifiedTime>
 			<_dependsOn type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
@@ -1562,16 +1562,16 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 			<_dependent type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">IEmbededFile</_hm2Class>
-					<_hid type="a">GUID ec8e164e-f44a-47c1-b49a-eac33fed0b56</_hid>
+					<_hid type="a">GUID a0ba1e03-4d8c-43e9-a4af-9a694915e1e0</_hid>
 				</INObjectHandle>
 			</_dependent>
 		</IDependency>
 		<ITag type="e">
-			<_id type="a">GUID b3d04a4f-16e9-4276-a950-37fdaf9945d4</_id>
+			<_id type="a">GUID 1c0aa78c-00ab-4753-b73f-9125f04f4b2b</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Verdict</_name>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:30</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:30</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.25.2023::8:29:22</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.25.2023::8:29:22</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -1592,13 +1592,13 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 				</IHandle>
 			</_base>
 			<AggregatesList type="e">
-				<value>GUID fe281362-9000-4995-977d-5640b953de0a</value>
+				<value>GUID 698b45e2-5250-4366-ac59-5576cc28ac18</value>
 			</AggregatesList>
 		</ITag>
 		<ILiteralSpecification type="e">
-			<_id type="a">GUID fe281362-9000-4995-977d-5640b953de0a</_id>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:30</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:30</_modifiedTime>
+			<_id type="a">GUID 698b45e2-5250-4366-ac59-5576cc28ac18</_id>
+			<_modifiedTimeWeak type="a">5.25.2023::8:29:22</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.25.2023::8:29:22</_modifiedTime>
 			<_value type="a">Passed</_value>
 		</ILiteralSpecification>
 		<IMSC type="e">
@@ -2242,7 +2242,7 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 			<m_bLeft type="a">0</m_bLeft>
 		</CGIMscMessage>
 		<IMSC type="e">
-			<_id type="a">GUID e20df338-e42f-44ae-aa8a-eec42d33fc33</_id>
+			<_id type="a">GUID f6cd21dc-8a54-41bd-8948-c10a4b45cb15</_id>
 			<_myState type="a">8192</_myState>
 			<_properties type="p"><IPropertyContainer type="e">
 				<Subjects type="c">
@@ -2394,8 +2394,8 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 				</IRPYRawContainer>
 			</Stereotypes>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:54:54</_modifiedTime>
-			<_lastModifiedTime type="a">5.24.2023::15:54:54</_lastModifiedTime>
+			<_modifiedTime type="a">5.25.2023::8:29:34</_modifiedTime>
+			<_lastModifiedTime type="a">5.25.2023::8:29:34</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -2407,18 +2407,18 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 				</IHandle>
 			</_defaultSubsystem>
 			<m_pICollaboration type="p"><ICollaboration type="e">
-				<_id type="a">GUID aa6c8b2d-bc8a-4a83-bc6f-9f74794a56ef</_id>
+				<_id type="a">GUID 2de4b923-cfdf-4b6d-acb4-8bcc103d4c6e</_id>
 				<_rmmServerID type="a">-1</_rmmServerID>
 				<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
 				<_modifiedTime type="a">5.24.2023::15:38:53</_modifiedTime>
 				<AggregatesList type="e">
-					<value>GUID d9fad45f-052e-4da1-81d4-5f68d03e467c</value>
-					<value>GUID 12640a42-3b63-43bc-9448-a059281c5433</value>
-					<value>GUID 62366d54-2dc9-4f44-9fdb-9b2e79033917</value>
+					<value>GUID 02cab4c0-f6e8-4d45-b6b8-d4298237ab96</value>
+					<value>GUID f7805a84-3800-4925-9a69-d5f6622127aa</value>
+					<value>GUID 828102ad-2bf5-4fd5-b242-d57647b96298</value>
 				</AggregatesList>
 			</ICollaboration>
 			<IClassifierRole type="e">
-				<_id type="a">GUID d9fad45f-052e-4da1-81d4-5f68d03e467c</_id>
+				<_id type="a">GUID 02cab4c0-f6e8-4d45-b6b8-d4298237ab96</_id>
 				<_properties type="p"><IPropertyContainer type="e">
 					<Subjects type="c">
 						<IRPYRawContainer type="e">
@@ -2485,7 +2485,7 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 				</m_instance>
 			</IClassifierRole>
 			<IClassifierRole type="e">
-				<_id type="a">GUID 12640a42-3b63-43bc-9448-a059281c5433</_id>
+				<_id type="a">GUID f7805a84-3800-4925-9a69-d5f6622127aa</_id>
 				<_rmmServerID type="a">-1</_rmmServerID>
 				<_name type="a">TCon_Led_Strips.itsDummyDriver_of_Led_Strips</_name>
 				<Stereotypes type="c">
@@ -2516,10 +2516,9 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 				</m_instance>
 			</IClassifierRole>
 			<IMessage type="e">
-				<_id type="a">GUID 62366d54-2dc9-4f44-9fdb-9b2e79033917</_id>
+				<_id type="a">GUID 828102ad-2bf5-4fd5-b242-d57647b96298</_id>
 				<_rmmServerID type="a">-1</_rmmServerID>
 				<_name type="a">nr_of_strips</_name>
-				<_displayName type="a">25=nr_of_strips(): Check of return value (Actual value: 0) failed</_displayName>
 				<Stereotypes type="c">
 					<IRPYRawContainer type="e">
 						<size type="a">1</size>
@@ -2535,7 +2534,7 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 					</IRPYRawContainer>
 				</Stereotypes>
 				<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-				<_modifiedTime type="a">5.24.2023::15:54:54</_modifiedTime>
+				<_modifiedTime type="a">5.24.2023::15:39:17</_modifiedTime>
 				<m_szSequence type="a">1.</m_szSequence>
 				<m_szReturnVal type="a">25</m_szReturnVal>
 				<m_pCommunicationConnection type="r">
@@ -2545,13 +2544,13 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 				<m_pReceiver type="r">
 					<IHandle type="e">
 						<_hm2Class type="a">IClassifierRole</_hm2Class>
-						<_hid type="a">GUID d9fad45f-052e-4da1-81d4-5f68d03e467c</_hid>
+						<_hid type="a">GUID 02cab4c0-f6e8-4d45-b6b8-d4298237ab96</_hid>
 					</IHandle>
 				</m_pReceiver>
 				<m_pSender type="r">
 					<IHandle type="e">
 						<_hm2Class type="a">IClassifierRole</_hm2Class>
-						<_hid type="a">GUID 12640a42-3b63-43bc-9448-a059281c5433</_hid>
+						<_hid type="a">GUID f7805a84-3800-4925-9a69-d5f6622127aa</_hid>
 					</IHandle>
 				</m_pSender>
 				<m_pFormalMessage type="r">
@@ -2574,16 +2573,16 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 					</IHandle>
 				</m_srcExec>
 				<AggregatesList type="e">
-					<value>GUID 1a0d1549-9798-4af1-b48b-29b0a7391701</value>
+					<value>GUID c5d5a0e0-ce13-4046-afef-34a244ac2307</value>
 				</AggregatesList>
 			</IMessage>
 			<ITag type="e">
-				<_id type="a">GUID 1a0d1549-9798-4af1-b48b-29b0a7391701</_id>
+				<_id type="a">GUID c5d5a0e0-ce13-4046-afef-34a244ac2307</_id>
 				<_myState type="a">8192</_myState>
 				<_rmmServerID type="a">-1</_rmmServerID>
 				<_name type="a">RTC_MsgId</_name>
 				<_modifiedTimeWeak type="a">5.24.2023::15:39:17</_modifiedTimeWeak>
-				<_modifiedTime type="a">5.24.2023::15:54:54</_modifiedTime>
+				<_modifiedTime type="a">5.25.2023::8:29:34</_modifiedTime>
 				<_typeOf type="r">
 					<IHandle type="e">
 						<_hm2Class type="a">IType</_hm2Class>
@@ -2604,11 +2603,11 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 					</IHandle>
 				</_base>
 				<AggregatesList type="e">
-					<value>GUID a7b4e13c-0312-4cf0-8bed-6eb071641283</value>
+					<value>GUID 2be6893c-d577-4a25-be41-43dcf122ddba</value>
 				</AggregatesList>
 			</ITag>
 			<ILiteralSpecification type="e">
-				<_id type="a">GUID a7b4e13c-0312-4cf0-8bed-6eb071641283</_id>
+				<_id type="a">GUID 2be6893c-d577-4a25-be41-43dcf122ddba</_id>
 				<_rmmServerID type="a">-1</_rmmServerID>
 				<_modifiedTimeWeak type="a">5.24.2023::15:39:17</_modifiedTimeWeak>
 				<_modifiedTime type="a">5.24.2023::15:39:17</_modifiedTime>
@@ -2616,19 +2615,19 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 			</ILiteralSpecification>
 			</m_pICollaboration>
 			<AggregatesList type="e">
-				<value>GUID ed15bcb6-50cc-46eb-a394-01c4635a231c</value>
+				<value>GUID 9790e2f7-c823-406e-b493-e81452367185</value>
 			</AggregatesList>
 		</IMSC>
 		<CGIMscChart type="e">
 			<vLadderMargin type="a">20</vLadderMargin>
 			<m_usingActivationBar type="a">0</m_usingActivationBar>
-			<_id type="a">GUID ed15bcb6-50cc-46eb-a394-01c4635a231c</_id>
+			<_id type="a">GUID 9790e2f7-c823-406e-b493-e81452367185</_id>
 			<_rmmServerID type="a">-1</_rmmServerID>
 			<m_type type="a">0</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IMSC</_hm2Class>
-					<_hid type="a">GUID e20df338-e42f-44ae-aa8a-eec42d33fc33</_hid>
+					<_hid type="a">GUID f6cd21dc-8a54-41bd-8948-c10a4b45cb15</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -2658,25 +2657,25 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 			<m_nCreateDate type="a">0</m_nCreateDate>
 			<m_bScaleWithZoom type="a">1</m_bScaleWithZoom>
 			<m_arrowStyle type="a">'S'</m_arrowStyle>
-			<m_pRoot type="s">GUID 55b8888a-7e6f-437b-a89c-55164e172070</m_pRoot>
+			<m_pRoot type="s">GUID 15ca5b8d-65c4-4022-ac7a-2841a24e9520</m_pRoot>
 			<m_currentLeftTop type="a">0 0 </m_currentLeftTop>
 			<m_currentRightBottom type="a">0 0 </m_currentRightBottom>
 			<m_bFreezeCompartmentContent type="a">0</m_bFreezeCompartmentContent>
 			<AggregatesList type="e">
-				<value>GUID 55b8888a-7e6f-437b-a89c-55164e172070</value>
-				<value>GUID aa3a1f23-c00f-4e97-8eec-6a023e0bdbe7</value>
-				<value>GUID c76795da-a453-4a3f-966b-5cddd425ad3b</value>
-				<value>GUID 7b54c0a5-57a1-4191-9f03-5eda10c1cba8</value>
+				<value>GUID 15ca5b8d-65c4-4022-ac7a-2841a24e9520</value>
+				<value>GUID ac4cdda1-3898-4e4a-97fa-cf8a1ee0ea25</value>
+				<value>GUID ce3e6fdf-ec8c-45b3-889e-c30a874126a6</value>
+				<value>GUID a2d6f43b-aeef-4bb2-abe7-8ba390a25efb</value>
 			</AggregatesList>
 		</CGIMscChart>
 		<CGIBox type="e">
-			<_id type="a">GUID 55b8888a-7e6f-437b-a89c-55164e172070</_id>
+			<_id type="a">GUID 15ca5b8d-65c4-4022-ac7a-2841a24e9520</_id>
 			<_rmmServerID type="a">-1</_rmmServerID>
 			<m_type type="a">108</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">ICollaboration</_hm2Class>
-					<_hid type="a">GUID aa6c8b2d-bc8a-4a83-bc6f-9f74794a56ef</_hid>
+					<_hid type="a">GUID 2de4b923-cfdf-4b6d-acb4-8bcc103d4c6e</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -2703,7 +2702,7 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
 		</CGIBox>
 		<CGIMscColumnCR type="e">
-			<_id type="a">GUID aa3a1f23-c00f-4e97-8eec-6a023e0bdbe7</_id>
+			<_id type="a">GUID ac4cdda1-3898-4e4a-97fa-cf8a1ee0ea25</_id>
 			<_properties type="p"><IPropertyContainer type="e">
 				<Subjects type="c">
 					<IRPYRawContainer type="e">
@@ -2741,10 +2740,10 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClassifierRole</_hm2Class>
-					<_hid type="a">GUID d9fad45f-052e-4da1-81d4-5f68d03e467c</_hid>
+					<_hid type="a">GUID 02cab4c0-f6e8-4d45-b6b8-d4298237ab96</_hid>
 				</IHandle>
 			</m_pModelObject>
-			<m_pParent type="s">GUID 55b8888a-7e6f-437b-a89c-55164e172070</m_pParent>
+			<m_pParent type="s">GUID 15ca5b8d-65c4-4022-ac7a-2841a24e9520</m_pParent>
 			<m_name type="p">
 				<CGIText type="e">
 					<m_str type="a">TCon_Led_Strips.itsLed_Strips:Led_Strips</m_str>
@@ -2790,16 +2789,16 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 			<m_SubType type="a">0</m_SubType>
 		</CGIMscColumnCR>
 		<CGIMscColumnCR type="e">
-			<_id type="a">GUID c76795da-a453-4a3f-966b-5cddd425ad3b</_id>
+			<_id type="a">GUID ce3e6fdf-ec8c-45b3-889e-c30a874126a6</_id>
 			<_rmmServerID type="a">-1</_rmmServerID>
 			<m_type type="a">109</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClassifierRole</_hm2Class>
-					<_hid type="a">GUID 12640a42-3b63-43bc-9448-a059281c5433</_hid>
+					<_hid type="a">GUID f7805a84-3800-4925-9a69-d5f6622127aa</_hid>
 				</IHandle>
 			</m_pModelObject>
-			<m_pParent type="s">GUID 55b8888a-7e6f-437b-a89c-55164e172070</m_pParent>
+			<m_pParent type="s">GUID 15ca5b8d-65c4-4022-ac7a-2841a24e9520</m_pParent>
 			<m_name type="p">
 				<CGIText type="e">
 					<m_str type="a">TCon_Led_Strips.itsDummyDriver_of_Led_Strips:DummyDriver_of_Led_Strips</m_str>
@@ -2845,11 +2844,11 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 			<m_SubType type="a">0</m_SubType>
 		</CGIMscColumnCR>
 		<CGIMscMessage type="e">
-			<_id type="a">GUID 7b54c0a5-57a1-4191-9f03-5eda10c1cba8</_id>
+			<_id type="a">GUID a2d6f43b-aeef-4bb2-abe7-8ba390a25efb</_id>
 			<_properties type="p"><IPropertyContainer type="e">
 				<Subjects type="c">
 					<IRPYRawContainer type="e">
-						<size type="a">2</size>
+						<size type="a">1</size>
 						<IPropertySubject type="e">
 							<_Name type="a">Format</_Name>
 							<Metaclasses type="c">
@@ -2862,7 +2861,7 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 												<size type="a">2</size>
 												<IProperty type="e">
 													<_Name type="a">Line.LineColor</_Name>
-													<_Value type="a">255,0,0</_Value>
+													<_Value type="a">0,112,0</_Value>
 													<_Type type="a">Color</_Type>
 												</IProperty>
 												
@@ -2870,30 +2869,6 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 													<_Name type="a">Line.LineWidth</_Name>
 													<_Value type="a">2</_Value>
 													<_Type type="a">Int</_Type>
-												</IProperty>
-												
-											</IRPYRawContainer>
-										</Properties>
-									</IPropertyMetaclass>
-									
-								</IRPYRawContainer>
-							</Metaclasses>
-						</IPropertySubject>
-						
-						<IPropertySubject type="e">
-							<_Name type="a">General</_Name>
-							<Metaclasses type="c">
-								<IRPYRawContainer type="e">
-									<size type="a">1</size>
-									<IPropertyMetaclass type="e">
-										<_Name type="a">Graphics</_Name>
-										<Properties type="c">
-											<IRPYRawContainer type="e">
-												<size type="a">1</size>
-												<IProperty type="e">
-													<_Name type="a">ShowLabels</_Name>
-													<_Value type="a">True</_Value>
-													<_Type type="a">Bool</_Type>
 												</IProperty>
 												
 											</IRPYRawContainer>
@@ -2913,13 +2888,13 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IMessage</_hm2Class>
-					<_hid type="a">GUID 62366d54-2dc9-4f44-9fdb-9b2e79033917</_hid>
+					<_hid type="a">GUID 828102ad-2bf5-4fd5-b242-d57647b96298</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
 			<m_name type="p">
 				<CGIText type="e">
-					<m_str type="a">25=nr_of_strips(): Check of return value (Actual value: 0) failed</m_str>
+					<m_str type="a">25=nr_of_strips()</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -2934,11 +2909,11 @@ ActiveConfiguration $ACTIVECONFIGURATION%0D
 					<m_nOrientationCtrlPt type="a">4</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_name>
-			<m_drawBehavior type="a">2048</m_drawBehavior>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
 			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
-			<m_pSource type="s">GUID c76795da-a453-4a3f-966b-5cddd425ad3b</m_pSource>
+			<m_pSource type="s">GUID ce3e6fdf-ec8c-45b3-889e-c30a874126a6</m_pSource>
 			<m_sourceType type="a">'F'</m_sourceType>
-			<m_pTarget type="s">GUID aa3a1f23-c00f-4e97-8eec-6a023e0bdbe7</m_pTarget>
+			<m_pTarget type="s">GUID ac4cdda1-3898-4e4a-97fa-cf8a1ee0ea25</m_pTarget>
 			<m_targetType type="a">'T'</m_targetType>
 			<m_direction type="a">' '</m_direction>
 			<m_rpn type="p">
@@ -3596,11 +3571,11 @@ return &quot;&quot;;
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:20</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:20</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.25.2023::8:29:5</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.25.2023::8:29:5</_modifiedTime>
 			<_lastID type="a">1</_lastID>
-			<weakCGTime type="a">5.24.2023::15:55:20</weakCGTime>
-			<strongCGTime type="a">5.24.2023::15:55:20</strongCGTime>
+			<weakCGTime type="a">5.25.2023::8:29:5</weakCGTime>
+			<strongCGTime type="a">5.25.2023::8:29:5</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
 				</IHandle>
