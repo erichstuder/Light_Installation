@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>100.840.0</version>
+	<lang>C++</lang>
+	<BuildNo>9841247</BuildNo>
+	
+	<RHAPSODY-MODEL>
+	<ISubsystem type="e">
+			<_id type="a">GUID d3ee2cce-1a4d-4ef2-9407-a30fa0a7aa6d</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<size type="a">2</size>
+						<IPropertySubject type="e">
+							<_Name type="a">CPP_CG</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">1</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Package</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">2</size>
+												<IProperty type="e">
+													<_Name type="a">DefineNameSpace</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">GenerateDirectory</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">TestConductor</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">1</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Settings</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">2</size>
+												<IProperty type="e">
+													<_Name type="a">CreateTestArchitectureUsingGlobalObjects</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">TestingMode</_Name>
+													<_Value type="a">AssertionBased</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">AnimationBased,AssertionBased</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_name type="a">TPkg_Strip</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">1</size>
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\TestingProfile\TestingProfile_rpy\TestingProfile.sbs</_hfilename>
+							<_hsubsystem type="a">TestingProfile::RTC::TestArchitecture</_hsubsystem>
+							<_hname type="a">TestPackage</_hname>
+							<_hid type="a">GUID 657a25b3-75f1-4419-98a4-e1a65d5a0def</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">5.28.2023::17:56:48</_modifiedTimeWeak>
+			<EmbededFiles type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</EmbededFiles>
+			<_modifiedTime type="a">5.28.2023::17:56:48</_modifiedTime>
+			<weakCGTime type="a">5.28.2023::17:56:48</weakCGTime>
+			<strongCGTime type="a">5.28.2023::17:46:49</strongCGTime>
+			<_defaultComposite type="s">GUID c28a58d2-5b3d-4954-a8d0-067b7ae8c4b5</_defaultComposite>
+			<_eventsBaseID type="a">15001</_eventsBaseID>
+			<_configurationRelatedTime type="a">5.28.2023::17:46:49</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 8537f10f-28e1-49de-9455-60fe09e547a8</value>
+				<value>GUID 35eef609-6dd6-4088-8415-a8ea137b54f9</value>
+				<value>GUID 293cb5b2-4dac-4681-b4e0-baec082d8a57</value>
+				<value>GUID c28a58d2-5b3d-4954-a8d0-067b7ae8c4b5</value>
+				<value>GUID a68033d6-052a-48e2-9720-538a9e97e2e9</value>
+				<value>GUID fd1dc0b3-aad4-416a-b8f8-0f3d704dfe01</value>
+			</AggregatesList>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">TCon_Strip_Architecture</fileName>
+			<_id type="a">GUID 8537f10f-28e1-49de-9455-60fe09e547a8</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">TCon_Strip_TestControl</fileName>
+			<_id type="a">GUID 35eef609-6dd6-4088-8415-a8ea137b54f9</_id>
+		</ISubsystem>
+		<IComponent type="e">
+			<fileName type="a">TPkg_Strip_Comp</fileName>
+			<_id type="a">GUID 293cb5b2-4dac-4681-b4e0-baec082d8a57</_id>
+		</IComponent>
+		<IClass type="e">
+			<_id type="a">GUID c28a58d2-5b3d-4954-a8d0-067b7ae8c4b5</_id>
+			<_myState type="a">40960</_myState>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">5.28.2023::17:46:49</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::17:46:49</_modifiedTime>
+			<weakCGTime type="a">5.28.2023::17:46:49</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID d9a593b7-db8f-4aa3-ab87-4a1260f45971</value>
+				<value>GUID 52eab41c-e8ae-4670-a690-63daf84c862e</value>
+			</AggregatesList>
+		</IClass>
+		<IPart type="e">
+			<_id type="a">GUID d9a593b7-db8f-4aa3-ab87-4a1260f45971</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">itsTCon_Strip_Scheduler</_name>
+			<_modifiedTimeWeak type="a">5.28.2023::17:46:49</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::17:46:49</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hfilename type="a">.\TCon_Strip_TestControl.sbsx</_hfilename>
+					<_hsubsystem type="a">TPkg_Strip::TCon_Strip_TestControl</_hsubsystem>
+					<_hname type="a">TCon_Strip_Scheduler</_hname>
+					<_hid type="a">GUID 12750dc1-6cf8-4c6e-bbf6-fbfc4a06537b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_inverse>
+		</IPart>
+		<IPart type="e">
+			<_id type="a">GUID 52eab41c-e8ae-4670-a690-63daf84c862e</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsTCon_Strip</_name>
+			<_modifiedTimeWeak type="a">5.28.2023::17:46:49</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::17:46:49</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hfilename type="a">.\TCon_Strip_Architecture.sbsx</_hfilename>
+					<_hsubsystem type="a">TPkg_Strip::TCon_Strip_Architecture</_hsubsystem>
+					<_hname type="a">TCon_Strip</_hname>
+					<_hid type="a">GUID 91e82b30-ee9e-446c-9b74-b38fb78d3fce</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_inverse>
+		</IPart>
+		<IEvent type="e">
+			<_id type="a">GUID a68033d6-052a-48e2-9720-538a9e97e2e9</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">evTCStart</_name>
+			<_modifiedTimeWeak type="a">5.28.2023::17:46:49</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::17:46:49</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Args>
+		</IEvent>
+		<IEvent type="e">
+			<_id type="a">GUID fd1dc0b3-aad4-416a-b8f8-0f3d704dfe01</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">evTCFinished</_name>
+			<_modifiedTimeWeak type="a">5.28.2023::17:46:49</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::17:46:49</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Args>
+		</IEvent>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+			<size type="a">0</size>
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

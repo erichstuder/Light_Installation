@@ -146,8 +146,8 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">firmware</_name>
-			<_modifiedTimeWeak type="a">5.28.2023::16:52:4</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.28.2023::16:52:4</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.28.2023::17:46:49</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::17:53:38</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
@@ -180,8 +180,9 @@
 			<_component type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IComponent</_hm2Class>
-					<_hname type="a">Component</_hname>
-					<_hid type="a">GUID 1e499f98-6051-4dcc-be89-d1bd07568b37</_hid>
+					<_hsubsystem type="a">TPkg_Strip</_hsubsystem>
+					<_hname type="a">TPkg_Strip_Comp</_hname>
+					<_hid type="a">GUID 293cb5b2-4dac-4681-b4e0-baec082d8a57</_hid>
 				</IHandle>
 			</_component>
 			<Multiplicities type="c">
@@ -229,9 +230,11 @@
 				<value>GUID 3f0773c8-c3a2-4e47-96df-0316e3c9ad73</value>
 				<value>GUID 4c76d60f-4c98-42e0-b168-2441ba3a5283</value>
 				<value>GUID 347694ae-5190-4d9c-a15a-ec291bcb3fa8</value>
+				<value>GUID 97e8e172-3b62-412c-b1a2-3a27c06ceaa4</value>
 				<value>GUID d24d9192-bc4f-48a2-a4e1-fdaebbdfa6b6</value>
 				<value>GUID c4330c76-1cd6-4dbd-bdff-600355b9f34d</value>
 				<value>GUID 74ef0591-fbb4-4279-a005-822d9597ffc8</value>
+				<value>GUID d3ee2cce-1a4d-4ef2-9407-a30fa0a7aa6d</value>
 				<value>GUID 84261723-8643-45a1-99af-b54226989ed2</value>
 				<value>GUID 1e499f98-6051-4dcc-be89-d1bd07568b37</value>
 			</AggregatesList>
@@ -247,6 +250,10 @@
 		<ISubsystem type="e">
 			<fileName type="a">TPkg_Led_Strips</fileName>
 			<_id type="a">GUID 347694ae-5190-4d9c-a15a-ec291bcb3fa8</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">TPkg_Application</fileName>
+			<_id type="a">GUID 97e8e172-3b62-412c-b1a2-3a27c06ceaa4</_id>
 		</ISubsystem>
 		<IProfile type="e">
 			<fileName type="a">UMLPerspectives</fileName>
@@ -267,6 +274,10 @@
 			<_id type="a">GUID 74ef0591-fbb4-4279-a005-822d9597ffc8</_id>
 			<_partOfTheModelKind type="a">referenceunit</_partOfTheModelKind>
 		</IProfile>
+		<ISubsystem type="e">
+			<fileName type="a">TPkg_Strip</fileName>
+			<_id type="a">GUID d3ee2cce-1a4d-4ef2-9407-a30fa0a7aa6d</_id>
+		</ISubsystem>
 		<IDiagram type="e">
 			<_id type="a">GUID 84261723-8643-45a1-99af-b54226989ed2</_id>
 			<_myState type="a">8192</_myState>
