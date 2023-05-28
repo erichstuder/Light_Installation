@@ -8,17 +8,17 @@
 	
 	<RHAPSODY-MODEL>
 	<IComponent type="e">
-			<_id type="a">GUID 83e912fb-2dc3-473f-89ff-3a2d1bbc44e5</_id>
+			<_id type="a">GUID 79c73435-7763-4b6a-a652-284e5025394e</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">TPkg_Led_Strips_Comp</_name>
-			<_modifiedTimeWeak type="a">5.25.2023::8:26:34</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.25.2023::8:26:34</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.28.2023::16:48:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::16:48:44</_modifiedTime>
 			<m_buildType type="a">Executable</m_buildType>
 			<m_includePath type="a">$(OMROOT)/../TestConductor</m_includePath>
 			<m_configActive type="r">
 				<ICodeGenConfigInfoHandle type="e">
 					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
-					<_hid type="a">GUID eeef9a57-8a10-4029-80e3-48b4432c2b8f</_hid>
+					<_hid type="a">GUID a267d06e-9b08-4f0a-a852-2da1de24ae4b</_hid>
 				</ICodeGenConfigInfoHandle>
 			</m_configActive>
 			<VariationPoints type="c">
@@ -31,29 +31,46 @@
 					<size type="a">0</size>
 				</IRPYRawContainer>
 			</SelectedVariants>
-			<weakCGTime type="a">5.25.2023::8:26:34</weakCGTime>
-			<strongCGTime type="a">5.24.2023::15:36:45</strongCGTime>
+			<weakCGTime type="a">5.28.2023::16:48:44</weakCGTime>
+			<strongCGTime type="a">5.28.2023::16:5:29</strongCGTime>
 			<AggregatesList type="e">
-				<value>GUID 7acaae36-19d0-406e-9a10-59542bb8284b</value>
-				<value>GUID eeef9a57-8a10-4029-80e3-48b4432c2b8f</value>
+				<value>GUID 2ba6c494-a7e7-489a-9b31-7ed6245d53f5</value>
+				<value>GUID a267d06e-9b08-4f0a-a852-2da1de24ae4b</value>
 			</AggregatesList>
 		</IComponent>
 		<IFolder type="e">
-			<_id type="a">GUID 7acaae36-19d0-406e-9a10-59542bb8284b</_id>
+			<_id type="a">GUID 2ba6c494-a7e7-489a-9b31-7ed6245d53f5</_id>
 			<_myState type="a">73728</_myState>
 			<_name type="a">Files</_name>
-			<_modifiedTimeWeak type="a">5.24.2023::15:36:45</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:36:45</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.28.2023::16:5:29</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::16:5:29</_modifiedTime>
 			<Elements type="c">
 				<IRPYRawContainer type="e">
 					<size type="a">8</size>
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\TCon_Led_Strips_Architecture.sbsx</_hfilename>
+							<_hsubsystem type="a">TPkg_Led_Strips</_hsubsystem>
+							<_hname type="a">TCon_Led_Strips_Architecture</_hname>
+							<_hid type="a">GUID 33b67897-f9f6-420a-b8b0-03999707f8bb</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\TPkg_Led_Strips.sbsx</_hfilename>
+							<_hname type="a">TPkg_Led_Strips</_hname>
+							<_hid type="a">GUID 347694ae-5190-4d9c-a15a-ec291bcb3fa8</_hid>
+						</IHandle>
+					
 					
 						<IHandle type="e">
 							<_hm2Class type="a">IClass</_hm2Class>
 							<_hfilename type="a">.\TCon_Led_Strips_Architecture.sbsx</_hfilename>
 							<_hsubsystem type="a">TPkg_Led_Strips::TCon_Led_Strips_Architecture</_hsubsystem>
 							<_hname type="a">TCon_Led_Strips</_hname>
-							<_hid type="a">GUID 1daf0fd9-5cf1-4e7c-af74-4ac5d39ec674</_hid>
+							<_hid type="a">GUID 506f50e1-0b88-402f-a4a6-2382aa1b4952</_hid>
 						</IHandle>
 					
 					
@@ -62,7 +79,7 @@
 							<_hfilename type="a">.\TCon_Led_Strips_TestControl.sbsx</_hfilename>
 							<_hsubsystem type="a">TPkg_Led_Strips::TCon_Led_Strips_TestControl</_hsubsystem>
 							<_hname type="a">TCon_Led_Strips_Scheduler</_hname>
-							<_hid type="a">GUID 5ce218cf-bfb3-460e-bec0-684b3ce13943</_hid>
+							<_hid type="a">GUID 2060fbe8-7b04-4001-955e-75fcde68b435</_hid>
 						</IHandle>
 					
 					
@@ -98,24 +115,7 @@
 							<_hfilename type="a">.\TCon_Led_Strips_Architecture.sbsx</_hfilename>
 							<_hsubsystem type="a">TPkg_Led_Strips::TCon_Led_Strips_Architecture</_hsubsystem>
 							<_hname type="a">DummyDriver_of_Led_Strips</_hname>
-							<_hid type="a">GUID 570f2c8b-216c-4988-92b0-a4f1520e6ab2</_hid>
-						</IHandle>
-					
-					
-						<IHandle type="e">
-							<_hm2Class type="a">ISubsystem</_hm2Class>
-							<_hfilename type="a">.\TCon_Led_Strips_Architecture.sbsx</_hfilename>
-							<_hsubsystem type="a">TPkg_Led_Strips</_hsubsystem>
-							<_hname type="a">TCon_Led_Strips_Architecture</_hname>
-							<_hid type="a">GUID 4064d37f-b906-40b8-a859-f58275f9eebd</_hid>
-						</IHandle>
-					
-					
-						<IHandle type="e">
-							<_hm2Class type="a">ISubsystem</_hm2Class>
-							<_hfilename type="a">.\TPkg_Led_Strips.sbsx</_hfilename>
-							<_hname type="a">TPkg_Led_Strips</_hname>
-							<_hid type="a">GUID 9fb36e23-f6d7-4eb6-8bd5-e281006500cc</_hid>
+							<_hid type="a">GUID ef72a96a-6532-406f-bac9-82fa49b798ba</_hid>
 						</IHandle>
 					
 				</IRPYRawContainer>
@@ -127,7 +127,7 @@
 			</Files>
 		</IFolder>
 		<ICodeGenConfigInfo type="e">
-			<_id type="a">GUID eeef9a57-8a10-4029-80e3-48b4432c2b8f</_id>
+			<_id type="a">GUID a267d06e-9b08-4f0a-a852-2da1de24ae4b</_id>
 			<_myState type="a">8192</_myState>
 			<_properties type="p"><IPropertyContainer type="e">
 				<Subjects type="c">
@@ -224,8 +224,8 @@
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.25.2023::8:29:20</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.25.2023::8:29:20</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.28.2023::16:48:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::16:48:44</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<_scopeType type="a">Explicit</_scopeType>
 			<_additionalSources type="a">../../Mocks/WS2812FX.cpp</_additionalSources>
@@ -248,8 +248,8 @@ itsTCon_Led_Strips_Scheduler.parseCommands(argc,argv);</_initializationCode>
 					<size type="a">0</size>
 				</IRPYRawContainer>
 			</InitialInstances>
-			<weakCGTime type="a">5.25.2023::8:29:20</weakCGTime>
-			<strongCGTime type="a">5.25.2023::8:29:20</strongCGTime>
+			<weakCGTime type="a">5.28.2023::16:48:44</weakCGTime>
+			<strongCGTime type="a">5.28.2023::16:48:44</strongCGTime>
 			<AnimScopeElements type="c">
 				<IRPYRawContainer type="e">
 					<size type="a">0</size>
@@ -258,14 +258,14 @@ itsTCon_Led_Strips_Scheduler.parseCommands(argc,argv);</_initializationCode>
 			<m_allInAnimScope type="a">1</m_allInAnimScope>
 			<m_generateUsecases type="a">0</m_generateUsecases>
 			<AggregatesList type="e">
-				<value>GUID 6cd1be59-0bea-400e-96bd-9fb85d91fe0e</value>
-				<value>GUID 79c6d51e-1c90-4248-b22b-c627801a3334</value>
-				<value>GUID 10d50a5e-0d04-4911-a9eb-e5f3c3bb5121</value>
-				<value>GUID f17dd82a-6f41-4c82-bb31-eca4b46deb1d</value>
+				<value>GUID 5af6268f-1497-446a-bfdb-33048183a24e</value>
+				<value>GUID a2cb0c1c-8eda-4389-94c5-6e7eaca5104a</value>
+				<value>GUID 56656438-323f-4203-8b29-eefa8d3fab22</value>
+				<value>GUID b413c07c-7d30-4095-9a8e-f841649a6db9</value>
 			</AggregatesList>
 		</ICodeGenConfigInfo>
 		<IDependency type="e">
-			<_id type="a">GUID 6cd1be59-0bea-400e-96bd-9fb85d91fe0e</_id>
+			<_id type="a">GUID 5af6268f-1497-446a-bfdb-33048183a24e</_id>
 			<_name type="a">theScheduler</_name>
 			<Stereotypes type="c">
 				<IRPYRawContainer type="e">
@@ -280,28 +280,28 @@ itsTCon_Led_Strips_Scheduler.parseCommands(argc,argv);</_initializationCode>
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.24.2023::15:36:45</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:36:45</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.28.2023::16:5:29</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::16:5:29</_modifiedTime>
 			<_dependsOn type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
 					<_hfilename type="a">.\TCon_Led_Strips_TestControl.sbsx</_hfilename>
 					<_hsubsystem type="a">TPkg_Led_Strips::TCon_Led_Strips_TestControl</_hsubsystem>
 					<_hname type="a">TCon_Led_Strips_Scheduler</_hname>
-					<_hid type="a">GUID 5ce218cf-bfb3-460e-bec0-684b3ce13943</_hid>
+					<_hid type="a">GUID 2060fbe8-7b04-4001-955e-75fcde68b435</_hid>
 				</INObjectHandle>
 			</_dependsOn>
 			<_dependent type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
-					<_hid type="a">GUID eeef9a57-8a10-4029-80e3-48b4432c2b8f</_hid>
+					<_hid type="a">GUID a267d06e-9b08-4f0a-a852-2da1de24ae4b</_hid>
 				</INObjectHandle>
 			</_dependent>
 		</IDependency>
 		<IMHyperLink type="e">
-			<_id type="a">GUID 79c6d51e-1c90-4248-b22b-c627801a3334</_id>
+			<_id type="a">GUID a2cb0c1c-8eda-4389-94c5-6e7eaca5104a</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:36:59</_modifiedTime>
+			<_modifiedTime type="a">5.28.2023::16:5:56</_modifiedTime>
 			<_dependsOn type="r">
 				<INObjectHandle type="e">
 				</INObjectHandle>
@@ -312,9 +312,9 @@ itsTCon_Led_Strips_Scheduler.parseCommands(argc,argv);</_initializationCode>
 			<isConfigurationFileHyperLink type="a">1</isConfigurationFileHyperLink>
 		</IMHyperLink>
 		<IMHyperLink type="e">
-			<_id type="a">GUID 10d50a5e-0d04-4911-a9eb-e5f3c3bb5121</_id>
+			<_id type="a">GUID 56656438-323f-4203-8b29-eefa8d3fab22</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:36:59</_modifiedTime>
+			<_modifiedTime type="a">5.28.2023::16:5:56</_modifiedTime>
 			<_dependsOn type="r">
 				<INObjectHandle type="e">
 				</INObjectHandle>
@@ -325,11 +325,11 @@ itsTCon_Led_Strips_Scheduler.parseCommands(argc,argv);</_initializationCode>
 			<isConfigurationFileHyperLink type="a">1</isConfigurationFileHyperLink>
 		</IMHyperLink>
 		<IFolder type="e">
-			<_id type="a">GUID f17dd82a-6f41-4c82-bb31-eca4b46deb1d</_id>
+			<_id type="a">GUID b413c07c-7d30-4095-9a8e-f841649a6db9</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">DefaultConfig</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:36:45</_modifiedTime>
+			<_modifiedTime type="a">5.28.2023::16:5:29</_modifiedTime>
 			<Elements type="c">
 				<IRPYRawContainer type="e">
 					<size type="a">0</size>

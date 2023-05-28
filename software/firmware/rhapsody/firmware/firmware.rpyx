@@ -146,8 +146,8 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">firmware</_name>
-			<_modifiedTimeWeak type="a">5.24.2023::15:54:27</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:54:27</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.28.2023::16:52:4</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::16:52:4</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
@@ -180,9 +180,8 @@
 			<_component type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IComponent</_hm2Class>
-					<_hsubsystem type="a">TPkg_Led_Strips</_hsubsystem>
-					<_hname type="a">TPkg_Led_Strips_Comp</_hname>
-					<_hid type="a">GUID 83e912fb-2dc3-473f-89ff-3a2d1bbc44e5</_hid>
+					<_hname type="a">Component</_hname>
+					<_hid type="a">GUID 1e499f98-6051-4dcc-be89-d1bd07568b37</_hid>
 				</IHandle>
 			</_component>
 			<Multiplicities type="c">
@@ -229,10 +228,10 @@
 			<AggregatesList type="e">
 				<value>GUID 3f0773c8-c3a2-4e47-96df-0316e3c9ad73</value>
 				<value>GUID 4c76d60f-4c98-42e0-b168-2441ba3a5283</value>
+				<value>GUID 347694ae-5190-4d9c-a15a-ec291bcb3fa8</value>
 				<value>GUID d24d9192-bc4f-48a2-a4e1-fdaebbdfa6b6</value>
 				<value>GUID c4330c76-1cd6-4dbd-bdff-600355b9f34d</value>
 				<value>GUID 74ef0591-fbb4-4279-a005-822d9597ffc8</value>
-				<value>GUID 9fb36e23-f6d7-4eb6-8bd5-e281006500cc</value>
 				<value>GUID 84261723-8643-45a1-99af-b54226989ed2</value>
 				<value>GUID 1e499f98-6051-4dcc-be89-d1bd07568b37</value>
 			</AggregatesList>
@@ -244,6 +243,10 @@
 		<ISubsystem type="e">
 			<fileName type="a">_Overview</fileName>
 			<_id type="a">GUID 4c76d60f-4c98-42e0-b168-2441ba3a5283</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">TPkg_Led_Strips</fileName>
+			<_id type="a">GUID 347694ae-5190-4d9c-a15a-ec291bcb3fa8</_id>
 		</ISubsystem>
 		<IProfile type="e">
 			<fileName type="a">UMLPerspectives</fileName>
@@ -264,10 +267,6 @@
 			<_id type="a">GUID 74ef0591-fbb4-4279-a005-822d9597ffc8</_id>
 			<_partOfTheModelKind type="a">referenceunit</_partOfTheModelKind>
 		</IProfile>
-		<ISubsystem type="e">
-			<fileName type="a">TPkg_Led_Strips</fileName>
-			<_id type="a">GUID 9fb36e23-f6d7-4eb6-8bd5-e281006500cc</_id>
-		</ISubsystem>
 		<IDiagram type="e">
 			<_id type="a">GUID 84261723-8643-45a1-99af-b54226989ed2</_id>
 			<_myState type="a">8192</_myState>

@@ -8,7 +8,7 @@
 	
 	<RHAPSODY-MODEL>
 	<ISubsystem type="e">
-			<_id type="a">GUID 9fb36e23-f6d7-4eb6-8bd5-e281006500cc</_id>
+			<_id type="a">GUID 347694ae-5190-4d9c-a15a-ec291bcb3fa8</_id>
 			<_myState type="a">8192</_myState>
 			<_properties type="p"><IPropertyContainer type="e">
 				<Subjects type="c">
@@ -94,136 +94,41 @@
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:35</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:35</_modifiedTime>
-			<weakCGTime type="a">5.24.2023::15:55:35</weakCGTime>
-			<strongCGTime type="a">5.24.2023::15:36:45</strongCGTime>
-			<_defaultComposite type="s">GUID 7cfcc3d2-edc5-4b57-9894-324736d45828</_defaultComposite>
+			<_modifiedTimeWeak type="a">5.28.2023::16:5:29</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::16:5:29</_modifiedTime>
+			<weakCGTime type="a">5.28.2023::16:5:29</weakCGTime>
+			<strongCGTime type="a">5.28.2023::16:5:29</strongCGTime>
+			<_defaultComposite type="s">GUID e3ecba34-7845-4993-87d6-b3ca74f2edb1</_defaultComposite>
 			<_eventsBaseID type="a">27401</_eventsBaseID>
-			<_configurationRelatedTime type="a">5.24.2023::15:36:45</_configurationRelatedTime>
+			<_configurationRelatedTime type="a">5.28.2023::16:5:29</_configurationRelatedTime>
 			<AggregatesList type="e">
-				<value>GUID 4c7bb881-69a0-40ec-a43a-ac3d05848ba3</value>
-				<value>GUID 4064d37f-b906-40b8-a859-f58275f9eebd</value>
-				<value>GUID 40cc94d0-1b40-47be-a1ae-0880d986b114</value>
-				<value>GUID 83e912fb-2dc3-473f-89ff-3a2d1bbc44e5</value>
-				<value>GUID 7cfcc3d2-edc5-4b57-9894-324736d45828</value>
-				<value>GUID 947e8f17-cfe8-454f-a005-b4a6e49b14a1</value>
-				<value>GUID cddf4e9d-5ae9-4a86-9a55-0886d3f9eea7</value>
+				<value>GUID 33b67897-f9f6-420a-b8b0-03999707f8bb</value>
+				<value>GUID 07bdf2b3-f7e5-4238-8e2a-9428a16d4406</value>
+				<value>GUID 79c73435-7763-4b6a-a652-284e5025394e</value>
+				<value>GUID e3ecba34-7845-4993-87d6-b3ca74f2edb1</value>
+				<value>GUID d93ea902-87e0-4042-b449-9027ea90d120</value>
+				<value>GUID f1528435-89ec-4ae7-82a3-98ae8e8f45b9</value>
 			</AggregatesList>
 		</ISubsystem>
-		<IEmbededFile type="e">
-			<_id type="a">GUID 4c7bb881-69a0-40ec-a43a-ac3d05848ba3</_id>
-			<_name type="a">TPkg_Led_Strips_1.html</_name>
-			<Stereotypes type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">1</size>
-					
-						<IHandle type="e">
-							<_hm2Class type="a">IStereotype</_hm2Class>
-							<_hfilename type="a">$OMROOT\Profiles\TestingProfile\TestingProfile_rpy\TestingProfile.sbs</_hfilename>
-							<_hsubsystem type="a">TestingProfile::RTC::TestBehavior</_hsubsystem>
-							<_hname type="a">TestResult</_hname>
-							<_hid type="a">GUID 3b636ccf-5bd3-40bb-b142-8a0e4834ed56</_hid>
-						</IHandle>
-					
-				</IRPYRawContainer>
-			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:35</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:35</_modifiedTime>
-			<_lastID type="a">1</_lastID>
-			<_MayNeedToRelocate type="a">0</_MayNeedToRelocate>
-			<_LastKnownFullPath type="a">C:\Users\e.studer\Documents\repos\Light_Installation\software\firmware\rhapsody\firmware\firmware_rpy\TPkg_Led_Strips_1.html</_LastKnownFullPath>
-			<AggregatesList type="e">
-				<value>GUID 1c901a46-8d5f-4227-980d-e051db9e0f34</value>
-				<value>GUID 4b33f695-89ce-453f-a443-a09c7bbe0d83</value>
-			</AggregatesList>
-		</IEmbededFile>
-		<IDependency type="e">
-			<_id type="a">GUID 1c901a46-8d5f-4227-980d-e051db9e0f34</_id>
-			<_name type="a">itsTestElement</_name>
-			<Stereotypes type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">1</size>
-					
-						<IHandle type="e">
-							<_hm2Class type="a">IStereotype</_hm2Class>
-							<_hfilename type="a">$OMROOT\Profiles\TestingProfile\TestingProfile_rpy\TestingProfile.sbs</_hfilename>
-							<_hsubsystem type="a">TestingProfile::RTC::TestBehavior</_hsubsystem>
-							<_hname type="a">ExecutedElement</_hname>
-							<_hid type="a">GUID b3269538-fb0e-4902-9497-bfd2364edc4a</_hid>
-						</IHandle>
-					
-				</IRPYRawContainer>
-			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:35</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:35</_modifiedTime>
-			<_dependsOn type="r">
-				<INObjectHandle type="e">
-					<_hm2Class type="a">ISubsystem</_hm2Class>
-					<_hid type="a">GUID 9fb36e23-f6d7-4eb6-8bd5-e281006500cc</_hid>
-				</INObjectHandle>
-			</_dependsOn>
-			<_dependent type="r">
-				<INObjectHandle type="e">
-					<_hm2Class type="a">IEmbededFile</_hm2Class>
-					<_hid type="a">GUID 4c7bb881-69a0-40ec-a43a-ac3d05848ba3</_hid>
-				</INObjectHandle>
-			</_dependent>
-		</IDependency>
-		<ITag type="e">
-			<_id type="a">GUID 4b33f695-89ce-453f-a443-a09c7bbe0d83</_id>
-			<_myState type="a">8192</_myState>
-			<_name type="a">Verdict</_name>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:35</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:35</_modifiedTime>
-			<_typeOf type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypes</_hsubsystem>
-					<_hname type="a">RhpString</_hname>
-					<_hid type="a">GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35</_hid>
-				</IHandle>
-			</_typeOf>
-			<_isOrdered type="a">0</_isOrdered>
-			<_base type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">ITag</_hm2Class>
-					<_hfilename type="a">$OMROOT\Profiles\TestingProfile\TestingProfile_rpy\TestingProfile.sbs</_hfilename>
-					<_hsubsystem type="a">TestingProfile::RTC::TestBehavior</_hsubsystem>
-					<_hclass type="a">TestResult</_hclass>
-					<_hname type="a">Verdict</_hname>
-					<_hid type="a">GUID e92d7185-a5cf-4ccb-a600-09c8d95b8e3c</_hid>
-				</IHandle>
-			</_base>
-			<AggregatesList type="e">
-				<value>GUID 5d6e3d14-1b23-452d-9777-644cb43bddf0</value>
-			</AggregatesList>
-		</ITag>
-		<ILiteralSpecification type="e">
-			<_id type="a">GUID 5d6e3d14-1b23-452d-9777-644cb43bddf0</_id>
-			<_modifiedTimeWeak type="a">5.24.2023::15:55:35</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:55:35</_modifiedTime>
-			<_value type="a">Passed</_value>
-		</ILiteralSpecification>
 		<ISubsystem type="e">
 			<fileName type="a">TCon_Led_Strips_Architecture</fileName>
-			<_id type="a">GUID 4064d37f-b906-40b8-a859-f58275f9eebd</_id>
+			<_id type="a">GUID 33b67897-f9f6-420a-b8b0-03999707f8bb</_id>
 		</ISubsystem>
 		<ISubsystem type="e">
 			<fileName type="a">TCon_Led_Strips_TestControl</fileName>
-			<_id type="a">GUID 40cc94d0-1b40-47be-a1ae-0880d986b114</_id>
+			<_id type="a">GUID 07bdf2b3-f7e5-4238-8e2a-9428a16d4406</_id>
 		</ISubsystem>
 		<IComponent type="e">
 			<fileName type="a">TPkg_Led_Strips_Comp</fileName>
-			<_id type="a">GUID 83e912fb-2dc3-473f-89ff-3a2d1bbc44e5</_id>
+			<_id type="a">GUID 79c73435-7763-4b6a-a652-284e5025394e</_id>
 		</IComponent>
 		<IClass type="e">
-			<_id type="a">GUID 7cfcc3d2-edc5-4b57-9894-324736d45828</_id>
+			<_id type="a">GUID e3ecba34-7845-4993-87d6-b3ca74f2edb1</_id>
 			<_myState type="a">40960</_myState>
 			<_name type="a">TopLevel</_name>
-			<_modifiedTimeWeak type="a">5.24.2023::15:36:45</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:36:45</_modifiedTime>
-			<weakCGTime type="a">5.24.2023::15:36:45</weakCGTime>
+			<_modifiedTimeWeak type="a">5.28.2023::16:5:29</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::16:5:29</_modifiedTime>
+			<weakCGTime type="a">5.28.2023::16:5:29</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -231,16 +136,16 @@
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<AggregatesList type="e">
-				<value>GUID f570055e-8262-45f1-9b5d-d8faa443161f</value>
-				<value>GUID dbe7008b-bdd1-44ff-bf77-14eeeecd5e9a</value>
+				<value>GUID 339db56e-9cd5-4888-8f36-ef421b009796</value>
+				<value>GUID 36a9747d-d9d8-43dd-be15-e8d3c543ed7b</value>
 			</AggregatesList>
 		</IClass>
 		<IPart type="e">
-			<_id type="a">GUID f570055e-8262-45f1-9b5d-d8faa443161f</_id>
+			<_id type="a">GUID 339db56e-9cd5-4888-8f36-ef421b009796</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">itsTCon_Led_Strips_Scheduler</_name>
-			<_modifiedTimeWeak type="a">5.24.2023::15:36:45</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:36:45</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.28.2023::16:5:29</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::16:5:29</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -248,7 +153,7 @@
 					<_hfilename type="a">.\TCon_Led_Strips_TestControl.sbsx</_hfilename>
 					<_hsubsystem type="a">TPkg_Led_Strips::TCon_Led_Strips_TestControl</_hsubsystem>
 					<_hname type="a">TCon_Led_Strips_Scheduler</_hname>
-					<_hid type="a">GUID 5ce218cf-bfb3-460e-bec0-684b3ce13943</_hid>
+					<_hid type="a">GUID 2060fbe8-7b04-4001-955e-75fcde68b435</_hid>
 				</IClassifierHandle>
 			</_otherClass>
 			<_inverse type="r">
@@ -257,11 +162,11 @@
 			</_inverse>
 		</IPart>
 		<IPart type="e">
-			<_id type="a">GUID dbe7008b-bdd1-44ff-bf77-14eeeecd5e9a</_id>
+			<_id type="a">GUID 36a9747d-d9d8-43dd-be15-e8d3c543ed7b</_id>
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsTCon_Led_Strips</_name>
-			<_modifiedTimeWeak type="a">5.24.2023::15:36:45</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:36:45</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.28.2023::16:5:29</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::16:5:29</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -269,7 +174,7 @@
 					<_hfilename type="a">.\TCon_Led_Strips_Architecture.sbsx</_hfilename>
 					<_hsubsystem type="a">TPkg_Led_Strips::TCon_Led_Strips_Architecture</_hsubsystem>
 					<_hname type="a">TCon_Led_Strips</_hname>
-					<_hid type="a">GUID 1daf0fd9-5cf1-4e7c-af74-4ac5d39ec674</_hid>
+					<_hid type="a">GUID 506f50e1-0b88-402f-a4a6-2382aa1b4952</_hid>
 				</IClassifierHandle>
 			</_otherClass>
 			<_inverse type="r">
@@ -278,11 +183,11 @@
 			</_inverse>
 		</IPart>
 		<IEvent type="e">
-			<_id type="a">GUID 947e8f17-cfe8-454f-a005-b4a6e49b14a1</_id>
+			<_id type="a">GUID d93ea902-87e0-4042-b449-9027ea90d120</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">evTCStart</_name>
-			<_modifiedTimeWeak type="a">5.24.2023::15:36:44</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:36:44</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.28.2023::16:5:29</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::16:5:29</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -291,11 +196,11 @@
 			</Args>
 		</IEvent>
 		<IEvent type="e">
-			<_id type="a">GUID cddf4e9d-5ae9-4a86-9a55-0886d3f9eea7</_id>
+			<_id type="a">GUID f1528435-89ec-4ae7-82a3-98ae8e8f45b9</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">evTCFinished</_name>
-			<_modifiedTimeWeak type="a">5.24.2023::15:36:44</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.24.2023::15:36:44</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.28.2023::16:5:29</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::16:5:29</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
