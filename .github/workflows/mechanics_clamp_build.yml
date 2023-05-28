@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: install openscad
-        run: sudo apt-get install -y openscad
+        run: sudo apt-get update && sudo apt-get install -y openscad
 
       - name: set environment variable
         run: echo MY_VERSION_ID=$(echo $GITHUB_REF_NAME | grep -oE "v[0-9]+\.[0-9]+\.[0-9]+") >> $GITHUB_ENV
