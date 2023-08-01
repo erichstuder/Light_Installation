@@ -63,8 +63,9 @@ void setup(){
 	for(WS2812FX &strip : ledStrips){
 		strip.init();
 		strip.setBrightness(255);
-		strip.setSpeed(1000);
-		strip.setMode(FX_MODE_CHASE_RAINBOW);
+		//strip.setSpeed(1000);
+		//strip.setMode(FX_MODE_CHASE_RAINBOW);
+		strip.setColor(WHITE);
 		strip.start();
 	}
 }
