@@ -7,7 +7,7 @@ Feature: Led Simulation
 	During the animation the model can be rotated with the mouse.
 
 	Scenario: Start the simulator
-		When I open the simulator
+		When I start the simulator
 		Then a model of the cube is shown
 		And the leds are shown
 		And the led animation starts rightaway

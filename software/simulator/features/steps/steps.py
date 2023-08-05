@@ -1,6 +1,9 @@
-@when(u'I open the simulator')
+from behave import *
+import simulator
+
+@when(u'I start the simulator')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When I open the simulator')
+    simulator.start_simulator()
 
 
 @then(u'a model of the cube is shown')
