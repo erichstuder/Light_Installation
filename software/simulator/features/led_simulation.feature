@@ -8,8 +8,7 @@ Feature: Led Simulation
 
 	Scenario: Start the simulator
 		When I start the simulator
-		Then a model of the cube is shown
-		And the leds are shown
+		Then the leds are shown
 		And the led animation starts rightaway
 
 	Scenario: Rotating the cube

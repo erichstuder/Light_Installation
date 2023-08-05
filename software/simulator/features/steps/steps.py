@@ -6,11 +6,6 @@ def step_impl(context):
     simulator.start_simulator()
 
 
-@then(u'a model of the cube is shown')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: Then a model of the cube is shown')
-
-
 @then(u'the leds are shown')
 def step_impl(context):
     raise NotImplementedError(u'STEP: Then the leds are shown')
