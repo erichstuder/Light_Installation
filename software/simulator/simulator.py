@@ -17,7 +17,7 @@ def update_led_colors(num, leds):
 		if red > 255:
 			red = 0
 		led.set_color('#'+'{:02x}'.format(red)+'{:02x}'.format(green)+'{:02x}'.format(blue))
-	#print(datetime.now())
+	print(datetime.now())
 	return leds
 
 
@@ -47,7 +47,7 @@ def start_simulator():
 
 	ax.set_title('3D Test')
 
-	line_ani = animation.FuncAnimation(figure, update_led_colors, 1, fargs=(leds,), interval=200, blit=False)
+	line_ani = animation.FuncAnimation(figure, update_led_colors, 1, fargs=(leds,), interval=10, blit=False)
 
 	plt.show()
 
