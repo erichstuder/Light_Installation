@@ -2,8 +2,8 @@ nr_of_leds_x = 5
 nr_of_leds_y = 5
 nr_of_leds_z = 15
 nr_of_leds = nr_of_leds_x * nr_of_leds_y * nr_of_leds_z
-set xrange[0:nrOfLeds-1]
-set samples nrOfLeds
+set xrange[0:nr_of_leds-1]
+set samples nr_of_leds
 
 led_spacing_mm_x = 100
 led_spacing_mm_y = 100
