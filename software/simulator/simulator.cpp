@@ -11,11 +11,11 @@ typedef struct{
 	uint8_t r, g, b;
 } Color_t;
 
-static const uint8_t Nr_Of_Leds_Z = 15;
+static const uint8_t Nr_of_leds_z = 15;
 
-static Color_t running_light(Pixel_t pixel, uint8_t iteraction_count){
+static Color_t running_light(Pixel_t pixel, uint8_t iteration_count){
 	//TODO: assert that pixel.z is of same type as interation_count?
-	if(pixel.z == iteraction_count % Nr_Of_Leds_Z){
+	if(pixel.z == iteration_count % Nr_of_leds_z){
 		return {255, 0, 0};
 	}
 	return {0, 0, 0};
