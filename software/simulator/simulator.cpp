@@ -3,52 +3,39 @@
 
 #include "gnuplot-iostream.h"
 
-typedef struct{
-	uint8_t x, y, z;
-} Pixel_t;
+#include "I_LedPattern.h"
+#include "Wave.h"
+#include "RunningLight.h"
 
-typedef struct{
-	uint8_t r, g, b;
-} Color_t;
 
-static const uint8_t Nr_of_leds_z = 15;
+static void createPatternFile(I_LedPattern* pattern, const char* fileName){
+	std::ofstream file;
+	file.open(fileName);
 
-static Color_t running_light(Pixel_t pixel, uint8_t iteration_count){
-	//TODO: assert that pixel.z is of same type as interation_count?
-	if(pixel.z == iteration_count % Nr_of_leds_z){
-		return {255, 0, 0};
-	}
-	return {0, 0, 0};
-}
+	const uint16_t Iterations = pattern->getIterations();
 
-static void create_pattern(){
-	std::ofstream pattern_file;
-	pattern_file.open("pattern.dat");
-
-	for(uint8_t iteration_count=0; iteration_count<15; iteration_count++){
-		pattern_file << "\n\n";
+	for(uint16_t iteration=0; iteration<Iterations; iteration++){
+		file << "\n\n";
 		for(uint8_t x=0; x<5; x++){
 			for(uint8_t y=0; y<5; y++){
 				for(uint8_t z=0; z<15; z++){
-					Color_t color = running_light({x,y,z}, iteration_count);
-					pattern_file << std::to_string(x) << " " << std::to_string(y) << " " << std::to_string(z) << " "
-					<< "0x00"
-					<< std::setfill('0') << std::setw(2) << std::hex << (int)color.r
-					<< std::setfill('0') << std::setw(2) << std::hex << (int)color.g
-					<< std::setfill('0') << std::setw(2) << std::hex << (int)color.b
+					Color_t color = pattern->getColor({x,y,z}, iteration);
+					file << std::to_string(x) << " " << std::to_string(y) << " " << std::to_string(z) << " "
+					<< "0x00" << std::hex
+					<< std::setw(2) << std::setfill('0') << (int)color.r
+					<< std::setw(2) << std::setfill('0') << (int)color.g
+					<< std::setw(2) << std::setfill('0') << (int)color.b
 					<< "\n";
 				}
 			}
 		}
 	}
-	//TODO: muss auch bei einer Exception geschlossen werden.
-	pattern_file.close();
+	file.close();
 }
 
-int main(){
-	create_pattern();
 
-	Gnuplot gp("gnuplot");
+static void animate(const char* fileName){
+	Gnuplot gp("gnuplot"); //pass "gnuplot" to prevent default: "gnuplot -persist"
 	gp	<< "set grid\n"
 
 		<< "set xlabel 'x'\n"
@@ -63,12 +50,22 @@ int main(){
 		<< "bind 'ctrl-c' 'done = 1'\n"
 		<< "bind 'q' 'done = 1'\n"
 		<< "bind 'Close' 'done = 1'\n"
+		<< "bind 'Escape' 'done = 1'\n"
 
-		<< "stats 'pattern.dat' nooutput\n"
+		<< "stats '" << fileName << "' nooutput\n"
 		<< "n = 0\n"
 		<< "while(!done){\n"
 		<< "	splot 'pattern.dat' index n using ($1*100):($2*100):($3*33.25):($4) with points lt 7 lc rgbcolor variable\n"
 		<< "	n = (n + 1) % STATS_blocks\n"
 		<< "	pause(0.01)\n"
 		<< "}\n";
+}
+
+
+int main(){
+	//RunningLight pattern;
+	Wave pattern;
+
+	createPatternFile(&pattern, "pattern.dat");
+	animate("pattern.dat");
 }

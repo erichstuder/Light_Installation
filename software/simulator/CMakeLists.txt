@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.18.4)
 
-project(Tutorial VERSION 0.0.0)
+project(simulator VERSION 0.0.0)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -10,6 +10,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_executable(simulator simulator.cpp)
+
+file(GLOB LED_PATTERNS "${CMAKE_CURRENT_SOURCE_DIR}/../firmware/lib/LedPatterns/*.cpp")
+target_sources(simulator PRIVATE ${LED_PATTERNS})
 
 target_include_directories(simulator PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/gnuplot-iostream/")
 target_include_directories(simulator PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../firmware/lib/LedPatterns/")
