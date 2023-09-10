@@ -1,11 +1,13 @@
 #include "Wave.h"
 
-//#include <Arduino.h>
+#ifdef PLATFORMIO
+	#include <Arduino.h>
+#endif
 
 #include <math.h>
 
 static const float Period = 1.0f;
-const float DeltaTime = 0.01f;
+static const float DeltaTime = 0.01f;
 
 uint16_t Wave::getIterations(){
 	return (uint16_t)(Period / DeltaTime);
@@ -18,7 +20,7 @@ Color_t Wave::getColor(Pixel_t pixel, uint16_t iteration){
 
 	float radius = sqrt(pow(pixel.x - CenterPixel.x, 2) + pow(pixel.y - CenterPixel.y, 2));
 	float z = Amplitude * sin(Omega * DeltaTime * (float)iteration - M_PI*radius/MaxRadius) + CenterPixel.z;
-	z = std::min(std::max(z, 0.0f), (float)MaxPixel.z);
+	z = min(max(z, 0.0f), (float)MaxPixel.z);
 
 	if(z == pixel.z){
 		return {0, 255, 0};

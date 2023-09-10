@@ -1,37 +1,8 @@
 #include <Arduino.h>
-#include <WS2812FX.h>
-
-#define Leds_per_strip 15
-
-//see schematic for connector names
-static const uint8_t Leds_J1_1 = 15;
-static const uint8_t Leds_J1_2 = 16;
-static const uint8_t Leds_J1_3 = 14;
-static const uint8_t Leds_J1_4 = 17;
-static const uint8_t Leds_J1_5 = 18;
-static const uint8_t Leds_J2_1 = 6;
-static const uint8_t Leds_J2_2 = 5;
-static const uint8_t Leds_J2_3 = 7;
-static const uint8_t Leds_J2_4 = 4;
-static const uint8_t Leds_J2_5 = 3;
-static const uint8_t Leds_J3_1 = 11;
-static const uint8_t Leds_J3_2 = 10;
-static const uint8_t Leds_J3_3 = 12;
-static const uint8_t Leds_J3_4 = 9;
-static const uint8_t Leds_J3_5 = 8;
-static const uint8_t Leds_J4_1 = 52;
-static const uint8_t Leds_J4_2 = 44;
-static const uint8_t Leds_J4_3 = 50;
-static const uint8_t Leds_J4_4 = 46;
-static const uint8_t Leds_J4_5 = 48;
-static const uint8_t Leds_J5_1 = 42;
-static const uint8_t Leds_J5_2 = 34;
-static const uint8_t Leds_J5_3 = 40;
-static const uint8_t Leds_J5_4 = 36;
-static const uint8_t Leds_J5_5 = 38;
+#include "LedStrips.h"
 
 
-WS2812FX ledStrips[] = {
+/*WS2812FX ledStrips[] = {
 	WS2812FX(Leds_per_strip, Leds_J1_1, NEO_GRB + NEO_KHZ800, 1, 1),
 	WS2812FX(Leds_per_strip, Leds_J1_2, NEO_GRB + NEO_KHZ800, 1, 1),
 	WS2812FX(Leds_per_strip, Leds_J1_3, NEO_GRB + NEO_KHZ800, 1, 1),
@@ -57,8 +28,8 @@ WS2812FX ledStrips[] = {
 	WS2812FX(Leds_per_strip, Leds_J5_3, NEO_GRB + NEO_KHZ800, 1, 1),
 	WS2812FX(Leds_per_strip, Leds_J5_4, NEO_GRB + NEO_KHZ800, 1, 1),
 	WS2812FX(Leds_per_strip, Leds_J5_5, NEO_GRB + NEO_KHZ800, 1, 1),
-};
-
+};*/
+/*
 typedef struct{
 	uint8_t x, y, z;
 } Pixel_t;
@@ -73,9 +44,9 @@ static Color_t running_light(Pixel_t pixel, uint8_t iteration_count){
 		return {255, 0, 0};
 	}
 	return {0, 0, 0};
-}
+}*/
 
-static uint16_t myCustomEffect(uint8_t id) {
+/*static uint16_t myCustomEffect(uint8_t id) {
 	static uint8_t iteration = 0;
 	WS2812FX &strip = ledStrips[id];
 	for(uint8_t n=0; n<15; n++){
@@ -92,8 +63,9 @@ static uint16_t myCustomEffect(uint8_t id) {
 	}
 
 	return strip.getSpeed();
-}
+}*/
 
+/*
 static uint16_t custom_mode_strip_0(){ return myCustomEffect(0); }
 static uint16_t custom_mode_strip_1(){ return myCustomEffect(1); }
 static uint16_t custom_mode_strip_2(){ return myCustomEffect(2); }
@@ -118,10 +90,17 @@ static uint16_t custom_mode_strip_20(){ return myCustomEffect(20); }
 static uint16_t custom_mode_strip_21(){ return myCustomEffect(21); }
 static uint16_t custom_mode_strip_22(){ return myCustomEffect(22); }
 static uint16_t custom_mode_strip_23(){ return myCustomEffect(23); }
-static uint16_t custom_mode_strip_24(){ return myCustomEffect(24); }
+static uint16_t custom_mode_strip_24(){ return myCustomEffect(24); }*/
 
-void setup(){
-	for(WS2812FX &strip : ledStrips){
+//static LedStrips ledStrips;
+
+//void setup(){
+	
+	///LedStrips::setPattern("Wave");
+
+	//ledStrips
+
+	/*for(WS2812FX &strip : ledStrips){
 		strip.init();
 		strip.setBrightness(50);
 		//strip.setMode(FX_MODE_STATIC);
@@ -153,11 +132,37 @@ void setup(){
 	ledStrips[21].setCustomMode(custom_mode_strip_21);
 	ledStrips[22].setCustomMode(custom_mode_strip_22);
 	ledStrips[23].setCustomMode(custom_mode_strip_23);
-	ledStrips[24].setCustomMode(custom_mode_strip_24);
+	ledStrips[24].setCustomMode(custom_mode_strip_24);*/
+//}
+
+
+void setup(){
+	LedStrips::setup();
 }
 
 void loop(){
-	for(WS2812FX &strip : ledStrips){
-		strip.service();
-	}
+	LedStrips::animate();
 }
+
+
+
+
+/*
+#include <WS2812FX.h>
+
+#define LED_COUNT 30
+#define LED_PIN 12
+
+WS2812FX ws2812fx = WS2812FX(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800, 1, 1);
+
+void setup() {
+  ws2812fx.init();
+  ws2812fx.setBrightness(100);
+  ws2812fx.setSpeed(200);
+  ws2812fx.setMode(FX_MODE_RAINBOW_CYCLE);
+  ws2812fx.start();
+}
+
+void loop() {
+  ws2812fx.service();
+}*/
