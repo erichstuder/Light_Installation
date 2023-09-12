@@ -70,9 +70,9 @@ INCLUDE_DIRS += ../lib/LedStrips
 #
 # This is kind of a kludge, but it causes the
 # .o and .d files to be put under objs.
-CPPUTEST_OBJS_DIR = test-obj/1
+CPPUTEST_OBJS_DIR = temp/test-obj/1
 
-CPPUTEST_LIB_DIR = test-lib
+CPPUTEST_LIB_DIR = temp/test-lib
 
 # You may have to tweak these compiler flags
 #    CPPUTEST_WARNINGFLAGS - apply to C and C++
