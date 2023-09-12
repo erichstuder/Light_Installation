@@ -1,4 +1,6 @@
 # unit test artefacts
 firmware_tests
+firmware_tests.txt
 test-lib/
 test-obj/
+gcov/
