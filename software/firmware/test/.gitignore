@@ -1,0 +1,4 @@
+# unit test artefacts
+firmware_tests
+test-lib/
+test-obj/
