@@ -3,7 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/../**"
+                "${workspaceFolder}/../firmware/lib/**"
             ],
             "compilerPath": "/usr/bin/gcc",
             "cppStandard": "gnu++20",

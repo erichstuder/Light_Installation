@@ -4,6 +4,8 @@ SILENCE = @
 #---- Outputs ----#
 COMPONENT_NAME = firmware
 
+PROJECT_UNDER_TEST = ../firmware
+
 #--- Inputs ----#
 PROJECT_HOME_DIR = .
 ifeq "$(CPPUTEST_HOME)" ""
@@ -24,7 +26,7 @@ endif
 # SRC_DIRS specifies directories containing
 # production code C and CPP files.
 #
-SRC_FILES += ../lib/LedStrips/LedStrip.cpp
+SRC_FILES += $(PROJECT_UNDER_TEST)/lib/LedStrips/LedStrip.cpp
 SRC_DIRS +=
 
 # --- TEST_SRC_FILES and TEST_SRC_DIRS ---
@@ -52,7 +54,7 @@ CPPUTEST_USE_EXTENSIONS = Y
 # containing directory
 INCLUDE_DIRS += $(CPPUTEST_HOME)/include
 INCLUDE_DIRS += $(CPPUTEST_HOME)/include/Platforms/Gcc
-INCLUDE_DIRS += ../lib/LedStrips
+INCLUDE_DIRS += $(PROJECT_UNDER_TEST)/lib/LedStrips
 
 
 # --- CPPUTEST_OBJS_DIR ---

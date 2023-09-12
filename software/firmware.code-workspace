@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "firmware"
+		},
+		{
+			"path": "firmware_tests"
+		}
+	],
+	"settings": {}
+}
