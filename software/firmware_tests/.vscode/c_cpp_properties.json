@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/../firmware/lib/**"
+                "${workspaceFolder}/../firmware/lib/**",
+                "${workspaceFolder}/mocks"
             ],
             "compilerPath": "/usr/bin/gcc",
             "cppStandard": "gnu++20",
