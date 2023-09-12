@@ -33,6 +33,8 @@ namespace LedStrips{
 	static const uint8_t Leds_J5_4 = 36;
 	static const uint8_t Leds_J5_5 = 38;
 
+	static const uint16_t LedsPerStrip = 15;
+
 	static Wave pattern;
 
 	static uint16_t iteration=0;
@@ -116,31 +118,31 @@ namespace LedStrips{
 	}
 
 	void setup(){
-		ledStrips[0] = new LedStrip(Leds_J1_1, animationCallback_x4y0);
-		ledStrips[1] = new LedStrip(Leds_J1_2, animationCallback_x4y1);
-		ledStrips[2] = new LedStrip(Leds_J1_3, animationCallback_x4y2);
-		ledStrips[3] = new LedStrip(Leds_J1_4, animationCallback_x4y3);
-		ledStrips[4] = new LedStrip(Leds_J1_5, animationCallback_x4y4);
-		ledStrips[5] = new LedStrip(Leds_J2_1, animationCallback_x3y0);
-		ledStrips[6] = new LedStrip(Leds_J2_2, animationCallback_x3y1);
-		ledStrips[7] = new LedStrip(Leds_J2_3, animationCallback_x3y2);
-		ledStrips[8] = new LedStrip(Leds_J2_4, animationCallback_x3y3);
-		ledStrips[9] = new LedStrip(Leds_J2_5, animationCallback_x3y4);
-		ledStrips[10] = new LedStrip(Leds_J3_1, animationCallback_x2y0);
-		ledStrips[11] = new LedStrip(Leds_J3_2, animationCallback_x2y1);
-		ledStrips[12] = new LedStrip(Leds_J3_3, animationCallback_x2y2);
-		ledStrips[13] = new LedStrip(Leds_J3_4, animationCallback_x2y3);
-		ledStrips[14] = new LedStrip(Leds_J3_5, animationCallback_x2y4);
-		ledStrips[15] = new LedStrip(Leds_J4_1, animationCallback_x1y0);
-		ledStrips[16] = new LedStrip(Leds_J4_2, animationCallback_x1y1);
-		ledStrips[17] = new LedStrip(Leds_J4_3, animationCallback_x1y2);
-		ledStrips[18] = new LedStrip(Leds_J4_4, animationCallback_x1y3);
-		ledStrips[19] = new LedStrip(Leds_J4_5, animationCallback_x1y4);
-		ledStrips[20] = new LedStrip(Leds_J5_1, animationCallback_x0y0);
-		ledStrips[21] = new LedStrip(Leds_J5_2, animationCallback_x0y1);
-		ledStrips[22] = new LedStrip(Leds_J5_3, animationCallback_x0y2);
-		ledStrips[23] = new LedStrip(Leds_J5_4, animationCallback_x0y3);
-		ledStrips[24] = new LedStrip(Leds_J5_5, animationCallback_x0y4);
+		ledStrips[0]  = new LedStrip(Leds_J1_1, animationCallback_x4y0,LedsPerStrip);
+		ledStrips[1]  = new LedStrip(Leds_J1_2, animationCallback_x4y1,LedsPerStrip);
+		ledStrips[2]  = new LedStrip(Leds_J1_3, animationCallback_x4y2,LedsPerStrip);
+		ledStrips[3]  = new LedStrip(Leds_J1_4, animationCallback_x4y3,LedsPerStrip);
+		ledStrips[4]  = new LedStrip(Leds_J1_5, animationCallback_x4y4,LedsPerStrip);
+		ledStrips[5]  = new LedStrip(Leds_J2_1, animationCallback_x3y0,LedsPerStrip);
+		ledStrips[6]  = new LedStrip(Leds_J2_2, animationCallback_x3y1,LedsPerStrip);
+		ledStrips[7]  = new LedStrip(Leds_J2_3, animationCallback_x3y2,LedsPerStrip);
+		ledStrips[8]  = new LedStrip(Leds_J2_4, animationCallback_x3y3,LedsPerStrip);
+		ledStrips[9]  = new LedStrip(Leds_J2_5, animationCallback_x3y4,LedsPerStrip);
+		ledStrips[10] = new LedStrip(Leds_J3_1, animationCallback_x2y0,LedsPerStrip);
+		ledStrips[11] = new LedStrip(Leds_J3_2, animationCallback_x2y1,LedsPerStrip);
+		ledStrips[12] = new LedStrip(Leds_J3_3, animationCallback_x2y2,LedsPerStrip);
+		ledStrips[13] = new LedStrip(Leds_J3_4, animationCallback_x2y3,LedsPerStrip);
+		ledStrips[14] = new LedStrip(Leds_J3_5, animationCallback_x2y4,LedsPerStrip);
+		ledStrips[15] = new LedStrip(Leds_J4_1, animationCallback_x1y0,LedsPerStrip);
+		ledStrips[16] = new LedStrip(Leds_J4_2, animationCallback_x1y1,LedsPerStrip);
+		ledStrips[17] = new LedStrip(Leds_J4_3, animationCallback_x1y2,LedsPerStrip);
+		ledStrips[18] = new LedStrip(Leds_J4_4, animationCallback_x1y3,LedsPerStrip);
+		ledStrips[19] = new LedStrip(Leds_J4_5, animationCallback_x1y4,LedsPerStrip);
+		ledStrips[20] = new LedStrip(Leds_J5_1, animationCallback_x0y0,LedsPerStrip);
+		ledStrips[21] = new LedStrip(Leds_J5_2, animationCallback_x0y1,LedsPerStrip);
+		ledStrips[22] = new LedStrip(Leds_J5_3, animationCallback_x0y2,LedsPerStrip);
+		ledStrips[23] = new LedStrip(Leds_J5_4, animationCallback_x0y3,LedsPerStrip);
+		ledStrips[24] = new LedStrip(Leds_J5_5, animationCallback_x0y4,LedsPerStrip);
 	}
 
 
