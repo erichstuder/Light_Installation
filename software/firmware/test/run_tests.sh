@@ -5,7 +5,7 @@ docker build -t $TAG .
 docker run \
 	--rm \
 	--name firmware-cpputest \
-	--volume ${PWD}:${WORKDIR} \
+	--volume "${PWD}/..":${WORKDIR} \
 	--workdir ${WORKDIR} \
 	-it $TAG \
-	make
+	make -C test CPPUTEST_USE_GCOV=Y gcov

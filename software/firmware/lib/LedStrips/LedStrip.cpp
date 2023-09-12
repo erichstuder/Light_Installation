@@ -28,5 +28,6 @@ void LedStrip::setPixelColor(uint8_t z, uint8_t r, uint8_t g, uint8_t b){
 
 
 void LedStrip::animate(){
+	// TODO: service hat einen Rückgabewert!
 	strip.service();
 }
