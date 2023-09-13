@@ -26,8 +26,9 @@ endif
 # SRC_DIRS specifies directories containing
 # production code C and CPP files.
 #
-SRC_FILES += $(PROJECT_UNDER_TEST)/lib/LedStrips/LedStrip.cpp
-SRC_DIRS +=
+# SRC_FILES +=
+SRC_DIRS += $(PROJECT_UNDER_TEST)/lib/LedPatterns #TODO: allenfalls entfernen, da patterns nicht hier getestet werden.
+SRC_DIRS += $(PROJECT_UNDER_TEST)/lib/LedStrips
 
 # --- TEST_SRC_FILES and TEST_SRC_DIRS ---
 # Test files are always included in the build.
@@ -54,6 +55,7 @@ CPPUTEST_USE_EXTENSIONS = Y
 # containing directory
 INCLUDE_DIRS += $(CPPUTEST_HOME)/include
 INCLUDE_DIRS += $(CPPUTEST_HOME)/include/Platforms/Gcc
+INCLUDE_DIRS += $(PROJECT_UNDER_TEST)/lib/LedPatterns #TODO: allenfalls entfernen, da patterns nicht hier getestet werden.
 INCLUDE_DIRS += $(PROJECT_UNDER_TEST)/lib/LedStrips
 
 

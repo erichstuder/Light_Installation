@@ -2,9 +2,13 @@
 
 #ifdef PLATFORMIO
 	#include <Arduino.h>
+#else
+	using namespace std;
 #endif
 
 #include <math.h>
+
+
 
 static const float Period = 1.0f;
 static const float DeltaTime = 0.01f;

@@ -1,10 +1,11 @@
 #include "LedStrips.h"
+#include "LedStrip_Factory_Interface.h"
 #include "Wave.h"
 #include "RunningLight.h"
 
 #include <stdint.h>
 
-namespace LedStrips{
+namespace LedStrips {
 
 	//see schematic for connector names
 	static const uint8_t Leds_J1_1 = 15;
@@ -68,46 +69,13 @@ namespace LedStrips{
 	static uint16_t animationCallback_x4y3(){ return animation(4, 3); }
 	static uint16_t animationCallback_x4y4(){ return animation(4, 4); }
 
-	
+	static LedStrip_Interface* ledStrips[25];
 
-	//typedef LedStrip* tt;
-	//static tt ledStrips[25];
 
-	static LedStrip* ledStrips[25];
-
-	/*static LedStrip ledStrips[] = {
-		LedStrip(Leds_J1_1, animationCallback_x4y0),
-		LedStrip(Leds_J1_2, animationCallback_x4y1),
-		LedStrip(Leds_J1_3, animationCallback_x4y2),
-		LedStrip(Leds_J1_4, animationCallback_x4y3),
-		LedStrip(Leds_J1_5, animationCallback_x4y4),
-		LedStrip(Leds_J2_1, animationCallback_x3y0),
-		LedStrip(Leds_J2_2, animationCallback_x3y1),
-		LedStrip(Leds_J2_3, animationCallback_x3y2),
-		LedStrip(Leds_J2_4, animationCallback_x3y3),
-		LedStrip(Leds_J2_5, animationCallback_x3y4),
-		LedStrip(Leds_J3_1, animationCallback_x2y0),
-		LedStrip(Leds_J3_2, animationCallback_x2y1),
-		LedStrip(Leds_J3_3, animationCallback_x2y2),
-		LedStrip(Leds_J3_4, animationCallback_x2y3),
-		LedStrip(Leds_J3_5, animationCallback_x2y4),
-		LedStrip(Leds_J4_1, animationCallback_x1y0),
-		LedStrip(Leds_J4_2, animationCallback_x1y1),
-		LedStrip(Leds_J4_3, animationCallback_x1y2),
-		LedStrip(Leds_J4_4, animationCallback_x1y3),
-		LedStrip(Leds_J4_5, animationCallback_x1y4),
-		LedStrip(Leds_J5_1, animationCallback_x0y0),
-		LedStrip(Leds_J5_2, animationCallback_x0y1),
-		LedStrip(Leds_J5_3, animationCallback_x0y2),
-		LedStrip(Leds_J5_4, animationCallback_x0y3),
-		LedStrip(Leds_J5_5, animationCallback_x0y4),
-	};*/
-
-	static uint16_t animation(uint8_t x, uint8_t y){
+	static uint16_t animation(uint8_t x, uint8_t y) {
 		for(uint8_t z=0; z<pattern.MaxPixel.z; z++){
 			Color_t color = pattern.getColor({x, y, z}, iteration);
 			ledStrips[x*5+y]->setPixelColor(z, color.r, color.g, color.b);
-			//ledStrips[x*5+y]->setPixelColor(7, 0, 0, 255);
 		}
 
 		if(x==4 && y==4){
@@ -117,72 +85,38 @@ namespace LedStrips{
 		return 1;
 	}
 
-	void setup(){
-		ledStrips[0]  = new LedStrip(Leds_J1_1, animationCallback_x4y0,LedsPerStrip);
-		ledStrips[1]  = new LedStrip(Leds_J1_2, animationCallback_x4y1,LedsPerStrip);
-		ledStrips[2]  = new LedStrip(Leds_J1_3, animationCallback_x4y2,LedsPerStrip);
-		ledStrips[3]  = new LedStrip(Leds_J1_4, animationCallback_x4y3,LedsPerStrip);
-		ledStrips[4]  = new LedStrip(Leds_J1_5, animationCallback_x4y4,LedsPerStrip);
-		ledStrips[5]  = new LedStrip(Leds_J2_1, animationCallback_x3y0,LedsPerStrip);
-		ledStrips[6]  = new LedStrip(Leds_J2_2, animationCallback_x3y1,LedsPerStrip);
-		ledStrips[7]  = new LedStrip(Leds_J2_3, animationCallback_x3y2,LedsPerStrip);
-		ledStrips[8]  = new LedStrip(Leds_J2_4, animationCallback_x3y3,LedsPerStrip);
-		ledStrips[9]  = new LedStrip(Leds_J2_5, animationCallback_x3y4,LedsPerStrip);
-		ledStrips[10] = new LedStrip(Leds_J3_1, animationCallback_x2y0,LedsPerStrip);
-		ledStrips[11] = new LedStrip(Leds_J3_2, animationCallback_x2y1,LedsPerStrip);
-		ledStrips[12] = new LedStrip(Leds_J3_3, animationCallback_x2y2,LedsPerStrip);
-		ledStrips[13] = new LedStrip(Leds_J3_4, animationCallback_x2y3,LedsPerStrip);
-		ledStrips[14] = new LedStrip(Leds_J3_5, animationCallback_x2y4,LedsPerStrip);
-		ledStrips[15] = new LedStrip(Leds_J4_1, animationCallback_x1y0,LedsPerStrip);
-		ledStrips[16] = new LedStrip(Leds_J4_2, animationCallback_x1y1,LedsPerStrip);
-		ledStrips[17] = new LedStrip(Leds_J4_3, animationCallback_x1y2,LedsPerStrip);
-		ledStrips[18] = new LedStrip(Leds_J4_4, animationCallback_x1y3,LedsPerStrip);
-		ledStrips[19] = new LedStrip(Leds_J4_5, animationCallback_x1y4,LedsPerStrip);
-		ledStrips[20] = new LedStrip(Leds_J5_1, animationCallback_x0y0,LedsPerStrip);
-		ledStrips[21] = new LedStrip(Leds_J5_2, animationCallback_x0y1,LedsPerStrip);
-		ledStrips[22] = new LedStrip(Leds_J5_3, animationCallback_x0y2,LedsPerStrip);
-		ledStrips[23] = new LedStrip(Leds_J5_4, animationCallback_x0y3,LedsPerStrip);
-		ledStrips[24] = new LedStrip(Leds_J5_5, animationCallback_x0y4,LedsPerStrip);
+
+	void setup(LedStrip_Factory_Interface* ledStrip_factory) {
+		ledStrips[0]  = ledStrip_factory->create(Leds_J1_1, animationCallback_x4y0, LedsPerStrip);
+		ledStrips[1]  = ledStrip_factory->create(Leds_J1_2, animationCallback_x4y1, LedsPerStrip);
+		ledStrips[2]  = ledStrip_factory->create(Leds_J1_3, animationCallback_x4y2, LedsPerStrip);
+		ledStrips[3]  = ledStrip_factory->create(Leds_J1_4, animationCallback_x4y3, LedsPerStrip);
+		ledStrips[4]  = ledStrip_factory->create(Leds_J1_5, animationCallback_x4y4, LedsPerStrip);
+		ledStrips[5]  = ledStrip_factory->create(Leds_J2_1, animationCallback_x3y0, LedsPerStrip);
+		ledStrips[6]  = ledStrip_factory->create(Leds_J2_2, animationCallback_x3y1, LedsPerStrip);
+		ledStrips[7]  = ledStrip_factory->create(Leds_J2_3, animationCallback_x3y2, LedsPerStrip);
+		ledStrips[8]  = ledStrip_factory->create(Leds_J2_4, animationCallback_x3y3, LedsPerStrip);
+		ledStrips[9]  = ledStrip_factory->create(Leds_J2_5, animationCallback_x3y4, LedsPerStrip);
+		ledStrips[10] = ledStrip_factory->create(Leds_J3_1, animationCallback_x2y0, LedsPerStrip);
+		ledStrips[11] = ledStrip_factory->create(Leds_J3_2, animationCallback_x2y1, LedsPerStrip);
+		ledStrips[12] = ledStrip_factory->create(Leds_J3_3, animationCallback_x2y2, LedsPerStrip);
+		ledStrips[13] = ledStrip_factory->create(Leds_J3_4, animationCallback_x2y3, LedsPerStrip);
+		ledStrips[14] = ledStrip_factory->create(Leds_J3_5, animationCallback_x2y4, LedsPerStrip);
+		ledStrips[15] = ledStrip_factory->create(Leds_J4_1, animationCallback_x1y0, LedsPerStrip);
+		ledStrips[16] = ledStrip_factory->create(Leds_J4_2, animationCallback_x1y1, LedsPerStrip);
+		ledStrips[17] = ledStrip_factory->create(Leds_J4_3, animationCallback_x1y2, LedsPerStrip);
+		ledStrips[18] = ledStrip_factory->create(Leds_J4_4, animationCallback_x1y3, LedsPerStrip);
+		ledStrips[19] = ledStrip_factory->create(Leds_J4_5, animationCallback_x1y4, LedsPerStrip);
+		ledStrips[20] = ledStrip_factory->create(Leds_J5_1, animationCallback_x0y0, LedsPerStrip);
+		ledStrips[21] = ledStrip_factory->create(Leds_J5_2, animationCallback_x0y1, LedsPerStrip);
+		ledStrips[22] = ledStrip_factory->create(Leds_J5_3, animationCallback_x0y2, LedsPerStrip);
+		ledStrips[23] = ledStrip_factory->create(Leds_J5_4, animationCallback_x0y3, LedsPerStrip);
+		ledStrips[24] = ledStrip_factory->create(Leds_J5_5, animationCallback_x0y4, LedsPerStrip);
 	}
 
 
-	/*LedStrips::LedStrips():
-		ledStrips({
-			LedStrip(Leds_J1_1, animationCallback_0 ),
-			LedStrip(Leds_J1_2, animationCallback_1 ),
-			LedStrip(Leds_J1_3, animationCallback_2 ),
-			LedStrip(Leds_J1_4, animationCallback_3 ),
-			LedStrip(Leds_J1_5, animationCallback_4 ),
-			LedStrip(Leds_J2_1, animationCallback_5 ),
-			LedStrip(Leds_J2_2, animationCallback_6 ),
-			LedStrip(Leds_J2_3, animationCallback_7 ),
-			LedStrip(Leds_J2_4, animationCallback_8 ),
-			LedStrip(Leds_J2_5, animationCallback_9 ),
-			LedStrip(Leds_J3_1, animationCallback_10),
-			LedStrip(Leds_J3_2, animationCallback_11),
-			LedStrip(Leds_J3_3, animationCallback_12),
-			LedStrip(Leds_J3_4, animationCallback_13),
-			LedStrip(Leds_J3_5, animationCallback_14),
-			LedStrip(Leds_J4_1, animationCallback_15),
-			LedStrip(Leds_J4_2, animationCallback_16),
-			LedStrip(Leds_J4_3, animationCallback_17),
-			LedStrip(Leds_J4_4, animationCallback_18),
-			LedStrip(Leds_J4_5, animationCallback_19),
-			LedStrip(Leds_J5_1, animationCallback_20),
-			LedStrip(Leds_J5_2, animationCallback_21),
-			LedStrip(Leds_J5_3, animationCallback_22),
-			LedStrip(Leds_J5_4, animationCallback_23),
-			LedStrip(Leds_J5_5, animationCallback_24),
-		})
-	{}*/
-
-
-	void setPattern(const char* name){
-		return;
-	}
-
-	void animate(){
-		for(LedStrip* ledStrip : ledStrips){
+	void animate() {
+		for(LedStrip_Interface* ledStrip : ledStrips) {
 			ledStrip->animate();
 		}
 	}
