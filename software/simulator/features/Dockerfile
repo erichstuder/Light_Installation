@@ -7,6 +7,7 @@ RUN apt-get update && \
                        libboost-thread-dev libboost-system-dev \
                        libboost-regex-dev libboost-date-time-dev \
                        libboost-program-options-dev \
+                       libboost-test-dev \
                        git \
                        ruby ruby-dev \
                        libboost-filesystem-dev 
