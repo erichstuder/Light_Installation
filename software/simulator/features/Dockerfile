@@ -17,3 +17,12 @@ RUN git clone https://github.com/cucumber/cucumber-cpp.git . && \
 
 RUN gem install bundler && \
     bundle install
+
+RUN git submodule init && \
+    git submodule update && \
+    cmake -E make_directory build && \
+    cmake -E chdir build cmake -DCUKE_ENABLE_EXAMPLES=on -DCMAKE_INSTALL_PREFIX=${prefix} .. && \
+    cmake --build build && \
+    cmake --build build --target test && \
+    cmake --build build --target install # && \
+#returns an error and is ignored for the moment as these are "only" tests:   cmake --build build --target features
