@@ -10,7 +10,8 @@ RUN apt-get update && \
                        libboost-test-dev \
                        git \
                        ruby ruby-dev \
-                       libboost-filesystem-dev 
+                       libboost-filesystem-dev \
+                       libboost-all-dev
 
 RUN git clone https://github.com/cucumber/cucumber-cpp.git . && \
     git checkout 2f7d9ad519290a8b4a6ee6845af4480dd9ec2b7f
