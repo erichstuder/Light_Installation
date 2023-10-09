@@ -1,17 +1,28 @@
 #include <gtest/gtest.h>
 #include <cucumber-cpp/autodetect.hpp>
 
-WHEN("^I start the simulator"){}
+#include "simulator.h"
+#include "IAnimator.h"
 
-THEN("^a model of the cube is shown") {}
+class Animator_Mock: public IAnimator {
+    public:
+        void animate(const char* fileName) { isAnimating = true; }
+        bool isAnimating = false;
+};
 
-THEN("^the leds are shown") {}
+static Animator_Mock animator_mock;
 
-THEN("^the led animation starts rightaway") {}
+WHEN("^I start the simulator") {
+    simulator(&animator_mock);
+}
+
+THEN("^the led animation starts rightaway") {
+    EXPECT_TRUE(animator_mock.isAnimating);
+}
 
 
-GIVEN("^the simulator is running") {}
+GIVEN("^the simulator is running") { FAIL(); }
 
-GIVEN("^the animation is running") {}
+GIVEN("^the animation is running") { FAIL(); }
 
-THEN("^the cube can be rotated with the mouse") {}
+THEN("^the cube can be rotated with the mouse") { FAIL(); }

@@ -13,6 +13,7 @@ add_executable(simulator simulator.cpp)
 
 file(GLOB LED_PATTERNS "${CMAKE_CURRENT_SOURCE_DIR}/../firmware/lib/LedPatterns/*.cpp")
 target_sources(simulator PRIVATE ${LED_PATTERNS})
+target_sources(simulator PRIVATE Animator.cpp)
 
 target_include_directories(simulator PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/gnuplot-iostream/")
 target_include_directories(simulator PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../firmware/lib/LedPatterns/")
