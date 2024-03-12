@@ -24,16 +24,16 @@ jobs:
           release_name: ${{ github.ref_name }}
           draft: false
           prerelease: false
-          
+
       - name: download build data
         uses: actions/download-artifact@v3
         with:
           name: clamp
           path: ./clamp_data
-          
+
       - name: zip fabrication data
         run: zip -jr clamp ./clamp_data
-          
+
       - name: upload release asset
         uses: actions/upload-release-asset@v1
         env:

@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: setup
         run: sudo apt-get install -y freecad
-    
+
       - name: checkout
         uses: actions/checkout@v3
-    
+
       - name: create release
         id: create_release
         uses: actions/create-release@v1
@@ -26,7 +26,7 @@ jobs:
           release_name: ${{ github.ref_name }}
           draft: false
           prerelease: false
-          
+
       - name: prepare files
         run: |
           echo "\
@@ -43,7 +43,7 @@ jobs:
             > create_release.py
           cat create_release.py
           freecadcmd create_release.py
-          
+
       - name: upload release asset
         uses: actions/upload-release-asset@v1
         env:

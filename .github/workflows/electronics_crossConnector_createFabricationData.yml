@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+
     - uses: INTI-CMNB/KiBot@v2_k6
       with:
         config: electronics/cross_connector/cross_connector.kibot.yaml
