@@ -23,7 +23,7 @@ void Animator::animate(const char* fileName) {
 		<< "stats '" << fileName << "' nooutput\n"
 		<< "n = 0\n"
 		<< "while(!done){\n"
-		<< "	splot 'pattern.dat' index n using ($1*100):($2*100):($3*33.25):($4) with points lt 7 lc rgbcolor variable\n"
+		<< "	splot 'build/pattern.dat' index n using ($1*100):($2*100):($3*33.25):($4) with points lt 7 lc rgbcolor variable\n"
 		<< "	n = (n + 1) % STATS_blocks\n"
 		<< "	pause(0.01)\n"
 		<< "}\n";

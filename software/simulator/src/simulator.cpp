@@ -39,9 +39,9 @@ void simulator(IAnimator* animator) {
 	//RunningLight pattern;
 	Wave pattern;
 
-	createPatternFile(&pattern, "pattern.dat");
+	createPatternFile(&pattern, "build/pattern.dat");
 
-	animator->animate("pattern.dat");
+	animator->animate("build/pattern.dat");
 }
 
 
