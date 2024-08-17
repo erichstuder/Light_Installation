@@ -9,7 +9,7 @@
 import subprocess
 from sphinx.application import Sphinx
 
-project = '433MHz_to_MQTT'
+project = 'Light Installation - MBSE'
 copyright = '2024, erichstuder'
 author = 'erichstuder'
 
