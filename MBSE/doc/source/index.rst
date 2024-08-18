@@ -9,6 +9,7 @@ This is the documentation for the MBSE implementation of the Light Installation 
 
    development_environment
    file_structure
+   model_documentation
 
 Indices and tables
 ==================
