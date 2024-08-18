@@ -42,16 +42,19 @@ Eclipse IDE setup
        - Modeling -> select Acceleo and Papyrus for UML
        - Install
 
-       .. image:: select_Acceleo.png
+       .. image:: images/select_Acceleo.png
+          :class: framed
 
        :
 
-       .. image:: select_Papyrus_for_UML.png
+       .. image:: images/select_Papyrus_for_UML.png
+          :class: framed
 
     - Eclipse IDE -> Help -> Eclipse Marketplace -> Fing: papyrus sysml 1.6
        - Install Papyrus SysML 1.6
 
-       .. image:: select_Papyrus_SysML.png
+       .. image:: images/select_Papyrus_SysML.png
+          :class: framed
 
 3. Update Eclipse IDE
     Allthough not strictly necessary it is recommended to update Eclipse IDE to the latest version.
