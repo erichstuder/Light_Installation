@@ -1,0 +1,28 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ * @author erich
+ * @version 1.0.0
+ * @since 1.0.0
+ */]
+[module generate('http://www.eclipse.org/uml2/5.0.0/Types', 'http://www.eclipse.org/uml2/5.0.0/UML', 'http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard', 'http://www.eclipse.org/papyrus/sysml/1.6/SysML')/]
+
+[comment @main/]
+[template public generateElement(element : uml::Element)]
+    [if (element.oclIsTypeOf(uml::Class) and (element.oclAsType(uml::Class).getAppliedStereotype('SysML::PortsAndFlows::InterfaceBlock') <> null))]
+        [file (element.name + '.h', overwrite, 'UTF-8')]
+          #pragma once
+
+          TODO: include
+
+          class [element.name/] {
+              public:
+                  virtual ~[element.name/]() {}
+        [comment TODO: it would probably be better to check to the real type than just the string representation/]
+                  [for (operation : uml::Operation | element.oclAsType(uml::Class).ownedOperation->select(op | op.visibility.toString() = 'public'))]
+                    virtual [operation.getReturnResult()/] [operation.name/]
+                  [/for]
+          };
+        [/file]
+    [/if]
+[/template]
