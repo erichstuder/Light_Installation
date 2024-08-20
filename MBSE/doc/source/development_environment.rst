@@ -37,12 +37,21 @@ Eclipse IDE setup
     - Open Eclipse IDE and select the workspace that contains the projects (see: :doc:`file_structure`).
     - Import all projects of the workspace.
 
-2. Install Papyrus and Acceleo
+2. Install Acceleo
+    - Eclipse IDE -> Help -> Install New Software -> Work with: https://download.eclipse.org/acceleo/updates/releases/4.0/R202407021157/
+       - Select all (Probably not everything is necessary. But for now, select all.)
+       - Install
+
+       .. image:: images/select_Acceleo.png
+          :class: framed
+
+
+3. Install Papyrus
     - Eclipse IDE -> Help -> Install New Software -> Work with: \--All Available Sites\--
        - Modeling -> select Acceleo and Papyrus for UML
        - Install
 
-       .. image:: images/select_Acceleo.png
+       .. image:: images/select_Modeling.png
           :class: framed
 
        :
@@ -56,6 +65,6 @@ Eclipse IDE setup
        .. image:: images/select_Papyrus_SysML.png
           :class: framed
 
-3. Update Eclipse IDE
+4. Update Eclipse IDE
     Allthough not strictly necessary it is recommended to update Eclipse IDE to the latest version.
     - Eclipse IDE -> Help -> Check for Updates
