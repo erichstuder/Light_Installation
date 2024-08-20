@@ -16,7 +16,7 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_AavygF7MEe-1pOzPlEhqxg" name="pin" visibility="public" effect="create">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ghdI4F7PEe-1pOzPlEhqxg" name="animation_callback" type="_xEGtwF7NEe-1pOzPlEhqxg" direction="out"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ghdI4F7PEe-1pOzPlEhqxg" name="animation_callback" type="_xEGtwF7NEe-1pOzPlEhqxg"/>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_rOn2MF7PEe-1pOzPlEhqxg" name="number_of_leds">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
           </ownedParameter>
