@@ -9,7 +9,19 @@
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_JC7tcF1lEe-CGKUOs61xDw" name="LedPatterns"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_FlEfcF1lEe-CGKUOs61xDw" name="LedStrips">
-      <packagedElement xmi:type="uml:Class" xmi:id="_dymacF1lEe-CGKUOs61xDw" name="LedStrip_Factory"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_dymacF1lEe-CGKUOs61xDw" name="LedStrip_Factory">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2vmrQGEuEe-BeqznoyYbnA" name="create">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_TWuP8GEfEe-BeqznoyYbnA" name="ledStrip_factory" visibility="public" type="_Q1Z5AF7KEe-1pOzPlEhqxg" direction="return" effect="create"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZZmqUGEdEe-BeqznoyYbnA" name="pin" visibility="public" effect="create">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_akzSIGEdEe-BeqznoyYbnA" name="animationCallback" visibility="public" type="_xEGtwF7NEe-1pOzPlEhqxg" effect="create"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDjqsGEdEe-BeqznoyYbnA" name="numberOfLeds" visibility="public" effect="create">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+          </ownedParameter>
+          <body>return new LedStrip(pin, animationCallback, numberOfLeds);</body>
+        </ownedBehavior>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_0wNlsF1lEe-CGKUOs61xDw" name="LedStrip_Factory_Interface" visibility="public">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_IplHYF1nEe-CGKUOs61xDw" name="create" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_OyRuMF7LEe-1pOzPlEhqxg" name="led_strip" visibility="public" type="_Q1Z5AF7KEe-1pOzPlEhqxg" direction="return" effect="create"/>

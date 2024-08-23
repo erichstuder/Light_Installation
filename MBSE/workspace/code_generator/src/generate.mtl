@@ -3,33 +3,85 @@
 
 [comment @main/]
 [template public generate_element(element : uml::Element)]
-    [if (element.oclIsTypeOf(uml::Class))]
-        [let class = element.oclAsType(uml::Class)]
-        [if (class.getAppliedStereotype('SysML::PortsAndFlows::InterfaceBlock') <> null)]
-            [class.generate_interface()/]
-        [/if]
-        [/let]
+  [if (element.oclIsTypeOf(uml::Class))]
+    [let class = element.oclAsType(uml::Class)]
+    [if (class.getAppliedStereotype('SysML::PortsAndFlows::InterfaceBlock') <> null)]
+      [class.generate_interface()/]
+    [elseif (class.getAppliedStereotype('SysML::Blocks::Block') <> null)]
+      [class.generate_class_header()/]
+      [class.generate_class()/]
     [/if]
+    [/let]
+  [/if]
 [/template]
 
 [template private generate_interface(class : uml::Class)]
-    [file (class.name + '.h', overwrite, 'UTF-8')]
-      #pragma once
+  [file (class.name + '.h', overwrite, 'UTF-8')]
+    #pragma once
 
-      [class.clientDependency->collect(d | '#include "' + d.supplier.name + '.h"')/]
+    [class.clientDependency->collect(d | '#include "' + d.supplier.name + '.h"')/]
 
-      class [class.name/] {
-          public:
-              virtual ~[class.name/]() {}
-              [for (operation : uml::Operation | class.ownedOperation->select(op | op.visibility.toString() = 'public')) separator('        ')]
-                [let parameters = operation.ownedParameter->select(p | p.direction.toString() <> 'return')]
+    class [class.name/] {
+        public:
+            virtual ~[class.name/]() {}
+            [for (operation : uml::Operation | class.ownedOperation->select(op | op.visibility.toString() = 'public')) separator('        ')]
+              [let parameters = operation.ownedParameter->select(p | p.direction.toString() <> 'return')]
+              [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+              [let return_type = if (operation.getReturnResult().type <> null) then operation.getReturnResult().type.name else 'void' endif]
+                virtual [return_type/] [operation.name/][signature->sep('(', ', ', ') = 0;')/]
+              [/let]
+              [/let]
+              [/let]
+            [/for]
+    };
+  [/file]
+[/template]
+
+[template private generate_class_header(class : uml::Class)]
+  [file (class.name + '.h', overwrite, 'UTF-8')]
+    #pragma once
+
+    [class.clientDependency->collect(d | '#include "' + d.supplier.name + '.h"')/]
+
+    class [class.name/] {
+        public:
+            ~[class.name/]() {}
+            [for (behavior : uml::Behavior | class.ownedBehavior->select(op | op.visibility.toString() = 'public')) separator('        ')]
+              [if (behavior.oclIsTypeOf(uml::OpaqueBehavior))]
+                [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
+                [let return_type = if (return_result.type <> null) then return_result.type.name else 'void' endif]
+                [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
                 [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
-                [let return_type = if (operation.getReturnResult().type <> null) then operation.getReturnResult().type.name else 'void' endif]
-                  virtual [return_type/] [operation.name/][signature->sep('(', ', ', ') = 0;')/]
+                  [return_type/] [behavior.name/][signature->sep('(', ', ', ');')/]
                 [/let]
                 [/let]
                 [/let]
-              [/for]
-      };
-    [/file]
+                [/let]
+              [/if]
+            [/for]
+    };
+  [/file]
+[/template]
+
+[template private generate_class(class : uml::Class)]
+  [file (class.name + '.cpp', overwrite, 'UTF-8')]
+    #include "[class.name/].h"
+    [class.clientDependency->collect(d | '#include "' + d.supplier.name + '.h"')/]
+
+    [for (behavior : uml::Behavior | class.ownedBehavior)]
+      [if (behavior.oclIsTypeOf(uml::OpaqueBehavior))]
+        [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
+        [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+        [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
+        [let return_type = if (return_result.type <> null) then return_result.type.name else 'void' endif]
+        [return_type/] [class.name/]::[behavior.name/][signature->sep('(', ', ', ') {')/]
+              [behavior.body/]
+          }
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+      [/if]
+    [/for]
+  [/file]
 [/template]
