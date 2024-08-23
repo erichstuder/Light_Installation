@@ -75,7 +75,11 @@
         [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
         [let return_type = if (return_result.type <> null) then return_result.type.name else 'void' endif]
         [return_type/] [class.name/]::[behavior.name/][signature->sep('(', ', ', ') {')/]
-              [behavior.body/]
+              [protected ('(don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
+
+                // place your code here (this comment can be removed)
+
+              [/protected]
           }
         [/let]
         [/let]

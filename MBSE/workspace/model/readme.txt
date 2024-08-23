@@ -1,0 +1,4 @@
+- It is possible to insert textual code directly into the model. But as these are only text fields (no code-completion, ...) this feature is not used.
+  - The solution are user code areas that will be filled in with e.g. vs-code
+  - These areas stay untouched by the code generation.
+  - The generated code including changes by hand must be commited as well.

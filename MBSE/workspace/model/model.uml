@@ -9,19 +9,6 @@
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_JC7tcF1lEe-CGKUOs61xDw" name="LedPatterns"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_FlEfcF1lEe-CGKUOs61xDw" name="LedStrips">
-      <packagedElement xmi:type="uml:Class" xmi:id="_dymacF1lEe-CGKUOs61xDw" name="LedStrip_Factory">
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2vmrQGEuEe-BeqznoyYbnA" name="create">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_TWuP8GEfEe-BeqznoyYbnA" name="ledStrip_factory" visibility="public" type="_Q1Z5AF7KEe-1pOzPlEhqxg" direction="return" effect="create"/>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZZmqUGEdEe-BeqznoyYbnA" name="pin" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_akzSIGEdEe-BeqznoyYbnA" name="animationCallback" visibility="public" type="_xEGtwF7NEe-1pOzPlEhqxg" effect="create"/>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDjqsGEdEe-BeqznoyYbnA" name="numberOfLeds" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-          </ownedParameter>
-          <body>return new LedStrip(pin, animationCallback, numberOfLeds);</body>
-        </ownedBehavior>
-      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_0wNlsF1lEe-CGKUOs61xDw" name="LedStrip_Factory_Interface" visibility="public">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_IplHYF1nEe-CGKUOs61xDw" name="create" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_OyRuMF7LEe-1pOzPlEhqxg" name="led_strip" visibility="public" type="_Q1Z5AF7KEe-1pOzPlEhqxg" direction="return" effect="create"/>
@@ -34,7 +21,18 @@
           </ownedParameter>
         </ownedOperation>
       </packagedElement>
-      <packagedElement xmi:type="uml:Realization" xmi:id="_dHvNoF1nEe-CGKUOs61xDw" client="_dymacF1lEe-CGKUOs61xDw" supplier="_0wNlsF1lEe-CGKUOs61xDw"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_dymacF1lEe-CGKUOs61xDw" name="LedStrip_Factory">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2vmrQGEuEe-BeqznoyYbnA" name="create" language="" body="">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_TWuP8GEfEe-BeqznoyYbnA" name="ledStrip_factory" visibility="public" type="_Q1Z5AF7KEe-1pOzPlEhqxg" direction="return" effect="create"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZZmqUGEdEe-BeqznoyYbnA" name="pin" visibility="public" effect="create">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_akzSIGEdEe-BeqznoyYbnA" name="animationCallback" visibility="public" type="_xEGtwF7NEe-1pOzPlEhqxg" effect="create"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDjqsGEdEe-BeqznoyYbnA" name="numberOfLeds" visibility="public" effect="create">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+          </ownedParameter>
+        </ownedBehavior>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Q1Z5AF7KEe-1pOzPlEhqxg" name="LedStrip_Interface">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Wb19EF7KEe-1pOzPlEhqxg" name="setPixelColor" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_d6ZZUF7KEe-1pOzPlEhqxg" name="z" visibility="public" effect="create">
@@ -59,7 +57,17 @@
           </ownedOperation>
         </nestedClassifier>
       </packagedElement>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_dHvNoF1nEe-CGKUOs61xDw" client="_dymacF1lEe-CGKUOs61xDw" supplier="_0wNlsF1lEe-CGKUOs61xDw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_uw6DcF7KEe-1pOzPlEhqxg" client="_0wNlsF1lEe-CGKUOs61xDw" supplier="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_dbLOEGE4Ee-BeqznoyYbnA" name="LedStrip">
+        <nestedClassifier xmi:type="uml:DataType" xmi:id="_qKJbEGE4Ee-BeqznoyYbnA" name="AnimationCallback_t">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_qKJbEWE4Ee-BeqznoyYbnA" name="Operation1">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_qKJbEmE4Ee-BeqznoyYbnA" name="result" visibility="public" direction="return" effect="create">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+            </ownedParameter>
+          </ownedOperation>
+        </nestedClassifier>
+      </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_E37v4FylEe-DFNQHRW9B6w">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E4ABUFylEe-DFNQHRW9B6w" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -125,4 +133,5 @@
   <Blocks:Block xmi:id="_dyxZkF1lEe-CGKUOs61xDw" base_Class="_dymacF1lEe-CGKUOs61xDw"/>
   <PortsAndFlows:InterfaceBlock xmi:id="_h6DikF1mEe-CGKUOs61xDw" base_Class="_0wNlsF1lEe-CGKUOs61xDw"/>
   <PortsAndFlows:InterfaceBlock xmi:id="_Q13zEF7KEe-1pOzPlEhqxg" base_Class="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
+  <Blocks:Block xmi:id="_dbUYAGE4Ee-BeqznoyYbnA" base_Class="_dbLOEGE4Ee-BeqznoyYbnA"/>
 </xmi:XMI>
