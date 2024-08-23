@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:PortsAndFlows="http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:PortsAndFlows="http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows">
   <uml:Model xmi:id="_E1Mk8FylEe-DFNQHRW9B6w" name="model">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_E8v-cFylEe-DFNQHRW9B6w">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -23,9 +23,6 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Realization" xmi:id="_dHvNoF1nEe-CGKUOs61xDw" client="_dymacF1lEe-CGKUOs61xDw" supplier="_0wNlsF1lEe-CGKUOs61xDw"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Dkir8F2CEe-CGKUOs61xDw" name="Class4">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_zSMzcF7BEe-EcdjQMGaSBA" name="Operation1" visibility="public"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Q1Z5AF7KEe-1pOzPlEhqxg" name="LedStrip_Interface">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Wb19EF7KEe-1pOzPlEhqxg" name="setPixelColor" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_d6ZZUF7KEe-1pOzPlEhqxg" name="z" visibility="public" effect="create">
@@ -115,6 +112,5 @@
   </uml:Model>
   <Blocks:Block xmi:id="_dyxZkF1lEe-CGKUOs61xDw" base_Class="_dymacF1lEe-CGKUOs61xDw"/>
   <PortsAndFlows:InterfaceBlock xmi:id="_h6DikF1mEe-CGKUOs61xDw" base_Class="_0wNlsF1lEe-CGKUOs61xDw"/>
-  <standard:Focus xmi:id="_ONbKMF4GEe-hydSYM8qfYQ" base_Class="_Dkir8F2CEe-CGKUOs61xDw"/>
   <PortsAndFlows:InterfaceBlock xmi:id="_Q13zEF7KEe-1pOzPlEhqxg" base_Class="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
 </xmi:XMI>
