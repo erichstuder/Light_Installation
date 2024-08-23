@@ -2,28 +2,34 @@
 [module generate('http://www.eclipse.org/uml2/5.0.0/Types', 'http://www.eclipse.org/uml2/5.0.0/UML', 'http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard', 'http://www.eclipse.org/papyrus/sysml/1.6/SysML')/]
 
 [comment @main/]
-[template public generateElement(element : uml::Element)]
-    [if (element.oclIsTypeOf(uml::Class) and (element.oclAsType(uml::Class).getAppliedStereotype('SysML::PortsAndFlows::InterfaceBlock') <> null))]
-        [file (element.name + '.h', overwrite, 'UTF-8')]
-          #pragma once
-
-          [element.oclAsType(uml::Class).clientDependency->collect(d | '#include "' + d.supplier.name + '.h"')/]
-
-          class [element.name/] {
-              public:
-                  virtual ~[element.name/]() {}
-                  [for (operation : uml::Operation | element.oclAsType(uml::Class).ownedOperation->select(op | op.visibility.toString() = 'public'))]
-                    virtual [operation.getReturnResult().type.name/] [operation.name/][operation.parameters()/]
-                  [/for]
-          };
-        [/file]
+[template public generate_element(element : uml::Element)]
+    [if (element.oclIsTypeOf(uml::Class))]
+        [let class = element.oclAsType(uml::Class)]
+        [if (class.getAppliedStereotype('SysML::PortsAndFlows::InterfaceBlock') <> null)]
+            [class.generate_interface()/]
+        [/if]
+        [/let]
     [/if]
 [/template]
 
-[template private parameters(operation : uml::Operation)]
-  [let params = operation.ownedParameter->select(p | p.direction.toString() <> 'return')]
-    [let signature = params->collect(s | s.type.name + ' ' + s.name)]
-      ([signature->sep(', ')/]) = 0;
-    [/let]
-  [/let]
+[template private generate_interface(class : uml::Class)]
+    [file (class.name + '.h', overwrite, 'UTF-8')]
+      #pragma once
+
+      [class.clientDependency->collect(d | '#include "' + d.supplier.name + '.h"')/]
+
+      class [class.name/] {
+          public:
+              virtual ~[class.name/]() {}
+              [for (operation : uml::Operation | class.ownedOperation->select(op | op.visibility.toString() = 'public')) separator('        ')]
+                [let parameters = operation.ownedParameter->select(p | p.direction.toString() <> 'return')]
+                [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+                [let return_type = if (operation.getReturnResult().type <> null) then operation.getReturnResult().type.name else 'void' endif]
+                  virtual [return_type/] [operation.name/][signature->sep('(', ', ', ') = 0;')/]
+                [/let]
+                [/let]
+                [/let]
+              [/for]
+      };
+    [/file]
 [/template]
