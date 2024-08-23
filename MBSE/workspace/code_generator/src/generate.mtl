@@ -49,7 +49,7 @@
             [for (behavior : uml::Behavior | class.ownedBehavior->select(op | op.visibility.toString() = 'public')) separator('        ')]
               [if (behavior.oclIsTypeOf(uml::OpaqueBehavior))]
                 [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
-                [let return_type = if (return_result.type <> null) then return_result.type.name else 'void' endif]
+                [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
                 [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
                 [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
                   [return_type/] [behavior.name/][signature->sep('(', ', ', ');')/]
@@ -70,21 +70,44 @@
 
     [for (behavior : uml::Behavior | class.ownedBehavior)]
       [if (behavior.oclIsTypeOf(uml::OpaqueBehavior))]
-        [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
-        [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
-        [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
-        [let return_type = if (return_result.type <> null) then return_result.type.name else 'void' endif]
-        [return_type/] [class.name/]::[behavior.name/][signature->sep('(', ', ', ') {')/]
-              [protected ('(don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
+        [if (behavior.name = class.name)]
+          [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
+          [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+          [class.name/]::[behavior.name/][signature->sep('(', ', ', ')')/]
+            [protected (behavior.name + ' initializers (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
 
-                // place your code here (this comment can be removed)
+              // begin the initializers with a : (this comment can be removed)
 
-              [/protected]
-          }
-        [/let]
-        [/let]
-        [/let]
-        [/let]
+            [/protected]
+            {
+                [protected (behavior.name + ' body (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
+
+                  // place your code here (this comment can be removed)
+
+                [/protected]
+            }
+
+
+          [/let]
+          [/let]
+        [else]
+          [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
+          [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+          [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
+          [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
+          [return_type/] [class.name/]::[behavior.name/][signature->sep('(', ', ', ') {')/]
+                [protected (behavior.name + ' (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
+
+                  // place your code here (this comment can be removed)
+
+                [/protected]
+            }
+
+          [/let]
+          [/let]
+          [/let]
+          [/let]
+        [/if]
       [/if]
     [/for]
   [/file]

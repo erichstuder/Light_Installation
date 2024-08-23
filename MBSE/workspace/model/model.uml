@@ -57,9 +57,31 @@
           </ownedOperation>
         </nestedClassifier>
       </packagedElement>
-      <packagedElement xmi:type="uml:Realization" xmi:id="_dHvNoF1nEe-CGKUOs61xDw" client="_dymacF1lEe-CGKUOs61xDw" supplier="_0wNlsF1lEe-CGKUOs61xDw"/>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_uw6DcF7KEe-1pOzPlEhqxg" client="_0wNlsF1lEe-CGKUOs61xDw" supplier="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_dbLOEGE4Ee-BeqznoyYbnA" name="LedStrip">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iq7AsGFJEe-BeqznoyYbnA" name="LedStrip">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_qNQJsGFJEe-BeqznoyYbnA" name="pin" visibility="public" effect="create">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rO-scGFJEe-BeqznoyYbnA" name="animationCallback" visibility="public" type="_qKJbEGE4Ee-BeqznoyYbnA" effect="create"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rVtmkGFJEe-BeqznoyYbnA" name="numberOfLeds" visibility="public" effect="create">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+          </ownedParameter>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_zpiTYGFIEe-BeqznoyYbnA" name="setPixelColor">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uCMcGFIEe-BeqznoyYbnA" name="z" visibility="public" effect="create">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-SIpwGFIEe-BeqznoyYbnA" name="r" visibility="public" effect="create">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-V_PAGFIEe-BeqznoyYbnA" name="g" visibility="public" effect="create">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-ZDxIGFIEe-BeqznoyYbnA" name="b" visibility="public" effect="create">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+          </ownedParameter>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0OmIQGFIEe-BeqznoyYbnA" name="animate"/>
         <nestedClassifier xmi:type="uml:DataType" xmi:id="_qKJbEGE4Ee-BeqznoyYbnA" name="AnimationCallback_t">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_qKJbEWE4Ee-BeqznoyYbnA" name="Operation1">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_qKJbEmE4Ee-BeqznoyYbnA" name="result" visibility="public" direction="return" effect="create">
@@ -68,6 +90,8 @@
           </ownedOperation>
         </nestedClassifier>
       </packagedElement>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_dHvNoF1nEe-CGKUOs61xDw" client="_dymacF1lEe-CGKUOs61xDw" supplier="_0wNlsF1lEe-CGKUOs61xDw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_uw6DcF7KEe-1pOzPlEhqxg" client="_0wNlsF1lEe-CGKUOs61xDw" supplier="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_E37v4FylEe-DFNQHRW9B6w">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E4ABUFylEe-DFNQHRW9B6w" source="http://www.eclipse.org/uml2/2.0.0/UML">
