@@ -92,6 +92,11 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Realization" xmi:id="_dHvNoF1nEe-CGKUOs61xDw" client="_dymacF1lEe-CGKUOs61xDw" supplier="_0wNlsF1lEe-CGKUOs61xDw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_uw6DcF7KEe-1pOzPlEhqxg" client="_0wNlsF1lEe-CGKUOs61xDw" supplier="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_fVRH8GFTEe-9_vMEk5-Rzw" client="_dbLOEGE4Ee-BeqznoyYbnA" supplier="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_2KeNkGHhEe-9_vMEk5-Rzw" client="_dbLOEGE4Ee-BeqznoyYbnA" supplier="_vQPmYGHhEe-9_vMEk5-Rzw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_tB8i0GHhEe-9_vMEk5-Rzw" name="Externals">
+      <packagedElement xmi:type="uml:Class" xmi:id="_vQPmYGHhEe-9_vMEk5-Rzw" name="WS2812FX"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_E37v4FylEe-DFNQHRW9B6w">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E4ABUFylEe-DFNQHRW9B6w" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -158,4 +163,5 @@
   <PortsAndFlows:InterfaceBlock xmi:id="_h6DikF1mEe-CGKUOs61xDw" base_Class="_0wNlsF1lEe-CGKUOs61xDw"/>
   <PortsAndFlows:InterfaceBlock xmi:id="_Q13zEF7KEe-1pOzPlEhqxg" base_Class="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
   <Blocks:Block xmi:id="_dbUYAGE4Ee-BeqznoyYbnA" base_Class="_dbLOEGE4Ee-BeqznoyYbnA"/>
+  <Blocks:Block xmi:id="_vQeP4GHhEe-9_vMEk5-Rzw" base_Class="_vQPmYGHhEe-9_vMEk5-Rzw"/>
 </xmi:XMI>

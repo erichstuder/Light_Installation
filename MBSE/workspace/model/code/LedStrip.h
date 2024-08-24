@@ -1,6 +1,7 @@
 #pragma once
 
-
+#include "LedStrip_Interface.h"
+#include <WS2812FX.h>
 
 class LedStrip {
     public:

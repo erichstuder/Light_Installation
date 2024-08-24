@@ -3,7 +3,7 @@
 
 [comment @main/]
 [template public generate_element(element : uml::Element)]
-  [if (element.oclIsTypeOf(uml::Class))]
+  [if (element.oclIsTypeOf(uml::Class) and element.eContainer(uml::Package)->at(1).name <> 'Externals')]
     [let class = element.oclAsType(uml::Class)]
     [if (class.getAppliedStereotype('SysML::PortsAndFlows::InterfaceBlock') <> null)]
       [class.generate_interface()/]
@@ -41,7 +41,13 @@
   [file (class.name + '.h', overwrite, 'UTF-8')]
     #pragma once
 
-    [class.clientDependency->collect(d | '#include "' + d.supplier.name + '.h"')/]
+    [for (dependency | class.clientDependency)]
+      [if (dependency.supplier.eContainer(uml::Package)->at(1).name = 'Externals')]
+        ['#include <' + dependency.supplier.name + '.h>\n'/]
+      [else]
+        ['#include "' + dependency.supplier.name + '.h"\n'/]
+      [/if]
+    [/for]
 
     class [class.name/] {
         public:
