@@ -1,6 +1,8 @@
 #pragma once
 
+#include <WS2812FX.h>
 
+typedef EInt (*AnimationCallback_t)();
 
 class LedStrip_Interface {
     public:

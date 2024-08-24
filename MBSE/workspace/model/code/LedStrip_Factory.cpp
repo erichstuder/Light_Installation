@@ -1,5 +1,4 @@
 #include "LedStrip_Factory.h"
-#include "LedStrip_Factory_Interface.h"
 
 LedStrip_Interface LedStrip_Factory::create(EByte pin, AnimationCallback_t animationCallback, EInt numberOfLeds) {
     // Start of user code create (don't remove the 'Start/End of user code' markers)

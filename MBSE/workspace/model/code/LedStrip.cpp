@@ -1,7 +1,6 @@
 #include "LedStrip.h"
-#include "LedStrip_Interface.h"#include "WS2812FX.h"
 
-LedStrip::LedStrip(EByte pin, AnimationCallback_t animationCallback, EInt numberOfLeds)
+LedStrip::LedStrip(uint8_t pin, AnimationCallback_t animationCallback, EInt numberOfLeds)
 // Start of user code LedStrip initializers (don't remove the 'Start/End of user code' markers)
 
     :

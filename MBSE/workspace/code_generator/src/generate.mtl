@@ -15,11 +15,36 @@
   [/if]
 [/template]
 
+
 [template private generate_interface(class : uml::Class)]
   [file (class.name + '.h', overwrite, 'UTF-8')]
     #pragma once
 
-    [class.clientDependency->collect(d | '#include "' + d.supplier.name + '.h"')/]
+    [for (dependency | class.clientDependency)]
+      [if (dependency.supplier.eContainer(uml::Package)->at(1).name = 'Externals')]
+        ['#include <' + dependency.supplier.name + '.h>\n'/]
+      [else]
+        ['#include "' + dependency.supplier.name + '.h"\n'/]
+      [/if]
+    [/for]
+
+    [for (element | class.ownedElement)]
+      [if (element.oclIsTypeOf(uml::DataType))]
+        [let data_type = element.oclAsType(uml::DataType)]
+        [let operation = data_type.ownedOperation]
+        [let return_result = operation.ownedParameter->select(p | p.direction.toString() = 'return')]
+        [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
+        [let parameters = operation.ownedParameter->select(p | p.direction.toString() <> 'return')]
+        [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+          typedef [return_type/] (*[element.name/])[signature->sep('(', ', ', ');')/]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+      [/if]
+    [/for]
 
     class [class.name/] {
         public:
@@ -37,6 +62,7 @@
   [/file]
 [/template]
 
+
 [template private generate_class_header(class : uml::Class)]
   [file (class.name + '.h', overwrite, 'UTF-8')]
     #pragma once
@@ -49,10 +75,28 @@
       [/if]
     [/for]
 
-    class [class.name/] {
+    [for (element | class.ownedElement)]
+      [if (element.oclIsTypeOf(uml::DataType))]
+        [let data_type = element.oclAsType(uml::DataType)]
+        [let operation = data_type.ownedOperation]
+        [let return_result = operation.ownedParameter->select(p | p.direction.toString() = 'return')]
+        [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
+        [let parameters = operation.ownedParameter->select(p | p.direction.toString() <> 'return')]
+        [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+          typedef [return_type/] (*[element.name/])[signature->sep('(', ', ', ');')/]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+      [/if]
+    [/for]
+
+    class [class.name/] [class.getClientDependencies().supplier->select(i | i.getAppliedStereotype('SysML::PortsAndFlows::InterfaceBlock') <> null).name->sep(': public ',' ',' ')/]{
         public:
             ~[class.name/]() {}
-            [for (behavior : uml::Behavior | class.ownedBehavior->select(op | op.visibility.toString() = 'public')) separator('        ')]
+            [for (behavior | class.ownedBehavior->select(op | op.visibility.toString() = 'public')) separator('        ')]
               [if (behavior.oclIsTypeOf(uml::OpaqueBehavior))]
                 [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
                 [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
@@ -65,14 +109,18 @@
                 [/let]
               [/if]
             [/for]
+        private:
+            [for (property | class.ownedAttribute->select(e | e.visibility.toString() = 'private'))]
+              [property.type.name/] [property.name/];
+            [/for]
     };
   [/file]
 [/template]
 
+
 [template private generate_class(class : uml::Class)]
   [file (class.name + '.cpp', overwrite, 'UTF-8')]
     #include "[class.name/].h"
-    [class.clientDependency->collect(d | '#include "' + d.supplier.name + '.h"')/]
 
     [for (behavior : uml::Behavior | class.ownedBehavior)]
       [if (behavior.oclIsTypeOf(uml::OpaqueBehavior))]

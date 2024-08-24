@@ -2,6 +2,7 @@
 
 #include "LedStrip_Interface.h"
 
+
 class LedStrip_Factory_Interface {
     public:
         virtual ~LedStrip_Factory_Interface() {}

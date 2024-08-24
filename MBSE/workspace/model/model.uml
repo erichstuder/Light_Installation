@@ -58,16 +58,16 @@
         </nestedClassifier>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_dbLOEGE4Ee-BeqznoyYbnA" name="LedStrip">
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iq7AsGFJEe-BeqznoyYbnA" name="LedStrip">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_qNQJsGFJEe-BeqznoyYbnA" name="pin" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
-          </ownedParameter>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_MfifYGIUEe-jQeWDWiZhkg" name="strip" visibility="private" type="_vQPmYGHhEe-9_vMEk5-Rzw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Y05SgGIUEe-jQeWDWiZhkg" name="id" visibility="private" type="_B-kpwGIOEe-jQeWDWiZhkg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iq7AsGFJEe-BeqznoyYbnA" name="LedStrip" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_qNQJsGFJEe-BeqznoyYbnA" name="pin" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_rO-scGFJEe-BeqznoyYbnA" name="animationCallback" visibility="public" type="_qKJbEGE4Ee-BeqznoyYbnA" effect="create"/>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_rVtmkGFJEe-BeqznoyYbnA" name="numberOfLeds" visibility="public" effect="create">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
           </ownedParameter>
         </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_zpiTYGFIEe-BeqznoyYbnA" name="setPixelColor">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_zpiTYGFIEe-BeqznoyYbnA" name="setPixelColor" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uCMcGFIEe-BeqznoyYbnA" name="z" visibility="public" effect="create">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
           </ownedParameter>
@@ -81,12 +81,10 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
           </ownedParameter>
         </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0OmIQGFIEe-BeqznoyYbnA" name="animate"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0OmIQGFIEe-BeqznoyYbnA" name="animate" visibility="public"/>
         <nestedClassifier xmi:type="uml:DataType" xmi:id="_qKJbEGE4Ee-BeqznoyYbnA" name="AnimationCallback_t">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_qKJbEWE4Ee-BeqznoyYbnA" name="Operation1">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_qKJbEmE4Ee-BeqznoyYbnA" name="result" visibility="public" direction="return" effect="create">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-            </ownedParameter>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_qKJbEWE4Ee-BeqznoyYbnA" name="func">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_qKJbEmE4Ee-BeqznoyYbnA" name="result" visibility="public" type="_fXOJUGIPEe-jQeWDWiZhkg" direction="return" effect="create"/>
           </ownedOperation>
         </nestedClassifier>
       </packagedElement>
@@ -94,9 +92,14 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_uw6DcF7KEe-1pOzPlEhqxg" client="_0wNlsF1lEe-CGKUOs61xDw" supplier="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
       <packagedElement xmi:type="uml:Realization" xmi:id="_fVRH8GFTEe-9_vMEk5-Rzw" client="_dbLOEGE4Ee-BeqznoyYbnA" supplier="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_2KeNkGHhEe-9_vMEk5-Rzw" client="_dbLOEGE4Ee-BeqznoyYbnA" supplier="_vQPmYGHhEe-9_vMEk5-Rzw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_FMEqEGIaEe-8La6k0UDBcA" client="_Q1Z5AF7KEe-1pOzPlEhqxg" supplier="_vQPmYGHhEe-9_vMEk5-Rzw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_tB8i0GHhEe-9_vMEk5-Rzw" name="Externals">
       <packagedElement xmi:type="uml:Class" xmi:id="_vQPmYGHhEe-9_vMEk5-Rzw" name="WS2812FX"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_AnIVsGIOEe-jQeWDWiZhkg" name="types">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_B-kpwGIOEe-jQeWDWiZhkg" name="uint8_t"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_fXOJUGIPEe-jQeWDWiZhkg" name="uint16_t"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_E37v4FylEe-DFNQHRW9B6w">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E4ABUFylEe-DFNQHRW9B6w" source="http://www.eclipse.org/uml2/2.0.0/UML">
