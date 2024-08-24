@@ -7,6 +7,10 @@
     <packageImport xmi:type="uml:PackageImport" xmi:id="_E9Hx4FylEe-DFNQHRW9B6w">
       <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
     </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_JC7tcF1lEe-CGKUOs61xDw" name="LedPatterns">
+      <packagedElement xmi:type="uml:Class" xmi:id="_30KqcGI9Ee-ndrumulRGWw" name="Wave"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_9CTjQGI9Ee-ndrumulRGWw" name="RunningLight"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_FlEfcF1lEe-CGKUOs61xDw" name="LedStrips">
       <packagedElement xmi:type="uml:Class" xmi:id="_0wNlsF1lEe-CGKUOs61xDw" name="LedStrip_Factory_Interface" visibility="public">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_IplHYF1nEe-CGKUOs61xDw" name="create" visibility="public">
@@ -69,14 +73,10 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_olXvkGI-Ee-ndrumulRGWw" client="_RwHEgGI9Ee-ndrumulRGWw" supplier="_30KqcGI9Ee-ndrumulRGWw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_rSzmMGI-Ee-ndrumulRGWw" client="_RwHEgGI9Ee-ndrumulRGWw" supplier="_9CTjQGI9Ee-ndrumulRGWw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_xuQp4GJCEe-ndrumulRGWw" client="_RwHEgGI9Ee-ndrumulRGWw" supplier="_GKDx8GI-Ee-ndrumulRGWw"/>
-      <packagedElement xmi:type="uml:Package" xmi:id="_JC7tcF1lEe-CGKUOs61xDw" name="LedPatterns">
-        <packagedElement xmi:type="uml:Class" xmi:id="_30KqcGI9Ee-ndrumulRGWw" name="Wave"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_9CTjQGI9Ee-ndrumulRGWw" name="RunningLight"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_vQPmYGHhEe-9_vMEk5-Rzw" name="WS2812FX"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_tB8i0GHhEe-9_vMEk5-Rzw" name="Externals">
       <packagedElement xmi:type="uml:Class" xmi:id="_GKDx8GI-Ee-ndrumulRGWw" name="stdint"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_vQPmYGHhEe-9_vMEk5-Rzw" name="WS2812FX"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_AnIVsGIOEe-jQeWDWiZhkg" name="Types">
       <packagedElement xmi:type="uml:DataType" xmi:id="_B-kpwGIOEe-jQeWDWiZhkg" name="uint8_t"/>

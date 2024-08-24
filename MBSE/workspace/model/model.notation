@@ -352,6 +352,7 @@
     <children xmi:type="notation:Compartment" xmi:id="_o96OkWJCEe-ndrumulRGWw" type="References"/>
     <children xmi:type="notation:Compartment" xmi:id="_o96OkmJCEe-ndrumulRGWw" type="Flow Properties"/>
     <children xmi:type="notation:Compartment" xmi:id="_o96Ok2JCEe-ndrumulRGWw" type="Parameters"/>
+    <styles xmi:type="notation:IntValueStyle" xmi:id="_i8kk8GJHEe-ndrumulRGWw" name="shapeDirection" intValue="3"/>
     <element xmi:type="uml:Class" href="model.uml#_RwHEgGI9Ee-ndrumulRGWw"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o9wdkWJCEe-ndrumulRGWw" x="260" y="240" width="121"/>
   </children>
@@ -635,6 +636,9 @@
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NU8SC2JDEe-ndrumulRGWw"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_TgIo8GJDEe-ndrumulRGWw" type="Dependency_Edge" source="_o9wdkGJCEe-ndrumulRGWw" target="_NUiCUGJDEe-ndrumulRGWw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Qpv4YGJIEe-ndrumulRGWw" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QpwfcGJIEe-ndrumulRGWw" key="visible" value="true"/>
+    </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_TgIo82JDEe-ndrumulRGWw" type="Dependency_NameLabel">
       <styles xmi:type="notation:BooleanValueStyle" xmi:id="_nc1A4GJDEe-ndrumulRGWw" name="IS_UPDATED_POSITION" booleanValue="true"/>
       <layoutConstraint xmi:type="notation:Location" xmi:id="_TgIo9GJDEe-ndrumulRGWw" x="-1" y="38"/>
@@ -649,6 +653,9 @@
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_U2k3cGJDEe-ndrumulRGWw" id="(0.5825242718446602,1.0)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_TgJQAGJDEe-ndrumulRGWw" type="Dependency_Edge" source="_o9wdkGJCEe-ndrumulRGWw" target="_Mo65gGJDEe-ndrumulRGWw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QpwfcWJIEe-ndrumulRGWw" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QpxGgGJIEe-ndrumulRGWw" key="visible" value="true"/>
+    </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_TgJ3EGJDEe-ndrumulRGWw" type="Dependency_NameLabel">
       <styles xmi:type="notation:BooleanValueStyle" xmi:id="_ndQesGJDEe-ndrumulRGWw" name="IS_UPDATED_POSITION" booleanValue="true"/>
       <layoutConstraint xmi:type="notation:Location" xmi:id="_TgJ3EWJDEe-ndrumulRGWw" x="-1" y="38"/>
