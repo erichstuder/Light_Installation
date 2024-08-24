@@ -3,19 +3,21 @@
   - These areas stay untouched by the code generation.
   - The generated code including changes by hand must be commited as well.
 
-- Keep the dependencies close to the client elements (Block, InterfaceBlock, ...)
+- Keep links (Dependencies, Realizations, ...) close to the client elements (Block, InterfaceBlock, ...)
   - example
     - Package
       - Block1
-        - Realization1
-        - Dependency1
-        :
+      - Realization1
+      - Dependency1
+      :
       - Block2
-        - Realization1
-        - Realization2
-        :
+      - Realization1
+      - Realization2
+      :
       - block3
-        :
+      - Dependency1
+      - Dependency2
+      :
   - why?
     - Not every dependency of an element will be shown in a diagram. Unimportant ones will be left away.
     - Dependencies of an element may be not all shown in one diagram, but scattered over multiple diagrams.
