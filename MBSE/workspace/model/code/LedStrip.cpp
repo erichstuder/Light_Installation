@@ -1,6 +1,6 @@
 #include "LedStrip.h"
 
-LedStrip::LedStrip(uint8_t pin, AnimationCallback_t animationCallback, EInt numberOfLeds)
+LedStrip::LedStrip(uint8_t pin, AnimationCallback_t animationCallback, uint16_t numberOfLeds)
 // Start of user code LedStrip initializers (don't remove the 'Start/End of user code' markers)
 
     :
@@ -21,7 +21,7 @@ LedStrip::LedStrip(uint8_t pin, AnimationCallback_t animationCallback, EInt numb
 }
 
 
-void LedStrip::setPixelColor(EByte z, EByte r, EByte g, EByte b) {
+void LedStrip::setPixelColor(uint8_t z, uint8_t r, uint8_t g, uint8_t b) {
     // Start of user code setPixelColor (don't remove the 'Start/End of user code' markers)
 
     strip.setPixelColor(z, r, g, b);

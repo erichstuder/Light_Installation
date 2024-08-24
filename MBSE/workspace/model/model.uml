@@ -12,48 +12,30 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_0wNlsF1lEe-CGKUOs61xDw" name="LedStrip_Factory_Interface" visibility="public">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_IplHYF1nEe-CGKUOs61xDw" name="create" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_OyRuMF7LEe-1pOzPlEhqxg" name="led_strip" visibility="public" type="_Q1Z5AF7KEe-1pOzPlEhqxg" direction="return" effect="create"/>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_AavygF7MEe-1pOzPlEhqxg" name="pin" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
-          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_AavygF7MEe-1pOzPlEhqxg" name="pin" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_ghdI4F7PEe-1pOzPlEhqxg" name="animation_callback" type="_xEGtwF7NEe-1pOzPlEhqxg"/>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rOn2MF7PEe-1pOzPlEhqxg" name="number_of_leds">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rOn2MF7PEe-1pOzPlEhqxg" name="number_of_leds" type="_fXOJUGIPEe-jQeWDWiZhkg"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_dymacF1lEe-CGKUOs61xDw" name="LedStrip_Factory">
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2vmrQGEuEe-BeqznoyYbnA" name="create" language="" body="">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_TWuP8GEfEe-BeqznoyYbnA" name="ledStrip_factory" visibility="public" type="_Q1Z5AF7KEe-1pOzPlEhqxg" direction="return" effect="create"/>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZZmqUGEdEe-BeqznoyYbnA" name="pin" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
-          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZZmqUGEdEe-BeqznoyYbnA" name="pin" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_akzSIGEdEe-BeqznoyYbnA" name="animationCallback" visibility="public" type="_xEGtwF7NEe-1pOzPlEhqxg" effect="create"/>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDjqsGEdEe-BeqznoyYbnA" name="numberOfLeds" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDjqsGEdEe-BeqznoyYbnA" name="numberOfLeds" visibility="public" type="_fXOJUGIPEe-jQeWDWiZhkg" effect="create"/>
         </ownedBehavior>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Q1Z5AF7KEe-1pOzPlEhqxg" name="LedStrip_Interface">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Wb19EF7KEe-1pOzPlEhqxg" name="setPixelColor" visibility="public">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_d6ZZUF7KEe-1pOzPlEhqxg" name="z" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_eqJbQF7KEe-1pOzPlEhqxg" name="r" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_fF48EF7KEe-1pOzPlEhqxg" name="g" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_fg7SQF7KEe-1pOzPlEhqxg" name="b" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
-          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_d6ZZUF7KEe-1pOzPlEhqxg" name="z" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_eqJbQF7KEe-1pOzPlEhqxg" name="r" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_fF48EF7KEe-1pOzPlEhqxg" name="g" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_fg7SQF7KEe-1pOzPlEhqxg" name="b" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Y94cAF7KEe-1pOzPlEhqxg" name="animate" visibility="public"/>
         <nestedClassifier xmi:type="uml:DataType" xmi:id="_xEGtwF7NEe-1pOzPlEhqxg" name="AnimationCallback_t">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_xpL7UF7OEe-1pOzPlEhqxg" name="Operation1">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zIGJUF7OEe-1pOzPlEhqxg" name="result" visibility="public" direction="return" effect="create">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-            </ownedParameter>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_xpL7UF7OEe-1pOzPlEhqxg" name="func">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zIGJUF7OEe-1pOzPlEhqxg" name="result" visibility="public" type="_fXOJUGIPEe-jQeWDWiZhkg" direction="return" effect="create"/>
           </ownedOperation>
         </nestedClassifier>
       </packagedElement>
@@ -63,23 +45,13 @@
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iq7AsGFJEe-BeqznoyYbnA" name="LedStrip" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_qNQJsGFJEe-BeqznoyYbnA" name="pin" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_rO-scGFJEe-BeqznoyYbnA" name="animationCallback" visibility="public" type="_qKJbEGE4Ee-BeqznoyYbnA" effect="create"/>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rVtmkGFJEe-BeqznoyYbnA" name="numberOfLeds" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rVtmkGFJEe-BeqznoyYbnA" name="numberOfLeds" visibility="public" type="_fXOJUGIPEe-jQeWDWiZhkg" effect="create"/>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_zpiTYGFIEe-BeqznoyYbnA" name="setPixelColor" visibility="public">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uCMcGFIEe-BeqznoyYbnA" name="z" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-SIpwGFIEe-BeqznoyYbnA" name="r" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-V_PAGFIEe-BeqznoyYbnA" name="g" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-ZDxIGFIEe-BeqznoyYbnA" name="b" visibility="public" effect="create">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
-          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uCMcGFIEe-BeqznoyYbnA" name="z" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-SIpwGFIEe-BeqznoyYbnA" name="r" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-V_PAGFIEe-BeqznoyYbnA" name="g" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-ZDxIGFIEe-BeqznoyYbnA" name="b" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0OmIQGFIEe-BeqznoyYbnA" name="animate" visibility="public"/>
         <nestedClassifier xmi:type="uml:DataType" xmi:id="_qKJbEGE4Ee-BeqznoyYbnA" name="AnimationCallback_t">

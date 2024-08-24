@@ -6,5 +6,5 @@
 class LedStrip_Factory_Interface {
     public:
         virtual ~LedStrip_Factory_Interface() {}
-        virtual LedStrip_Interface create(EByte pin, AnimationCallback_t animation_callback, EInt number_of_leds) = 0;
+        virtual LedStrip_Interface create(uint8_t pin, AnimationCallback_t animation_callback, uint16_t number_of_leds) = 0;
 };

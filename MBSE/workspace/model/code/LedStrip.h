@@ -8,8 +8,8 @@ typedef uint16_t (*AnimationCallback_t)();
 class LedStrip : public LedStrip_Interface {
     public:
         ~LedStrip() {}
-        void LedStrip(uint8_t pin, AnimationCallback_t animationCallback, EInt numberOfLeds);
-        void setPixelColor(EByte z, EByte r, EByte g, EByte b);
+        void LedStrip(uint8_t pin, AnimationCallback_t animationCallback, uint16_t numberOfLeds);
+        void setPixelColor(uint8_t z, uint8_t r, uint8_t g, uint8_t b);
         void animate();
     private:
         WS2812FX strip;
