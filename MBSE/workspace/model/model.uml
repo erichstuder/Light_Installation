@@ -20,6 +20,7 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_rOn2MF7PEe-1pOzPlEhqxg" name="number_of_leds" type="_fXOJUGIPEe-jQeWDWiZhkg"/>
         </ownedOperation>
       </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_uw6DcF7KEe-1pOzPlEhqxg" client="_0wNlsF1lEe-CGKUOs61xDw" supplier="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_dymacF1lEe-CGKUOs61xDw" name="LedStrip_Factory">
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2vmrQGEuEe-BeqznoyYbnA" name="create" language="" body="">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_TWuP8GEfEe-BeqznoyYbnA" name="ledStrip_factory" visibility="public" type="_Q1Z5AF7KEe-1pOzPlEhqxg" direction="return" effect="create"/>
@@ -28,6 +29,7 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDjqsGEdEe-BeqznoyYbnA" name="numberOfLeds" visibility="public" type="_fXOJUGIPEe-jQeWDWiZhkg" effect="create"/>
         </ownedBehavior>
       </packagedElement>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_dHvNoF1nEe-CGKUOs61xDw" client="_dymacF1lEe-CGKUOs61xDw" supplier="_0wNlsF1lEe-CGKUOs61xDw"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_Q1Z5AF7KEe-1pOzPlEhqxg" name="LedStrip_Interface">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Wb19EF7KEe-1pOzPlEhqxg" name="setPixelColor" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_d6ZZUF7KEe-1pOzPlEhqxg" name="z" visibility="public" type="_B-kpwGIOEe-jQeWDWiZhkg" effect="create"/>
@@ -42,6 +44,7 @@
           </ownedOperation>
         </nestedClassifier>
       </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_FMEqEGIaEe-8La6k0UDBcA" client="_Q1Z5AF7KEe-1pOzPlEhqxg" supplier="_vQPmYGHhEe-9_vMEk5-Rzw"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_dbLOEGE4Ee-BeqznoyYbnA" name="LedStrip">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_MfifYGIUEe-jQeWDWiZhkg" name="strip" visibility="private" type="_vQPmYGHhEe-9_vMEk5-Rzw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Y05SgGIUEe-jQeWDWiZhkg" name="id" visibility="private" type="_B-kpwGIOEe-jQeWDWiZhkg"/>
@@ -63,12 +66,9 @@
           </ownedOperation>
         </nestedClassifier>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_RwHEgGI9Ee-ndrumulRGWw" name="LedStrips"/>
-      <packagedElement xmi:type="uml:Realization" xmi:id="_dHvNoF1nEe-CGKUOs61xDw" client="_dymacF1lEe-CGKUOs61xDw" supplier="_0wNlsF1lEe-CGKUOs61xDw"/>
       <packagedElement xmi:type="uml:Realization" xmi:id="_fVRH8GFTEe-9_vMEk5-Rzw" client="_dbLOEGE4Ee-BeqznoyYbnA" supplier="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_uw6DcF7KEe-1pOzPlEhqxg" client="_0wNlsF1lEe-CGKUOs61xDw" supplier="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_2KeNkGHhEe-9_vMEk5-Rzw" client="_dbLOEGE4Ee-BeqznoyYbnA" supplier="_vQPmYGHhEe-9_vMEk5-Rzw"/>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_FMEqEGIaEe-8La6k0UDBcA" client="_Q1Z5AF7KEe-1pOzPlEhqxg" supplier="_vQPmYGHhEe-9_vMEk5-Rzw"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_RwHEgGI9Ee-ndrumulRGWw" name="LedStrips"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_uLya8GI9Ee-ndrumulRGWw" client="_RwHEgGI9Ee-ndrumulRGWw" supplier="_0wNlsF1lEe-CGKUOs61xDw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_olXvkGI-Ee-ndrumulRGWw" client="_RwHEgGI9Ee-ndrumulRGWw" supplier="_30KqcGI9Ee-ndrumulRGWw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_rSzmMGI-Ee-ndrumulRGWw" client="_RwHEgGI9Ee-ndrumulRGWw" supplier="_9CTjQGI9Ee-ndrumulRGWw"/>
