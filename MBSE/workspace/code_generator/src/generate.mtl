@@ -93,7 +93,9 @@
       [/if]
     [/for]
 
-    class [class.name/] [class.getClientDependencies().supplier->select(i | i.getAppliedStereotype('SysML::PortsAndFlows::InterfaceBlock') <> null).name->sep(': public ',' ',' ')/]{
+    [let interface_names = class.getClientDependencies()->select(d | d.oclIsTypeOf(uml::Realization)).supplier.name]
+      class [class.name/][if (interface_names->notEmpty())][interface_names->sep(' : public ',' ','')/][/if] {
+    [/let]
         public:
             ~[class.name/]() {}
             [for (behavior | class.ownedBehavior->select(op | op.visibility.toString() = 'public')) separator('        ')]
