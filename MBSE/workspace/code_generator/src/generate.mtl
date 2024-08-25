@@ -7,6 +7,9 @@
     [let class = element.oclAsType(uml::Class)]
     [if (class.getAppliedStereotype('SysML::PortsAndFlows::InterfaceBlock') <> null)]
       [class.generate_interface()/]
+    [elseif (class.getAppliedStereotype('SysML::Blocks::Block') <> null and class.getAppliedStereotype('model::Namespace') <> null)]
+      [class.generate_namespace_header()/]
+      [comment class.generate_namespace()/]
     [elseif (class.getAppliedStereotype('SysML::Blocks::Block') <> null)]
       [class.generate_class_header()/]
       [class.generate_class()/]
@@ -116,6 +119,35 @@
               [property.type.name/] [property.name/];
             [/for]
     };
+  [/file]
+[/template]
+
+
+[template private generate_namespace_header(class : uml::Class)]
+  [file (class.name + '.h', overwrite, 'UTF-8')]
+    #pragma once
+
+    [for (dependency | class.clientDependency)]
+      [if (dependency.supplier.eContainer(uml::Package)->at(1).name = 'Externals')]
+        ['#include <' + dependency.supplier.name + '.h>\n'/]
+      [else]
+        ['#include "' + dependency.supplier.name + '.h"\n'/]
+      [/if]
+    [/for]
+
+    namespace [class.name/] {
+    [for (behavior | class.ownedBehavior->select(op | op.visibility.toString() = 'public'))]
+      [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
+      [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
+      [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
+      [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+            [return_type/] [behavior.name/][signature->sep('(', ', ', ');')/]
+      [/let]
+      [/let]
+      [/let]
+      [/let]
+    [/for]
+    }
   [/file]
 [/template]
 

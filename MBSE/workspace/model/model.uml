@@ -68,7 +68,12 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Realization" xmi:id="_fVRH8GFTEe-9_vMEk5-Rzw" client="_dbLOEGE4Ee-BeqznoyYbnA" supplier="_Q1Z5AF7KEe-1pOzPlEhqxg"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_2KeNkGHhEe-9_vMEk5-Rzw" client="_dbLOEGE4Ee-BeqznoyYbnA" supplier="_vQPmYGHhEe-9_vMEk5-Rzw"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_RwHEgGI9Ee-ndrumulRGWw" name="LedStrips"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_RwHEgGI9Ee-ndrumulRGWw" name="LedStrips">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_293iQGMGEe-QKsqF1fD-lQ" name="setup" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_4vf38GMGEe-QKsqF1fD-lQ" name="ledStrip_factory" visibility="public" type="_0wNlsF1lEe-CGKUOs61xDw" effect="create"/>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_EgOUAGMHEe-QKsqF1fD-lQ" name="animate" visibility="public"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_uLya8GI9Ee-ndrumulRGWw" client="_RwHEgGI9Ee-ndrumulRGWw" supplier="_0wNlsF1lEe-CGKUOs61xDw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_olXvkGI-Ee-ndrumulRGWw" client="_RwHEgGI9Ee-ndrumulRGWw" supplier="_30KqcGI9Ee-ndrumulRGWw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_rSzmMGI-Ee-ndrumulRGWw" client="_RwHEgGI9Ee-ndrumulRGWw" supplier="_9CTjQGI9Ee-ndrumulRGWw"/>
