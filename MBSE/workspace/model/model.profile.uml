@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_fBgekGI8Ee-wA_29uJFPJw" name="model" metaclassReference="_673QoGI8Ee-wA_29uJFPJw">
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_fBgekGI8Ee-wA_29uJFPJw" name="model" metaclassReference="_673QoGI8Ee-wA_29uJFPJw _k33XEGekEe-yQIyMeh5fxQ">
   <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pAG1sGI8Ee-wA_29uJFPJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_67yYIGI8Ee-wA_29uJFPJw" source="PapyrusVersion">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_67yYIWI8Ee-wA_29uJFPJw" key="Version" value="0.0.0"/>
@@ -8,6 +8,51 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_67yYJGI8Ee-wA_29uJFPJw" key="Date" value=""/>
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_67yYJWI8Ee-wA_29uJFPJw" key="Author" value="&lt;undefined>"/>
     </eAnnotations>
+    <contents xmi:type="ecore:EPackage" xmi:id="_ood64GekEe-yQIyMeh5fxQ" name="model" nsURI="http:///schemas/model/_oodT0GekEe-yQIyMeh5fxQ/3" nsPrefix="model">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ood67mekEe-yQIyMeh5fxQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ood672ekEe-yQIyMeh5fxQ" key="Version" value="0.0.4"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ood68GekEe-yQIyMeh5fxQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ood68WekEe-yQIyMeh5fxQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ood68mekEe-yQIyMeh5fxQ" key="Date" value="2024-08-31"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ood682ekEe-yQIyMeh5fxQ" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ood64WekEe-yQIyMeh5fxQ" name="Array_of_Pointers">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ood64mekEe-yQIyMeh5fxQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bR47UGekEe-yQIyMeh5fxQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ood642ekEe-yQIyMeh5fxQ" name="base_Class" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ood65WekEe-yQIyMeh5fxQ" name="base_Property" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ood652ekEe-yQIyMeh5fxQ" name="Namespace">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ood66GekEe-yQIyMeh5fxQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_hcodMGI8Ee-wA_29uJFPJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ood66WekEe-yQIyMeh5fxQ" name="base_Class" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_l_BMYGekEe-yQIyMeh5fxQ" name="model" nsURI="http:///schemas/model/_l-_-QGekEe-yQIyMeh5fxQ/2" nsPrefix="model">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l_BzcmekEe-yQIyMeh5fxQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l_Bzc2ekEe-yQIyMeh5fxQ" key="Version" value="0.0.3"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l_BzdGekEe-yQIyMeh5fxQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l_BzdWekEe-yQIyMeh5fxQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l_BzdmekEe-yQIyMeh5fxQ" key="Date" value="2024-08-31"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l_Bzd2ekEe-yQIyMeh5fxQ" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_l_BMYWekEe-yQIyMeh5fxQ" name="Array_of_Pointers">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l_BMYmekEe-yQIyMeh5fxQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bR47UGekEe-yQIyMeh5fxQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_l_BMY2ekEe-yQIyMeh5fxQ" name="base_Class" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_l_BMZWekEe-yQIyMeh5fxQ" name="Namespace">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l_BMZmekEe-yQIyMeh5fxQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_hcodMGI8Ee-wA_29uJFPJw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_l_BMZ2ekEe-yQIyMeh5fxQ" name="base_Class" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_9k0P4WI8Ee-wA_29uJFPJw" name="model" nsURI="http:///schemas/model/_9k0P4GI8Ee-wA_29uJFPJw/1" nsPrefix="model">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9k1eAGI8Ee-wA_29uJFPJw" source="PapyrusVersion">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9k1eAWI8Ee-wA_29uJFPJw" key="Version" value="0.0.2"/>
@@ -39,12 +84,25 @@
   <elementImport xmi:type="uml:ElementImport" xmi:id="_673QoGI8Ee-wA_29uJFPJw" alias="Class">
     <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
   </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_k33XEGekEe-yQIyMeh5fxQ" alias="Property">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+  </elementImport>
   <packageImport xmi:type="uml:PackageImport" xmi:id="_fDusIGI8Ee-wA_29uJFPJw">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packageImport xmi:type="uml:PackageImport" xmi:id="_fDvTMGI8Ee-wA_29uJFPJw">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
   </packageImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_bR47UGekEe-yQIyMeh5fxQ" name="Array_of_Pointers">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_bR47UWekEe-yQIyMeh5fxQ" name="base_Class">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bR47UmekEe-yQIyMeh5fxQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_n151gGekEe-yQIyMeh5fxQ" name="base_Property" association="_n13ZQGekEe-yQIyMeh5fxQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n151gWekEe-yQIyMeh5fxQ"/>
+    </ownedAttribute>
+  </packagedElement>
   <packagedElement xmi:type="uml:Stereotype" xmi:id="_hcodMGI8Ee-wA_29uJFPJw" name="Namespace">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_8rR_0WI8Ee-wA_29uJFPJw" name="base_Class" association="_8rQKoGI8Ee-wA_29uJFPJw">
       <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
@@ -53,5 +111,8 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Extension" xmi:id="_8rQKoGI8Ee-wA_29uJFPJw" name="E_Namespace_Class6" memberEnd="_8rR_0GI8Ee-wA_29uJFPJw _8rR_0WI8Ee-wA_29uJFPJw">
     <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_8rR_0GI8Ee-wA_29uJFPJw" name="extension_Namespace" type="_hcodMGI8Ee-wA_29uJFPJw" aggregation="composite" association="_8rQKoGI8Ee-wA_29uJFPJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_n13ZQGekEe-yQIyMeh5fxQ" name="E_Array_of_Pointers_Property9" memberEnd="_n15OcGekEe-yQIyMeh5fxQ _n151gGekEe-yQIyMeh5fxQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_n15OcGekEe-yQIyMeh5fxQ" name="extension_Array_of_Pointers" type="_bR47UGekEe-yQIyMeh5fxQ" aggregation="composite" association="_n13ZQGekEe-yQIyMeh5fxQ"/>
   </packagedElement>
 </uml:Profile>

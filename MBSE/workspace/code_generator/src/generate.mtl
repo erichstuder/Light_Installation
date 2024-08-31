@@ -159,49 +159,39 @@
     namespace [class.name/] {
 
     [for (property | class.ownedAttribute->select(e | e.visibility.toString() = 'private'))]
-      static [property.type.name/] [property.name/][if (property.isReadOnly)] = [property.getDefault()/][/if];
+      [let default_value = if (property.isSetDefault()) then ' = ' + property.getDefault() else '' endif]
+      [let const_modifier = if (property.isReadOnly) then ' const' else '' endif]
+      [let multiplicity = if (property.isMultivalued()) then '[' + (property.upper + 1) + ']' else '' endif]
+      [let pointer = if property.getAppliedStereotype('model::Array_of_Pointers') <> null then '*' else '' endif]
+            static[const_modifier/] [property.type.name/][pointer/] [property.name/][multiplicity/][default_value/];
+      [/let]
+      [/let]
+      [/let]
+      [/let]
     [/for]
+
 
     [for (behavior : uml::Behavior | class.ownedBehavior)]
       [if (behavior.oclIsTypeOf(uml::OpaqueBehavior))]
-        [if (behavior.name = class.name)]
-          [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
-          [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
-          [class.name/]::[behavior.name/][signature->sep('(', ', ', ')')/]
-            [protected (behavior.name + ' initializers (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
+        [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
+        [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+        [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
+        [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
+        [let visibility = if (behavior.visibility.toString() = 'private') then 'static ' else '' endif]
+              [visibility/][return_type/] [behavior.name/][signature->sep('(', ', ', ') {')/]
+                  [protected (behavior.name + ' (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
 
-              // begin the initializers with a : (this comment can be removed)
+                    // place your code here (this comment can be removed)
 
-            [/protected]
-            {
-                [protected (behavior.name + ' body (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
-
-                  // place your code here (this comment can be removed)
-
-                [/protected]
-            }
+                  [/protected]
+              }
 
 
-          [/let]
-          [/let]
-        [else]
-          [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
-          [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
-          [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
-          [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
-          [return_type/] [class.name/]::[behavior.name/][signature->sep('(', ', ', ') {')/]
-                [protected (behavior.name + ' (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
-
-                  // place your code here (this comment can be removed)
-
-                [/protected]
-            }
-
-          [/let]
-          [/let]
-          [/let]
-          [/let]
-        [/if]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
       [/if]
     [/for]
     }
