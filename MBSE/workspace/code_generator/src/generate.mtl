@@ -9,7 +9,7 @@
       [class.generate_interface()/]
     [elseif (class.getAppliedStereotype('SysML::Blocks::Block') <> null and class.getAppliedStereotype('model::Namespace') <> null)]
       [class.generate_namespace_header()/]
-      [comment class.generate_namespace()/]
+      [class.generate_namespace()/]
     [elseif (class.getAppliedStereotype('SysML::Blocks::Block') <> null)]
       [class.generate_class_header()/]
       [class.generate_class()/]
@@ -146,6 +146,63 @@
       [/let]
       [/let]
       [/let]
+    [/for]
+    }
+  [/file]
+[/template]
+
+
+[template private generate_namespace(class : uml::Class)]
+  [file (class.name + '.cpp', overwrite, 'UTF-8')]
+    #include "[class.name/].h"
+
+    namespace [class.name/] {
+
+    [for (property | class.ownedAttribute->select(e | e.visibility.toString() = 'private'))]
+      static [property.type.name/] [property.name/][if (property.isReadOnly)] = [property.getDefault()/][/if];
+    [/for]
+
+    [for (behavior : uml::Behavior | class.ownedBehavior)]
+      [if (behavior.oclIsTypeOf(uml::OpaqueBehavior))]
+        [if (behavior.name = class.name)]
+          [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
+          [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+          [class.name/]::[behavior.name/][signature->sep('(', ', ', ')')/]
+            [protected (behavior.name + ' initializers (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
+
+              // begin the initializers with a : (this comment can be removed)
+
+            [/protected]
+            {
+                [protected (behavior.name + ' body (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
+
+                  // place your code here (this comment can be removed)
+
+                [/protected]
+            }
+
+
+          [/let]
+          [/let]
+        [else]
+          [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
+          [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+          [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
+          [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
+          [return_type/] [class.name/]::[behavior.name/][signature->sep('(', ', ', ') {')/]
+                [protected (behavior.name + ' (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
+
+                  // place your code here (this comment can be removed)
+
+                [/protected]
+            }
+
+          [/let]
+          [/let]
+          [/let]
+          [/let]
+        [/if]
+      [/if]
     [/for]
     }
   [/file]
