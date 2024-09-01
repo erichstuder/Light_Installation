@@ -253,6 +253,74 @@
       <packagedElement xmi:type="uml:DataType" xmi:id="_B-kpwGIOEe-jQeWDWiZhkg" name="uint8_t"/>
       <packagedElement xmi:type="uml:DataType" xmi:id="_fXOJUGIPEe-jQeWDWiZhkg" name="uint16_t"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="__fcq4GhuEe-AANONNylBrg" name="Use Cases">
+      <packagedElement xmi:type="uml:Package" xmi:id="_lElgMGhvEe-AANONNylBrg" name="Simulator">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_JiJFkGh0Ee-AANONNylBrg" annotatedElement="_aK3dQGhyEe-AANONNylBrg">
+          <body>Loads last pattern if possible
+else
+loads no pattern.</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_aK3dQGhyEe-AANONNylBrg" name="Start Simulator">
+          <include xmi:type="uml:Include" xmi:id="_R3byAGhzEe-AANONNylBrg" addition="_J1ZgIGhxEe-AANONNylBrg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_J1ZgIGhxEe-AANONNylBrg" name="Load existing LED pattern">
+          <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_B4vgsGhzEe-AANONNylBrg" name="ExtensionPoint1"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_KGJHUGhwEe-AANONNylBrg" name="Create new LED pattern">
+          <include xmi:type="uml:Include" xmi:id="_IHMccGhyEe-AANONNylBrg" addition="_LWS9EGhvEe-AANONNylBrg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_LWS9EGhvEe-AANONNylBrg" name="Store LED pattern">
+          <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_xFai4GhxEe-AANONNylBrg" name="ExtensionPoint1"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_RJ4sUGhvEe-AANONNylBrg" name="Simulate LED pattern">
+          <include xmi:type="uml:Include" xmi:id="_Q6LVAGhyEe-AANONNylBrg" addition="_LWS9EGhvEe-AANONNylBrg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_Vh5OYGhvEe-AANONNylBrg" name="Edit LED pattern"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_rGEFAGhwEe-AANONNylBrg" name="User"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_-cFegGhwEe-AANONNylBrg" memberEnd="_-cJv8GhwEe-AANONNylBrg _-cKXAGhwEe-AANONNylBrg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-cIh0GhwEe-AANONNylBrg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-cJI4GhwEe-AANONNylBrg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_-cJv8GhwEe-AANONNylBrg" name="create new led pattern" type="_KGJHUGhwEe-AANONNylBrg" association="_-cFegGhwEe-AANONNylBrg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_-cKXAGhwEe-AANONNylBrg" name="user" type="_rGEFAGhwEe-AANONNylBrg" association="_-cFegGhwEe-AANONNylBrg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_RgRhIGhxEe-AANONNylBrg" memberEnd="_RgTWUGhxEe-AANONNylBrg _RgTWUWhxEe-AANONNylBrg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RgSvQGhxEe-AANONNylBrg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RgSvQWhxEe-AANONNylBrg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_RgTWUGhxEe-AANONNylBrg" name="load existing led pattern" type="_J1ZgIGhxEe-AANONNylBrg" association="_RgRhIGhxEe-AANONNylBrg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_RgTWUWhxEe-AANONNylBrg" type="_rGEFAGhwEe-AANONNylBrg" association="_RgRhIGhxEe-AANONNylBrg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Td6SgGhxEe-AANONNylBrg" memberEnd="_Td7goWhxEe-AANONNylBrg _Td7gomhxEe-AANONNylBrg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Td65kGhxEe-AANONNylBrg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Td7goGhxEe-AANONNylBrg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_Td7goWhxEe-AANONNylBrg" name="user" type="_rGEFAGhwEe-AANONNylBrg" association="_Td6SgGhxEe-AANONNylBrg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_Td7gomhxEe-AANONNylBrg" name="edit led pattern" type="_Vh5OYGhvEe-AANONNylBrg" association="_Td6SgGhxEe-AANONNylBrg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vdm5YGhxEe-AANONNylBrg" memberEnd="_VdoHgWhxEe-AANONNylBrg _VdoHgmhxEe-AANONNylBrg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VdngcGhxEe-AANONNylBrg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VdoHgGhxEe-AANONNylBrg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_VdoHgWhxEe-AANONNylBrg" name="user" type="_rGEFAGhwEe-AANONNylBrg" association="_Vdm5YGhxEe-AANONNylBrg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_VdoHgmhxEe-AANONNylBrg" name="simulate led pattern" type="_RJ4sUGhvEe-AANONNylBrg" association="_Vdm5YGhxEe-AANONNylBrg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Z4UxMGhxEe-AANONNylBrg" memberEnd="_Z4V_UmhxEe-AANONNylBrg _Z4WmYGhxEe-AANONNylBrg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Z4V_UGhxEe-AANONNylBrg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Z4V_UWhxEe-AANONNylBrg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_Z4V_UmhxEe-AANONNylBrg" name="store led pattern" type="_LWS9EGhvEe-AANONNylBrg" association="_Z4UxMGhxEe-AANONNylBrg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_Z4WmYGhxEe-AANONNylBrg" type="_rGEFAGhwEe-AANONNylBrg" association="_Z4UxMGhxEe-AANONNylBrg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_kkHJAGhyEe-AANONNylBrg" memberEnd="_kkIXImhyEe-AANONNylBrg _kkIXI2hyEe-AANONNylBrg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kkIXIGhyEe-AANONNylBrg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kkIXIWhyEe-AANONNylBrg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_kkIXImhyEe-AANONNylBrg" name="start simulator" type="_aK3dQGhyEe-AANONNylBrg" association="_kkHJAGhyEe-AANONNylBrg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_kkIXI2hyEe-AANONNylBrg" type="_rGEFAGhwEe-AANONNylBrg" association="_kkHJAGhyEe-AANONNylBrg"/>
+      </packagedElement>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_E37v4FylEe-DFNQHRW9B6w">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E4ABUFylEe-DFNQHRW9B6w" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
