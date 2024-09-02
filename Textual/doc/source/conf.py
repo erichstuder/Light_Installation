@@ -42,5 +42,41 @@ html_theme = 'sphinx_rtd_theme'
 drawio_no_sandbox = True
 
 needs_types = [
-    {"directive": "usecase", "title": "Use Case", "prefix": "UC_", "style": "node", "color": "#BFD8D2"},
+    {
+        "directive": "usecase",
+        "title": "Use Case",
+        "prefix": "UC_",
+        "style": "usecase",
+        "color": "#BFD8D2"
+    },
+    {
+        "directive": "actor",
+        "title": "Actor",
+        "prefix": "A_",
+        "style": "actor",
+        "color": "#BFD8D2"
+    },
+]
+
+needs_extra_links = [
+    {
+        "option": "includes",
+        "incoming": "is included by",
+        "outgoing": "<<include>>",
+        "copy": False,
+        "style": "#000000",
+        "style_part": "#000000",
+        "style_start": ".",
+        "style_end": "->"
+    },
+    {
+        "option": "association",
+        "incoming": "is associated with",
+        "outgoing": "",
+        "copy": False,
+        "style": "#000000",
+        "style_part": "#000000",
+        "style_start": "-",
+        "style_end": "-"
+    },
 ]
