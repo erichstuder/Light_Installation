@@ -9,7 +9,7 @@
 import subprocess
 from sphinx.application import Sphinx
 
-project = 'Light Installation - MBSE'
+project = 'Light Installation - Textual'
 copyright = '2024, erichstuder'
 author = 'erichstuder'
 
@@ -18,10 +18,10 @@ author = 'erichstuder'
 
 extensions = [
     'sphinxcontrib.drawio',
-    # 'sphinxcontrib.plantuml',
+    'sphinxcontrib.plantuml',
     # 'sphinx_toolbox.collapse',
     'sphinxcontrib.programoutput',
-    # 'sphinxcontrib_rust',
+    'sphinx_needs',
 ]
 
 templates_path = ['_templates']
@@ -33,10 +33,50 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
-html_css_files = [
-    'custom.css',
-]
+# html_css_files = [
+#     'custom.css',
+# ]
 
 drawio_no_sandbox = True
+
+needs_types = [
+    {
+        "directive": "usecase",
+        "title": "Use Case",
+        "prefix": "UC_",
+        "style": "usecase",
+        "color": "#BFD8D2"
+    },
+    {
+        "directive": "actor",
+        "title": "Actor",
+        "prefix": "A_",
+        "style": "actor",
+        "color": "#BFD8D2"
+    },
+]
+
+needs_extra_links = [
+    {
+        "option": "includes",
+        "incoming": "is included by",
+        "outgoing": "<<include>>",
+        "copy": False,
+        "style": "#000000",
+        "style_part": "#000000",
+        "style_start": ".",
+        "style_end": "->"
+    },
+    {
+        "option": "association",
+        "incoming": "is associated with",
+        "outgoing": "",
+        "copy": False,
+        "style": "#000000",
+        "style_part": "#000000",
+        "style_start": "-",
+        "style_end": "-"
+    },
+]

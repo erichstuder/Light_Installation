@@ -1,26 +1,24 @@
-Development Environment
-=======================
+Welcome to MBSE's documentation!
+================================
 
-Installation
-------------
-To work on this project on a local machine, the following tools need to be installed:
+This is the documentation for the MBSE implementation of the Light Installation project.
 
-- VS Code
-- Docker
-- Python
-- Eclipse IDE
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
-Local Toolchain
----------------
+   development_environment
+   file_structure
+   model_documentation
 
-.. drawio-image:: toolchain_local.drawio
+Indices and tables
+==================
 
-Eclipse IDE with Papyrus
-^^^^^^^^^^^^^^^^^^^^^^^^
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
 
-Used to create the model.
+Creation Date
+=============
 
-Acceleo
-^^^^^^^
-
-Used to generate code from the model.
+   |today|
