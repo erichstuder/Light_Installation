@@ -8,6 +8,7 @@ This is the documentation for the Textual implementation of the Light Installati
    :caption: Contents:
 
    use_cases/simulator_use_cases
+   use_cases/device_use_cases
 
 Indices and tables
 ==================

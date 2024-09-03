@@ -28,7 +28,7 @@ Use Cases for Simulator
 
 
 .. needflow::
-   :filter: is_need
+   :filter: docname.endswith('simulator_use_cases')
    :link_types: includes, association
    :show_link_names:
    :config: lefttoright
