@@ -277,6 +277,40 @@ loads no pattern.</body>
         </packagedElement>
         <packagedElement xmi:type="uml:UseCase" xmi:id="_Vh5OYGhvEe-AANONNylBrg" name="Edit LED pattern"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_nzdPYGoeEe-5O-IZ4_l4Yw" name="Device">
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_rz60IGoeEe-5O-IZ4_l4Yw" name="Start Device"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_tMDEsGoeEe-5O-IZ4_l4Yw" name="Load LED pattern"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_sRIUkGoeEe-5O-IZ4_l4Yw" name="Show LED pattern"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_sWwbcGoeEe-5O-IZ4_l4Yw" name="Power down Device"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_IQT8QGofEe-5O-IZ4_l4Yw" memberEnd="_IQWYgGofEe-5O-IZ4_l4Yw _IQWYgWofEe-5O-IZ4_l4Yw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IQVxcGofEe-5O-IZ4_l4Yw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IQVxcWofEe-5O-IZ4_l4Yw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_IQWYgGofEe-5O-IZ4_l4Yw" name="user" type="_rGEFAGhwEe-AANONNylBrg" association="_IQT8QGofEe-5O-IZ4_l4Yw"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_IQWYgWofEe-5O-IZ4_l4Yw" name="start device" type="_rz60IGoeEe-5O-IZ4_l4Yw" association="_IQT8QGofEe-5O-IZ4_l4Yw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_JgfKsGofEe-5O-IZ4_l4Yw" memberEnd="_JggY0GofEe-5O-IZ4_l4Yw _JggY0WofEe-5O-IZ4_l4Yw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JgfxwGofEe-5O-IZ4_l4Yw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JgfxwWofEe-5O-IZ4_l4Yw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_JggY0GofEe-5O-IZ4_l4Yw" name="user" type="_rGEFAGhwEe-AANONNylBrg" association="_JgfKsGofEe-5O-IZ4_l4Yw"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_JggY0WofEe-5O-IZ4_l4Yw" name="load led pattern" type="_tMDEsGoeEe-5O-IZ4_l4Yw" association="_JgfKsGofEe-5O-IZ4_l4Yw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_KaKksGofEe-5O-IZ4_l4Yw" memberEnd="_KaMZ4GofEe-5O-IZ4_l4Yw _KaMZ4WofEe-5O-IZ4_l4Yw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KaLy0GofEe-5O-IZ4_l4Yw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KaLy0WofEe-5O-IZ4_l4Yw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_KaMZ4GofEe-5O-IZ4_l4Yw" name="user" type="_rGEFAGhwEe-AANONNylBrg" association="_KaKksGofEe-5O-IZ4_l4Yw"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_KaMZ4WofEe-5O-IZ4_l4Yw" name="show led pattern" type="_sRIUkGoeEe-5O-IZ4_l4Yw" association="_KaKksGofEe-5O-IZ4_l4Yw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_LEVjEGofEe-5O-IZ4_l4Yw" memberEnd="_LEWxMmofEe-5O-IZ4_l4Yw _LEXYQGofEe-5O-IZ4_l4Yw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LEWxMGofEe-5O-IZ4_l4Yw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LEWxMWofEe-5O-IZ4_l4Yw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_LEWxMmofEe-5O-IZ4_l4Yw" name="user" type="_rGEFAGhwEe-AANONNylBrg" association="_LEVjEGofEe-5O-IZ4_l4Yw"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_LEXYQGofEe-5O-IZ4_l4Yw" name="power down device" type="_sWwbcGoeEe-5O-IZ4_l4Yw" association="_LEVjEGofEe-5O-IZ4_l4Yw"/>
+        </packagedElement>
+      </packagedElement>
       <packagedElement xmi:type="uml:Actor" xmi:id="_rGEFAGhwEe-AANONNylBrg" name="User"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_-cFegGhwEe-AANONNylBrg" memberEnd="_-cJv8GhwEe-AANONNylBrg _-cKXAGhwEe-AANONNylBrg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-cIh0GhwEe-AANONNylBrg" source="org.eclipse.papyrus">
