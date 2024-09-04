@@ -1,6 +1,16 @@
 Use Cases for Simulator
 =======================
 
+.. needflow::
+   :filter: docname.endswith('simulator_use_cases')
+   :link_types: includes, association
+   :show_link_names:
+   :config: lefttoright
+
+.. actor:: User
+    :id: A_001
+    :association: UC_001, UC_002, UC_003, UC_004, UC_005, UC_006
+
 .. usecase:: Start Simulator
     :id: UC_001
     :includes: UC_002
@@ -21,14 +31,3 @@ Use Cases for Simulator
 
 .. usecase:: Edit LED pattern
     :id: UC_006
-
-.. actor:: User
-    :id: A_001
-    :association: UC_001, UC_002, UC_003, UC_004, UC_005, UC_006
-
-
-.. needflow::
-   :filter: docname.endswith('simulator_use_cases')
-   :link_types: includes, association
-   :show_link_names:
-   :config: lefttoright

@@ -43,18 +43,25 @@ drawio_no_sandbox = True
 
 needs_types = [
     {
+        "directive": "req",
+        "title": "Requirement",
+        "prefix": "R_",
+        "color": "#BFD8D2",
+        "style": "node",
+    },
+    {
         "directive": "usecase",
         "title": "Use Case",
         "prefix": "UC_",
+        "color": "#BFD8D2",
         "style": "usecase",
-        "color": "#BFD8D2"
     },
     {
         "directive": "actor",
         "title": "Actor",
         "prefix": "A_",
+        "color": "#BFD8D2",
         "style": "actor",
-        "color": "#BFD8D2"
     },
 ]
 
