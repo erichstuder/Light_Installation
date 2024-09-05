@@ -7,7 +7,7 @@ preflight:
   run_drc: true
   set_text_variables:
     - variable: 'GIT-COMMIT-TAG'
-      command: 'git tag'
+      command: 'git tag --points-at HEAD'
     - variable: 'GIT-COMMIT-HASH'
       command: 'git rev-parse --short HEAD'
 

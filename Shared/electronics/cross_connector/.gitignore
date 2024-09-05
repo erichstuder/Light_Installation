@@ -3,3 +3,4 @@ fp-info-cache
 *.kicad_prl
 \#auto_saved_files#
 *kicad_sch-bak
+*.kicad_pro-bak
