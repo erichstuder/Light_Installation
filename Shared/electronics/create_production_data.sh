@@ -16,5 +16,3 @@ docker run --rm --volume $(pwd)/../..:/home/project --workdir /home/project/Shar
     '-b led_connector.kicad_pcb' \
     '-e led_connector.kicad_sch' \
 	'-d production_data'
-
-# openscad -o ${SCRIPT_DIR}/temp/3d_models/clamp.stl ../clamp/clamp.scad
