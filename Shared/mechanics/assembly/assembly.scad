@@ -20,14 +20,14 @@ module led_connector(){
 	// It looks like blender exports stl files in meters (not millimeters).
 	// At the moment the solution is to scale up the model by 1000.
 	scale(1000) color("red", opacity)
-		import("temp/3d_models/led_connector-3D_blender.stl");
+		import("temp/3d_models/led_connector-3D_blender_top.stl");
 }
 
 module cross_connector(){
 	// It looks like blender exports stl files in meters (not millimeters).
 	// At the moment the solution is to scale up the model by 1000.
 	scale(1000) color("green", opacity)
-		import("temp/3d_models/cross_connector-3D_blender.stl");
+		import("temp/3d_models/cross_connector-3D_blender_top.stl");
 }
 
 module clamp(){
