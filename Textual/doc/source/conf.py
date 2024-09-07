@@ -6,8 +6,12 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-import subprocess
-from sphinx.application import Sphinx
+# import subprocess
+# from sphinx.application import Sphinx
+from sphinx.errors import SphinxError
+from sphinx.util import logging
+import os
+import sys
 
 project = 'Light Installation - Textual'
 copyright = '2024, erichstuder'
@@ -16,12 +20,15 @@ author = 'erichstuder'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+sys.path.append(os.path.abspath("./_custom_extensions"))
+
 extensions = [
     'sphinxcontrib.drawio',
     'sphinxcontrib.plantuml',
     # 'sphinx_toolbox.collapse',
     'sphinxcontrib.programoutput',
     'sphinx_needs',
+    'checked_file_hashes',
 ]
 
 templates_path = ['_templates']
@@ -47,6 +54,13 @@ needs_types = [
         "title": "Requirement",
         "prefix": "R_",
         "color": "#BFD8D2",
+        "style": "node",
+    },
+    {
+        "directive": "inspection",
+        "title": "Inspection",
+        "prefix": "INSP_",
+        "color": "#DCB239",
         "style": "node",
     },
     {
@@ -87,3 +101,18 @@ needs_extra_links = [
         "style_end": "-"
     },
 ]
+
+logger = logging.getLogger(__name__)
+
+def validate_needs(app, exception):
+    if exception is None:
+        env = app.builder.env
+        for need in env.needs_all_needs.values():
+            if need['type'] == 'inspection':
+                if 'status' not in need or not need['status']:
+                    raise SphinxError(f'Inspection "{need["id"]}" is missing the "status" field.')
+                elif need['status'] != 'pass':
+                    logger.warning(f'Inspection "{need["id"]}" is not set to "pass".')
+
+def setup(app):
+    app.connect('build-finished', validate_needs)

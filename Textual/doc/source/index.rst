@@ -10,6 +10,7 @@ This is the documentation for the Textual implementation of the Light Installati
    use_cases/simulator_use_cases
    use_cases/device_use_cases
    requirements/device_requirements
+   inspections/device/electronics/led_connector_inspection
 
 Indices and tables
 ==================

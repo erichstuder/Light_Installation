@@ -19,7 +19,6 @@ Use Cases for Device
 
 .. usecase:: Show LED pattern
     :id: UC_103
-    :links: R_001, R_002, R_003, R_004
 
 .. usecase:: Power down Device
     :id: UC_104

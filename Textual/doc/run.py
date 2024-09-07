@@ -52,7 +52,7 @@ def build_container(container_tag, work_dir):
 
 def run_container(container_tag, work_dir):
 
-    current_time = datetime.datetime.now().strftime('%Hh_%Mm_%Ss');
+    current_time = datetime.datetime.now().strftime('%Hh_%Mm_%Ss')
 
     docker_volume_dir = '/usr/project'
 
@@ -75,8 +75,8 @@ def run_container(container_tag, work_dir):
     args = ['docker', 'run',
         '--rm',
         '--name', 'doc_' + current_time,
-        '--volume', work_dir + '/..:' + docker_volume_dir,
-        '--workdir', docker_volume_dir]
+        '--volume', work_dir + '/../..:' + docker_volume_dir,
+        '--workdir', docker_volume_dir + '/Textual']
 
     if arguments.sphinx_autobuild:
         args.extend([
