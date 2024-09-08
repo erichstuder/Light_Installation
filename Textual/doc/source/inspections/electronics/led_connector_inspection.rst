@@ -6,6 +6,7 @@ Versions
 
 .. checked-file-hashes::
    ../../Shared/electronics/led_connector/led_connector.kicad_sch 3a509fb
+   ../../Shared/electronics/led_connector/led_connector.kicad_pcb 3a509fb
 
 
 Inspections
