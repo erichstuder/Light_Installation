@@ -8,8 +8,10 @@
 
 import subprocess
 from sphinx.application import Sphinx
+import os
+import shutil
 
-project = '433MHz_to_MQTT'
+project = 'Light Installation'
 copyright = '2024, erichstuder'
 author = 'erichstuder'
 
@@ -33,6 +35,17 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
-# html_static_path = ['_static']
+html_static_path = ['_static']
 
 # drawio_no_sandbox = True
+
+def pre_build_copy_textual_documentation(app):
+    src = os.path.join(app.srcdir, '../../Textual/doc/build')
+    dest = os.path.join(app.srcdir, '_static/auto_copied/Textual/build')
+    if os.path.exists(dest):
+        shutil.rmtree(dest)
+    shutil.copytree(src, dest)
+    print(f"Copied {src} to {dest}")
+
+def setup(app):
+    app.connect('builder-inited', pre_build_copy_textual_documentation)

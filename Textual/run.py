@@ -5,7 +5,6 @@ import sys
 
 scripts = {
     'doc': 'doc/run.py',
-    'Textual': 'Textual/run.py',
 }
 
 
@@ -35,8 +34,6 @@ def main():
                 exit(result.returncode)
     elif arguments.doc is not None:
         exit(subprocess.run(['python3', work_dir + '/' + scripts['doc']] + arguments.doc).returncode)
-    elif arguments.Textual is not None:
-        exit(subprocess.run(['python3', work_dir + '/' + scripts['Textual']] + arguments.Textual).returncode)
     else:
         print('Unknown argument')
         exit(2)

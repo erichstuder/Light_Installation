@@ -6,6 +6,7 @@ import argparse
 import subprocess
 import datetime
 import pathlib
+import os
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Execute common documentation tasks')
@@ -60,11 +61,17 @@ def run_container(container_tag, work_dir):
 
     work_dir_commands = 'set -e \n cd doc \n'
 
+    # build subdocumentation
+    result = subprocess.run(['python3', work_dir +'/../run.py', '--Textual', '--doc', '--build'], capture_output=True, text=True)
+    if result.returncode != 0:
+        raise RuntimeError(f"Build of Textual documentation failed: {result.stderr}")
+
     if arguments.keep_open:
         commands = 'bash'
     elif arguments.sphinx_autobuild:
+        os.makedirs(work_dir+'/_build/html', exist_ok=True)
         commands = work_dir_commands + 'sphinx-autobuild '+ ('' if arguments.verbose else '-q') +' -a --port 8000 --host 0.0.0.0 '
-        commands += '--re-ignore auto_generated source _build/html '
+        commands += '--re-ignore _static/auto_copied/ source _build/html '
         commands += '--pre-build "' + prebuild_command + '"'
         print(commands)
     elif arguments.build:
