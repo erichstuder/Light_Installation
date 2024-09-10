@@ -9,7 +9,7 @@ Use Cases for Simulator
 
 .. actor:: User
     :id: A_001
-    :association: UC_001, UC_002, UC_003, UC_004, UC_005, UC_006
+    :association: UC_001, UC_002, UC_003, UC_004, UC_005, UC_007
 
 .. usecase:: Start Simulator
     :id: UC_001
@@ -26,12 +26,22 @@ Use Cases for Simulator
     :id: UC_003
     :includes: UC_004
 
+    - LED patterns can be developed with the simulator.
+
 .. usecase:: Store LED pattern
     :id: UC_004
 
 .. usecase:: Simulate LED pattern
     :id: UC_005
-    :includes: UC_004
+    :includes: UC_004, UC_006
+
+    - The simulator shows a 3D model of the Light Installation.
+    - The LED pattern is simulated as it would look like on the real Light Installation.
+
+.. usecase:: Rotate 3D model
+    :id: UC_006
+
+    - During the simulation the 3D model can be rotated with the mouse.
 
 .. usecase:: Edit LED pattern
-    :id: UC_006
+    :id: UC_007

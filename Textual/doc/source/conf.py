@@ -6,12 +6,13 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-# import subprocess
-# from sphinx.application import Sphinx
+import subprocess
+from sphinx.application import Sphinx
 from sphinx.errors import SphinxError
 from sphinx.util import logging
 import os
 import sys
+
 
 project = 'Light Installation - Textual'
 copyright = '2024, erichstuder'
@@ -40,11 +41,12 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
-# html_static_path = ['_static']
 
-# html_css_files = [
-#     'custom.css',
-# ]
+html_static_path = ['_static']
+
+html_css_files = [
+    'gherkin.css',
+]
 
 drawio_no_sandbox = True
 
@@ -102,6 +104,9 @@ needs_extra_links = [
     },
 ]
 
+def run_gherkindoc(app: Sphinx):
+    subprocess.run(['sphinx-gherkindoc', '--toc-name', 'simulator_features', '--doc-project', 'DOC_PROJECT', '../simulator/features', 'source/auto_generated/features'], check=True)
+
 logger = logging.getLogger(__name__)
 
 def validate_needs(app, exception):
@@ -115,4 +120,5 @@ def validate_needs(app, exception):
                     logger.warning(f'Inspection "{need["id"]}" is not set to "pass".')
 
 def setup(app):
+    app.connect("builder-inited", run_gherkindoc)
     app.connect('build-finished', validate_needs)
