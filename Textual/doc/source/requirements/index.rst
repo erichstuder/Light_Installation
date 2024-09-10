@@ -4,4 +4,4 @@ Requirements
 .. toctree::
    :maxdepth: 2
 
-   device_requirements.rst
+   device_hardware_requirements.rst

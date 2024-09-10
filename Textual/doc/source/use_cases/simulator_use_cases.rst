@@ -15,8 +15,12 @@ Use Cases for Simulator
     :id: UC_001
     :includes: UC_002
 
-.. usecase:: Load existing LED pattern
+.. usecase:: Load LED pattern
     :id: UC_002
+
+    - The desired pattern shall be loaded.
+    - If no desired patter is provided: The last or if no last pattern is available,
+      the default pattern shall be loaded.
 
 .. usecase:: Create new LED pattern
     :id: UC_003

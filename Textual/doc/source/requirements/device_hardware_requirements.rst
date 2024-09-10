@@ -1,5 +1,5 @@
-Requirements for Device
-=======================
+Hardware Requirements for Device
+================================
 
 .. req:: Number of LEDs
     :id: R_001
