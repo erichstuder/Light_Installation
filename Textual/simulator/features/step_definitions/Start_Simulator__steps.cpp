@@ -16,10 +16,6 @@ WHEN("^I start the simulator") {
     simulator(&animator_mock);
 }
 
-THEN("^a 3D model of the Light Installation is shown$") {
-    pending();
-}
-
 THEN("^the led animation starts rightaway") {
     EXPECT_TRUE(animator_mock.isAnimating);
 }
