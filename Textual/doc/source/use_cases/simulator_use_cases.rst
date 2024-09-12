@@ -9,31 +9,32 @@ Use Cases for Simulator
 
 .. actor:: User
     :id: A_001
-    :association: UC_001, UC_002, UC_003, UC_004, UC_005, UC_007
+    :association: UC_001, UC_003, UC_004, UC_007
 
 .. usecase:: Start Simulator
     :id: UC_001
-    :includes: UC_002
+    :includes: UC_002, UC_005, UC_006
+
+    - When the simulator is started, it is compiled and then run.
+    - It is started via a script file.
 
 .. usecase:: Load LED pattern
     :id: UC_002
 
-    - The desired pattern shall be loaded.
-    - If no desired patter is provided: The last or if no last pattern is available,
-      the default pattern shall be loaded.
+    - Which LED pattern to show is hard-coded in the code.
 
 .. usecase:: Create new LED pattern
     :id: UC_003
-    :includes: UC_004
 
     - LED patterns can be developed with the simulator.
+    - They are directly edited in the code.
+    - C++ is used as the programming language.
 
 .. usecase:: Store LED pattern
     :id: UC_004
 
 .. usecase:: Simulate LED pattern
     :id: UC_005
-    :includes: UC_004, UC_006
 
     - The simulator shows a 3D model of the Light Installation.
     - The LED pattern is simulated as it would look like on the real Light Installation.
@@ -45,3 +46,5 @@ Use Cases for Simulator
 
 .. usecase:: Edit LED pattern
     :id: UC_007
+
+    - LED patterns are directly edited in the code.
