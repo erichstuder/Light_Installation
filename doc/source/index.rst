@@ -16,6 +16,7 @@ See :doc:`toplevel_file_structure`.
    :caption: Contents:
 
    toplevel_file_structure
+   coding_rules
 
 Links to the projects
 =====================
