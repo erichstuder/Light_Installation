@@ -3,13 +3,13 @@
 
 #include "simulator.h"
 #include "gnuplot-iostream.h"
-#include "I_LedPattern.h"
+#include "LedPattern_Interface.h"
 #include "Wave.h"
 #include "RunningLight.h"
 
 #include "Animator.h"
 
-static void createPatternFile(I_LedPattern* pattern, const char* fileName) {
+static void createPatternFile(LedPattern_Interface* pattern, const char* fileName) {
 	std::ofstream file;
 	file.open(fileName);
 
@@ -35,7 +35,7 @@ static void createPatternFile(I_LedPattern* pattern, const char* fileName) {
 }
 
 
-void simulator(IAnimator* animator) {
+void simulator(Animator_Interface* animator) {
 	//RunningLight pattern;
 	Wave pattern;
 

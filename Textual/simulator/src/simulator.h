@@ -1,5 +1,5 @@
 #pragma once
 
-#include "IAnimator.h"
+#include "Animator_Interface.h"
 
-void simulator(IAnimator* animator);
+void simulator(Animator_Interface* animator);

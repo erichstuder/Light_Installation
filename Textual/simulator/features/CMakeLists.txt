@@ -13,7 +13,7 @@ target_include_directories(simulator_lib PRIVATE "../src/gnuplot-iostream/")
 target_include_directories(simulator_lib PRIVATE "../../../Shared/software/firmware/lib/LedPatterns/")
 target_link_libraries(simulator_lib boost_iostreams boost_system boost_filesystem)
 
-add_executable(simulator_steps "step_definitions/led_simulation_steps.cpp")
+add_executable(simulator_steps "step_definitions/Start_Simulator__steps.cpp")
 target_include_directories(simulator_steps PRIVATE "/usr/src/cucumber-cpp/build/gmock/src/gmock/googletest/include")
 target_include_directories(simulator_steps PRIVATE "/usr/src/cucumber-cpp/include")
 target_include_directories(simulator_steps PRIVATE "/usr/src/cucumber-cpp/build/src")

@@ -2,15 +2,15 @@
 
 #include <stdint.h>
 
-typedef struct{
+typedef struct {
 	uint8_t x, y, z;
 } Pixel_t;
 
-typedef struct{
+typedef struct {
 	uint8_t r, g, b;
 } Color_t;
 
-class I_LedPattern{
+class LedPattern_Interface {
 	public:
 		const Pixel_t MinPixel = {0, 0, 0};
 		const Pixel_t MaxPixel = {5, 5, 15};
