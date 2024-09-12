@@ -7,17 +7,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_definitions(-DCUCUMBER)
 
-add_library(simulator_lib STATIC ../simulator.cpp)
-target_sources(simulator_lib PRIVATE "../../firmware/lib/LedPatterns/Wave.cpp")
-target_include_directories(simulator_lib PRIVATE "../gnuplot-iostream/")
-target_include_directories(simulator_lib PRIVATE "../../firmware/lib/LedPatterns/")
+add_library(simulator_lib STATIC ../src/simulator.cpp)
+target_sources(simulator_lib PRIVATE "../../../Shared/software/firmware/lib/LedPatterns/Wave.cpp")
+target_include_directories(simulator_lib PRIVATE "../src/gnuplot-iostream/")
+target_include_directories(simulator_lib PRIVATE "../../../Shared/software/firmware/lib/LedPatterns/")
 target_link_libraries(simulator_lib boost_iostreams boost_system boost_filesystem)
 
 add_executable(simulator_steps "step_definitions/led_simulation_steps.cpp")
 target_include_directories(simulator_steps PRIVATE "/usr/src/cucumber-cpp/build/gmock/src/gmock/googletest/include")
 target_include_directories(simulator_steps PRIVATE "/usr/src/cucumber-cpp/include")
 target_include_directories(simulator_steps PRIVATE "/usr/src/cucumber-cpp/build/src")
-target_include_directories(simulator_steps PRIVATE "..")
+target_include_directories(simulator_steps PRIVATE "../src")
 target_link_libraries(simulator_steps PRIVATE
     simulator_lib
     "/lib/libcucumber-cpp.a"
