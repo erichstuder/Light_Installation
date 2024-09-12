@@ -11,4 +11,4 @@ docker run \
 	--volume "${PWD}/../../..":${WORKDIR} \
 	--workdir ${WORKDIR}/Textual/simulator/features \
 	-it $TAG \
-	bash -c "cmake . && cmake --build . && (./simulator_steps >/dev/null &) && cucumber ."
+	bash -c "cmake -S . -B build && cmake --build build && (build/simulator_steps >/dev/null &) && cucumber ."
