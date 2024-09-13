@@ -105,7 +105,8 @@ needs_extra_links = [
 ]
 
 def run_gherkindoc(app: Sphinx):
-    subprocess.run(['sphinx-gherkindoc', '--toc-name', 'simulator_features', '--doc-project', 'DOC_PROJECT', '../simulator/features', 'source/auto_generated/features'], check=True)
+    subprocess.run(['sphinx-gherkindoc','--raw-descriptions', '--doc-project', 'DOC_PROJECT', '../simulator/features', 'source/auto_generated/features'], check=True)
+    subprocess.run(['rm', 'source/auto_generated/features/gherkin.rst'], check=True)
 
 logger = logging.getLogger(__name__)
 

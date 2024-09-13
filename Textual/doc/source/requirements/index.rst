@@ -4,5 +4,5 @@ Requirements
 .. toctree::
    :maxdepth: 2
 
-   Software Features for Simulator <../auto_generated/features/simulator_features.rst>
+   simulator_software_requirements.rst
    device_hardware_requirements.rst
