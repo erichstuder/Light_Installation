@@ -10,6 +10,7 @@ This is the documentation for the Textual implementation of the Light Installati
    use_cases/index
    requirements/index
    inspections/index
+   reports/index
 
 Indices and tables
 ==================

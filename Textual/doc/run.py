@@ -67,7 +67,7 @@ def run_container(container_tag, work_dir):
         os.makedirs(work_dir+'/_build/html', exist_ok=True)
         commands = work_dir_commands + 'sphinx-autobuild '+ ('' if arguments.verbose else '-q') +' -a --port 8000 --host 0.0.0.0 '
         commands += '--watch ../simulator/features '
-        commands += '--re-ignore auto_generated source _build/html '
+        commands += '--re-ignore auto_generated --re-ignore _static/auto_copied source _build/html '
         commands += '--pre-build "' + prebuild_command + '"'
     elif arguments.build:
         commands = work_dir_commands + prebuild_command + ' \n make html'

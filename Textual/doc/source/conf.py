@@ -12,6 +12,7 @@ from sphinx.errors import SphinxError
 from sphinx.util import logging
 import os
 import sys
+import shutil
 
 
 project = 'Light Installation - Textual'
@@ -108,10 +109,16 @@ def run_gherkindoc(app: Sphinx):
     subprocess.run(['sphinx-gherkindoc','--raw-descriptions', '--doc-project', 'DOC_PROJECT', '../simulator/features', 'source/auto_generated/features'], check=True)
     subprocess.run(['rm', 'source/auto_generated/features/gherkin.rst'], check=True)
 
-logger = logging.getLogger(__name__)
+def copy_cucumber_report(app):
+    src = os.path.join(app.srcdir, '../../simulator/features/build/simulator_cucumber_report.html')
+    dest = os.path.join(app.srcdir, '_static/auto_copied/')
+    os.makedirs(dest, exist_ok=True)
+    shutil.copy(src, dest)
+    print(f"Copied {src} to {dest}")
 
 def validate_needs(app, exception):
     if exception is None:
+        logger = logging.getLogger(__name__)
         env = app.builder.env
         for need in env.needs_all_needs.values():
             if need['type'] == 'inspection':
@@ -122,4 +129,5 @@ def validate_needs(app, exception):
 
 def setup(app):
     app.connect("builder-inited", run_gherkindoc)
+    app.connect('builder-inited', copy_cucumber_report)
     app.connect('build-finished', validate_needs)
