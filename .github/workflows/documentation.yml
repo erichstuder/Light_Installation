@@ -19,20 +19,22 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-        - name: checkout
-          uses: actions/checkout@v4
+        -   name: checkout
+            uses: actions/checkout@v4
+            with:
+                fetch-depth: 0  # Fetch all history to determine the last file hashes during build
 
-        - name: build documentation
-          run: python3 run.py --build_all
+        -   name: build documentation
+            run: python3 run.py --build_all
 
-        - name: Setup Pages
-          uses: actions/configure-pages@v5
+        -   name: Setup Pages
+            uses: actions/configure-pages@v5
 
-        - name: Upload artifact
-          uses: actions/upload-artifact@v4
-          with:
-            name: documentation
-            path: 'doc/build/html'
+        -   name: Upload artifact
+            uses: actions/upload-artifact@v4
+            with:
+                name: documentation
+                path: 'doc/build/html'
 
     deploy:
         needs: build
