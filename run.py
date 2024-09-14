@@ -37,15 +37,15 @@ def main():
             if result.returncode != 0:
                 exit(result.returncode)
     elif arguments.build_all:
-        result = subprocess.run(['python3', work_dir +'/run.py', '--Textual', '--simulator', '--features', '--test', '--report', '--verbose'])
+        result = subprocess.run(['python3', work_dir +'/run.py', '--Textual', '--simulator', '--features', '--test', '--report', '--verbose', '--pseudo_tty_off'])
         if result.returncode != 0:
             raise RuntimeError(f"Failed with: {result.stderr}")
 
-        result = subprocess.run(['python3', work_dir +'/run.py', '--Textual', '--doc', '--build', '--verbose'])
+        result = subprocess.run(['python3', work_dir +'/run.py', '--Textual', '--doc', '--build', '--verbose', '--pseudo_tty_off'])
         if result.returncode != 0:
             raise RuntimeError(f"Failed with: {result.stderr}")
 
-        result = subprocess.run(['python3', work_dir +'/run.py', '--doc', '--build', '--verbose'])
+        result = subprocess.run(['python3', work_dir +'/run.py', '--doc', '--build', '--verbose', '--pseudo_tty_off'])
         if result.returncode != 0:
             raise RuntimeError(f"Failed with: {result.stderr}")
     elif arguments.doc is not None:
