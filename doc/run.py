@@ -11,23 +11,23 @@ import os
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Execute common documentation tasks')
 
-    parser.add_argument('--build', '-b',
+    parser.add_argument('-b', '--build',
                         action='store_true',
                         help='Build documentation.')
 
-    parser.add_argument('--sphinx_autobuild', '--sa',
+    parser.add_argument('-a', '--autobuild',
                         action='store_true',
                         help='Start sphinx-autobuild.')
 
-    parser.add_argument('--pseudo_tty_disable', '-p',
+    parser.add_argument('-p', '--pseudo_tty_off',
                         action='store_true',
                         help='Disable colorfull output.')
 
-    parser.add_argument('--keep_open', '-k',
+    parser.add_argument('-k', '--keep_open',
                         action='store_true',
                         help='Enter the command line of the container.')
 
-    parser.add_argument('--verbose', '-v',
+    parser.add_argument('-v', '--verbose',
                         action='store_true',
                         help='Verbose output.')
 
@@ -68,12 +68,11 @@ def run_container(container_tag, work_dir):
 
     if arguments.keep_open:
         commands = 'bash'
-    elif arguments.sphinx_autobuild:
+    elif arguments.autobuild:
         os.makedirs(work_dir+'/_build/html', exist_ok=True)
         commands = work_dir_commands + 'sphinx-autobuild '+ ('' if arguments.verbose else '-q') +' -a --port 8000 --host 0.0.0.0 '
         commands += '--re-ignore _static/auto_copied/ source _build/html '
         commands += '--pre-build "' + prebuild_command + '"'
-        print(commands)
     elif arguments.build:
         commands = work_dir_commands + prebuild_command + ' \n make html'
     else:
@@ -85,12 +84,12 @@ def run_container(container_tag, work_dir):
         '--volume', work_dir + '/..:' + docker_volume_dir,
         '--workdir', docker_volume_dir]
 
-    if arguments.sphinx_autobuild:
+    if arguments.autobuild:
         args.extend([
             '--publish', '8000:8000',
             '--publish', '35729:35729'])
 
-    if arguments.pseudo_tty_disable:
+    if arguments.pseudo_tty_off:
         args.append('-i')
     else:
         args.append('-it')

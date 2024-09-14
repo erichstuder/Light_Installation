@@ -16,9 +16,9 @@ def main():
         group.add_argument('--'+key, '-'+key[0],
                            nargs=argparse.REMAINDER,
                            help='Pass the remaining arguments to ' + value + '.')
-    group.add_argument('--help_all', '--ha',
+    group.add_argument('--ha', '--help_all', dest='help_all',
                        action='store_true',
-                       help='Show help for this and all subscripts.')
+                       help='Show help for this and all direct subscripts.')
     arguments = parser.parse_args()
 
     work_dir = str(pathlib.Path(__file__).parent.resolve())

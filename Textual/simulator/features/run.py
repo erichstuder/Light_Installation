@@ -11,23 +11,23 @@ import os
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Execute common cucumber tasks')
 
-    parser.add_argument('--test', '-t',
+    parser.add_argument('-t', '--test',
                         action='store_true',
                         help='Build and run features.')
 
-    parser.add_argument('--report', '-r',
+    parser.add_argument('-r', '--report',
                         action='store_true',
                         help='Create an html report.')
 
-    parser.add_argument('--pseudo_tty_disable', '-p',
+    parser.add_argument('-p', '--pseudo_tty_off',
                         action='store_true',
                         help='Disable colorfull output.')
 
-    parser.add_argument('--keep_open', '-k',
+    parser.add_argument('-k', '--keep_open',
                         action='store_true',
                         help='Enter the command line of the container.')
 
-    parser.add_argument('--verbose', '-v',
+    parser.add_argument('-v', '--verbose',
                         action='store_true',
                         help='Verbose output.')
 
@@ -89,7 +89,7 @@ def run_container(container_tag, work_dir):
         '--volume', work_dir + '/../../..:' + docker_volume_dir,
         '--workdir', docker_volume_dir + '/Textual/simulator/features']
 
-    if arguments.pseudo_tty_disable:
+    if arguments.pseudo_tty_off:
         args.append('-i')
     else:
         args.append('-it')
