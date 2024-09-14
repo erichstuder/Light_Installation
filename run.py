@@ -37,6 +37,10 @@ def main():
             if result.returncode != 0:
                 exit(result.returncode)
     elif arguments.build_all:
+        result = subprocess.run(['git', 'submodule', 'update', '--init'])
+        if result.returncode != 0:
+            raise RuntimeError(f"Failed with: {result.stderr}")
+
         result = subprocess.run(['python3', work_dir +'/run.py', '--Textual', '--simulator', '--features', '--test', '--report', '--verbose', '--pseudo_tty_off'])
         if result.returncode != 0:
             raise RuntimeError(f"Failed with: {result.stderr}")
