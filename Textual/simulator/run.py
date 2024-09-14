@@ -4,8 +4,7 @@ import pathlib
 import sys
 
 scripts = {
-    'doc': 'doc/run.py',
-    'simulator': 'simulator/run.py',
+    'features': 'features/run.py',
 }
 
 
@@ -33,10 +32,8 @@ def main():
             result = subprocess.run(['python3', work_dir + '/' + value, '--help'])
             if result.returncode != 0:
                 exit(result.returncode)
-    elif arguments.doc is not None:
-        exit(subprocess.run(['python3', work_dir + '/' + scripts['doc']] + arguments.doc).returncode)
-    elif arguments.simulator is not None:
-        exit(subprocess.run(['python3', work_dir + '/' + scripts['simulator']] + arguments.simulator).returncode)
+    elif arguments.features is not None:
+        exit(subprocess.run(['python3', work_dir + '/' + scripts['features']] + arguments.features).returncode)
     else:
         print('Unknown argument')
         exit(2)

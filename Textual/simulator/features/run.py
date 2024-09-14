@@ -9,15 +9,15 @@ import pathlib
 import os
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description='Execute common documentation tasks')
+    parser = argparse.ArgumentParser(description='Execute common cucumber tasks')
 
-    parser.add_argument('--build', '-b',
+    parser.add_argument('--test', '-t',
                         action='store_true',
-                        help='Build documentation.')
+                        help='Build and run features.')
 
-    parser.add_argument('--sphinx_autobuild', '--sa',
+    parser.add_argument('--report', '-r',
                         action='store_true',
-                        help='Start sphinx-autobuild.')
+                        help='Create an html report.')
 
     parser.add_argument('--pseudo_tty_disable', '-p',
                         action='store_true',
@@ -57,33 +57,37 @@ def run_container(container_tag, work_dir):
 
     docker_volume_dir = '/usr/project'
 
-    prebuild_command = 'git config --global --add safe.directory ' + docker_volume_dir
+    work_dir_commands = 'set -e \n '
 
-    work_dir_commands = 'set -e \n cd doc \n'
+    if not arguments.verbose:
+        build_commands = 'cmake -S . -B build >/dev/null '
+        build_commands += '&& cmake --build build >/dev/null '
+        build_commands += '&& (build/simulator_steps &) '
+    else:
+        build_commands = 'cmake -S . -B build --log-level=VERBOSE '
+        build_commands += '&& cmake --build build '
+        build_commands += '&& (build/simulator_steps -v &) '
 
     if arguments.keep_open:
         commands = 'bash'
-    elif arguments.sphinx_autobuild:
-        os.makedirs(work_dir+'/_build/html', exist_ok=True)
-        commands = work_dir_commands + 'sphinx-autobuild '+ ('' if arguments.verbose else '-q') +' -a --port 8000 --host 0.0.0.0 '
-        commands += '--watch ../simulator/features '
-        commands += '--re-ignore auto_generated source _build/html '
-        commands += '--pre-build "' + prebuild_command + '"'
-    elif arguments.build:
-        commands = work_dir_commands + prebuild_command + ' \n make html'
+    elif arguments.test:
+        commands = work_dir_commands
+        commands += build_commands
+
+        commands += '&& cucumber --require cucumber.wire '
+        if arguments.verbose:
+            commands += '--verbose '
+        if arguments.report:
+            commands += '--format html > build/simulator_cucumber_report.html '
+        commands += '*.feature '
     else:
         return
 
     args = ['docker', 'run',
         '--rm',
-        '--name', 'doc_' + current_time,
-        '--volume', work_dir + '/../..:' + docker_volume_dir,
-        '--workdir', docker_volume_dir + '/Textual']
-
-    if arguments.sphinx_autobuild:
-        args.extend([
-            '--publish', '8000:8000',
-            '--publish', '35729:35729'])
+        '--name', 'cucumber_' + current_time,
+        '--volume', work_dir + '/../../..:' + docker_volume_dir,
+        '--workdir', docker_volume_dir + '/Textual/simulator/features']
 
     if arguments.pseudo_tty_disable:
         args.append('-i')
