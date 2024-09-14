@@ -61,11 +61,6 @@ def run_container(container_tag, work_dir):
 
     work_dir_commands = 'set -e \n cd doc \n'
 
-    # build subdocumentation
-    result = subprocess.run(['python3', work_dir +'/../run.py', '--Textual', '--doc', '--build'], capture_output=True, text=True)
-    if result.returncode != 0:
-        raise RuntimeError(f"Build of Textual documentation failed: {result.stderr}")
-
     if arguments.keep_open:
         commands = 'bash'
     elif arguments.autobuild:
@@ -74,7 +69,7 @@ def run_container(container_tag, work_dir):
         commands += '--re-ignore _static/auto_copied/ source _build/html '
         commands += '--pre-build "' + prebuild_command + '"'
     elif arguments.build:
-        commands = work_dir_commands + prebuild_command + ' \n make html'
+        commands = work_dir_commands + prebuild_command + ' \n make html SPHINXOPTS=-a'
     else:
         return
 

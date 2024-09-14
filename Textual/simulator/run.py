@@ -12,7 +12,7 @@ def main():
     parser = argparse.ArgumentParser(description='Execute common tasks like building, testing, uploading, ...')
     group = parser.add_mutually_exclusive_group(required=True)
     for key, value in scripts.items():
-        group.add_argument('--'+key, '-'+key[0],
+        group.add_argument('--'+key,
                            nargs=argparse.REMAINDER,
                            help='Pass the remaining arguments to ' + value + '.')
     group.add_argument('--ha', '--help_all', dest='help_all',
