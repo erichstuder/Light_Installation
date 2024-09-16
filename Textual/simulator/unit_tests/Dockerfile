@@ -3,7 +3,7 @@ FROM debian:12.7
 WORKDIR /usr/
 
 RUN apt-get update && \
-    apt-get -y install git cmake build-essential
+    apt-get -y install git cmake build-essential lcov
 
 RUN git clone https://github.com/google/googletest.git && \
     cd googletest && \

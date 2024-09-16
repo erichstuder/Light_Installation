@@ -56,18 +56,24 @@ def run_container(container_tag, work_dir):
 
     docker_volume_dir = '/usr/project'
 
-    work_dir_commands = 'set -e \n '
+    work_dir_commands = 'set -e \n'
 
     if arguments.keep_open:
         commands = 'bash'
     elif arguments.test:
-        commands = work_dir_commands + 'mkdir -p build && cd build && cmake .. '
+        commands = work_dir_commands + ' mkdir -p build && cd build && cmake ..'
         if not arguments.verbose:
-            commands += '> /dev/null '
-        commands += '&& make '
+            commands += ' > /dev/null'
+        commands += ' && make'
         if not arguments.verbose:
-            commands += '> /dev/null '
-        commands += '&& ./unit_tests'
+            commands += ' > /dev/null'
+        commands += ' && ./unit_tests'
+        commands += ' && lcov --capture --directory . --output-file coverage.info'
+        # if not arguments.verbose:
+        #     commands += ' > /dev/null 2>&1'
+        commands += ' && genhtml coverage.info --output-directory out'
+        # if not arguments.verbose:
+        #     commands += ' > /dev/null 2>&1'
     else:
         return
 
