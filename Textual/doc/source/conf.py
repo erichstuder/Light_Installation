@@ -13,6 +13,7 @@ from sphinx.util import logging
 import os
 import sys
 import shutil
+import xml.etree.ElementTree as ET
 
 
 project = 'Light Installation - Textual'
@@ -56,6 +57,13 @@ needs_types = [
         "directive": "req",
         "title": "Requirement",
         "prefix": "R_",
+        "color": "#BFD8D2",
+        "style": "node",
+    },
+    {
+        "directive": "feature",
+        "title": "Feature",
+        "prefix": "F_",
         "color": "#BFD8D2",
         "style": "node",
     },
@@ -106,8 +114,24 @@ needs_extra_links = [
 ]
 
 def run_gherkindoc(app: Sphinx):
-    subprocess.run(['sphinx-gherkindoc','--raw-descriptions', '--doc-project', 'DOC_PROJECT', '../simulator/features', 'source/auto_generated/features'], check=True)
-    subprocess.run(['rm', 'source/auto_generated/features/gherkin.rst'], check=True)
+    features_dir = os.path.join(app.srcdir, 'auto_generated/features')
+    subprocess.run(['sphinx-gherkindoc', '--raw-descriptions', '--doc-project', 'DOC_PROJECT', '../simulator/features', features_dir], check=True)
+    subprocess.run(['rm', os.path.join(features_dir, 'gherkin.rst')], check=True)
+
+    # Remove the '%' character from the beginning of lines in files in the source/auto_generated/features directory
+    # This is a workaround for now as the parser removes all whitespaces from the beginning of lines which leads to invalid requirements.
+    for root, _, files in os.walk(features_dir):
+        for file in files:
+            file_path = os.path.join(root, file)
+            with open(file_path, 'r') as f:
+                lines = f.readlines()
+            with open(file_path, 'w') as f:
+                for line in lines:
+                    if line.startswith('%'):
+                        f.write(line[1:])  # Remove the '%' character
+                    else:
+                        f.write(line)
+
 
 def copy_cucumber_report(app):
     src = os.path.join(app.srcdir, '../../simulator/features/build/simulator_cucumber_report.html')
@@ -115,6 +139,7 @@ def copy_cucumber_report(app):
     os.makedirs(dest, exist_ok=True)
     shutil.copy(src, dest)
     print(f"Copied {src} to {dest}")
+
 
 def validate_needs(app, exception):
     if exception is None:
@@ -126,6 +151,7 @@ def validate_needs(app, exception):
                     raise SphinxError(f'Inspection "{need["id"]}" is missing the "status" field.')
                 elif need['status'] != 'pass':
                     logger.warning(f'Inspection "{need["id"]}" is not set to "pass".')
+
 
 def setup(app):
     app.connect("builder-inited", run_gherkindoc)
