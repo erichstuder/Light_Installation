@@ -141,6 +141,46 @@ def copy_cucumber_report(app):
     print(f"Copied {src} to {dest}")
 
 
+def create_unit_test_reports(app: Sphinx):
+    tree = ET.parse('../simulator/unit_tests/build/test_results.xml')
+    root = tree.getroot()
+
+    rst_content = []
+
+    rst_content.append(f"Unit Test Report\n{'=' * len('Unit Test Report')}\n")
+
+    rst_content.append(f"Tests: {root.get('tests')}\n")
+    rst_content.append(f"Failures: {root.get('failures')}\n")
+    rst_content.append(f"Disabled: {root.get('disabled')}\n")
+    rst_content.append(f"Errors: {root.get('errors')}\n")
+
+    for testsuite in root.findall('testsuite'):
+        suite_name = testsuite.get('name')
+        rst_content.append(f"{suite_name}\n{'^' * len(suite_name)}\n")
+
+        for testcase in testsuite.findall('testcase'):
+            case_name = testcase.get('name')
+            rst_content.append(f"{case_name}\n{'-' * len(f'Test Case: {case_name}')}\n")
+
+            # Check for links property
+            properties = testcase.find('properties')
+            if properties is not None:
+                for prop in properties.findall('property'):
+                    if prop.get('name') == 'links':
+                        link_value = prop.get('value')
+                        rst_content.append(f"- **Links**: :need:`{link_value}`\n")
+
+            file_path = testcase.get('file')
+            rst_content.append(f"- **File**: {file_path}\n")
+
+            rst_content.append("\n")
+
+    output_rst_file = os.path.join(app.srcdir, 'auto_generated/unit_test_reports/simulator_unit_tests_report.rst')
+    os.makedirs(os.path.dirname(output_rst_file), exist_ok=True)
+    with open(output_rst_file, 'w') as f:
+        f.write('\n'.join(rst_content))
+
+
 def validate_needs(app, exception):
     if exception is None:
         logger = logging.getLogger(__name__)
@@ -156,4 +196,5 @@ def validate_needs(app, exception):
 def setup(app):
     app.connect("builder-inited", run_gherkindoc)
     app.connect('builder-inited', copy_cucumber_report)
+    app.connect('builder-inited', create_unit_test_reports)
     app.connect('build-finished', validate_needs)

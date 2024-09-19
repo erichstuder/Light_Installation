@@ -67,13 +67,15 @@ def run_container(container_tag, work_dir):
         commands += ' && make'
         if not arguments.verbose:
             commands += ' > /dev/null'
-        commands += ' && ./unit_tests'
-        commands += ' && lcov --capture --directory . --output-file coverage.info'
-        # if not arguments.verbose:
-        #     commands += ' > /dev/null 2>&1'
-        commands += ' && genhtml coverage.info --output-directory out'
-        # if not arguments.verbose:
-        #     commands += ' > /dev/null 2>&1'
+        commands += ' && ./unit_tests  --gtest_output=xml:test_results.xml'
+
+        if arguments.report:
+            commands += ' && lcov --capture --directory . --output-file coverage.info'
+            if not arguments.verbose:
+                commands += ' > /dev/null 2>&1'
+            commands += ' && genhtml coverage.info --output-directory out'
+            if not arguments.verbose:
+                commands += ' > /dev/null 2>&1'
     else:
         return
 

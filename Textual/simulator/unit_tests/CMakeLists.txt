@@ -10,6 +10,8 @@ if(CMAKE_COMPILER_IS_GNUCXX)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --coverage")
 endif()
 
-add_executable(unit_tests main.cpp)
+file(GLOB TEST_SOURCES "tests/*.cpp")
+
+add_executable(unit_tests main.cpp ${TEST_SOURCES})
 
 target_link_libraries(unit_tests gtest gtest_main gmock gmock_main)

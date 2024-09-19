@@ -5,6 +5,7 @@ import sys
 
 scripts = {
     'features': 'features/run.py',
+    'unit_tests': 'unit_tests/run.py',
 }
 
 
@@ -34,6 +35,8 @@ def main():
                 exit(result.returncode)
     elif arguments.features is not None:
         exit(subprocess.run(['python3', work_dir + '/' + scripts['features']] + arguments.features).returncode)
+    elif arguments.unit_tests is not None:
+        exit(subprocess.run(['python3', work_dir + '/' + scripts['unit_tests']] + arguments.unit_tests).returncode)
     else:
         print('Unknown argument')
         exit(2)

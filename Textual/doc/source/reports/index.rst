@@ -1,6 +1,10 @@
 Reports
 =======
 
-    `Simulator Cucumber Report <../_static/auto_copied/simulator_cucumber_report.html>`_
+.. toctree::
+    :maxdepth: 1
 
-    `Simulator Unit-Test Report <../_static/auto_generated/gtest_report.html>`_
+    ../../auto_generated/unit_test_reports/simulator_unit_tests_report.rst
+
+
+`Simulator Cucumber Report <../_static/auto_copied/simulator_cucumber_report.html>`_
