@@ -141,8 +141,8 @@ def copy_cucumber_report(app):
     print(f"Copied {src} to {dest}")
 
 
-def create_unit_test_reports(app: Sphinx):
-    tree = ET.parse('../simulator/unit_tests/build/test_results.xml')
+def create_unit_test_execution_reports(app: Sphinx):
+    tree = ET.parse('../simulator/unit_tests/build/execution_report.xml')
     root = tree.getroot()
 
     rst_content = []
@@ -181,6 +181,15 @@ def create_unit_test_reports(app: Sphinx):
         f.write('\n'.join(rst_content))
 
 
+def copy_unit_test_coverage_reports(app: Sphinx):
+    src = os.path.join(app.srcdir, '../../simulator/unit_tests/build/coverage_report')
+    dest = os.path.join(app.srcdir, '_static/auto_copied/coverage_report')
+    if os.path.exists(dest):
+        shutil.rmtree(dest)
+    shutil.copytree(src, dest)
+    print(f"Copied {src} to {dest}")
+
+
 def validate_needs(app, exception):
     if exception is None:
         logger = logging.getLogger(__name__)
@@ -196,5 +205,6 @@ def validate_needs(app, exception):
 def setup(app):
     app.connect("builder-inited", run_gherkindoc)
     app.connect('builder-inited', copy_cucumber_report)
-    app.connect('builder-inited', create_unit_test_reports)
+    app.connect('builder-inited', create_unit_test_execution_reports)
+    app.connect('builder-inited', copy_unit_test_coverage_reports)
     app.connect('build-finished', validate_needs)

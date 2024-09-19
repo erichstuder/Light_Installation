@@ -64,16 +64,23 @@ def run_container(container_tag, work_dir):
         commands = work_dir_commands + ' mkdir -p build && cd build && cmake ..'
         if not arguments.verbose:
             commands += ' > /dev/null'
+
         commands += ' && make'
         if not arguments.verbose:
             commands += ' > /dev/null'
-        commands += ' && ./unit_tests  --gtest_output=xml:test_results.xml'
+
+        commands += ' && ./unit_tests  --gtest_output=xml:execution_report.xml'
 
         if arguments.report:
             commands += ' && lcov --capture --directory . --output-file coverage.info'
             if not arguments.verbose:
                 commands += ' > /dev/null 2>&1'
-            commands += ' && genhtml coverage.info --output-directory out'
+
+            commands += ' && lcov --remove coverage.info "/usr/include/*" "*gtest*" --output-file filtered_coverage.info'
+            if not arguments.verbose:
+                commands += ' > /dev/null 2>&1'
+
+            commands += ' && genhtml filtered_coverage.info --output-directory coverage_report'
             if not arguments.verbose:
                 commands += ' > /dev/null 2>&1'
     else:
