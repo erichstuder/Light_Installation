@@ -18,7 +18,7 @@ WHEN("^I start the simulator$") {
     simulator(&pattern, &animator_mock);
 }
 
-THEN("^the led animation starts rightaway$") {
+THEN("^the led simulation starts rightaway$") {
     EXPECT_TRUE(animator_mock.isAnimating);
 }
 
