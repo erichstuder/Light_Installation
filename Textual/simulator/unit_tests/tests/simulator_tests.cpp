@@ -19,11 +19,6 @@ class LedPattern_Stub: public LedPattern_Interface {
 
 class LedPattern_Mock: public LedPattern_Interface {
     public:
-        // LedPattern_Mock() {
-        //     ON_CALL(*this, getIterations()).WillByDefault(::testing::Return(1));
-        //     ON_CALL(*this, getColor(::testing::_, ::testing::_)).WillByDefault(::testing::Return(Color_t{0, 0, 0}));
-        // }
-
         MOCK_METHOD(uint16_t, getIterations, (), (override));
         MOCK_METHOD(Color_t, getColor, (Pixel_t pixel, uint16_t iteration), (override));
 };
@@ -66,4 +61,15 @@ TEST(Simulator_Test, Start_Simulator__Create_Pattern_File) {
     simulator(&pattern_stub, &animator_stub);
 
     ASSERT_TRUE(std::filesystem::exists(filePath)) << "File " << file_name << " does not  exist";
+}
+
+TEST(Simulator_Test, Start_Simulator__Null_Pattern) {
+    RecordProperty("links", "F_002");
+
+    try {
+        Animator_Stub animator_stub;
+        simulator(nullptr, &animator_stub);
+    } catch (const std::invalid_argument& e) {
+        ASSERT_STREQ(e.what(), "pattern is null");
+    }
 }

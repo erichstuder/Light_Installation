@@ -39,6 +39,9 @@ void createPatternFile(LedPattern_Interface* pattern, const char* fileName) {
 
 
 void simulator(LedPattern_Interface* pattern, Animator_Interface* animator) {
+    if(pattern == nullptr) {
+        throw std::invalid_argument("pattern is null");
+    }
 
     createPatternFile(pattern, "build/pattern.dat");
 
