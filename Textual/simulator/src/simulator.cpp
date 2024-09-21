@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <filesystem>
 
 #include "simulator.h"
 #include "gnuplot-iostream.h"
@@ -9,7 +10,9 @@
 
 #include "Animator.h"
 
-static void createPatternFile(LedPattern_Interface* pattern, const char* fileName) {
+void createPatternFile(LedPattern_Interface* pattern, const char* fileName) {
+    std::filesystem::path filePath = std::filesystem::absolute(fileName);
+    std::filesystem::create_directories(filePath.parent_path());
     std::ofstream file;
     file.open(fileName);
 
@@ -35,20 +38,23 @@ static void createPatternFile(LedPattern_Interface* pattern, const char* fileNam
 }
 
 
-void simulator(Animator_Interface* animator) {
-    //RunningLight pattern;
-    Wave pattern;
+void simulator(LedPattern_Interface* pattern, Animator_Interface* animator) {
 
-    createPatternFile(&pattern, "build/pattern.dat");
+    createPatternFile(pattern, "build/pattern.dat");
 
     animator->animate("build/pattern.dat");
 }
 
 
 #ifndef CUCUMBER
+#ifndef UNIT_TEST
 int main() {
+    //RunningLight pattern;
+    Wave pattern;
+
     Animator animator;
 
-    simulator(&animator);
+    simulator(&pattern, &animator);
 }
+#endif
 #endif

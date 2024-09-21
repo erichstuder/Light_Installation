@@ -62,14 +62,14 @@ def run_container(container_tag, work_dir):
         commands = 'bash'
     elif arguments.test:
         commands = work_dir_commands + ' mkdir -p build && cd build && cmake ..'
-        if not arguments.verbose:
-            commands += ' > /dev/null'
+        # if not arguments.verbose:
+        #     commands += ' > /dev/null'
 
         commands += ' && make'
-        if not arguments.verbose:
-            commands += ' > /dev/null'
+        # if not arguments.verbose:
+        #     commands += ' > /dev/null'
 
-        commands += ' && ./unit_tests  --gtest_output=xml:execution_report.xml'
+        commands += ' && ./unit_tests --gtest_output=xml:execution_report.xml'
 
         if arguments.report:
             commands += ' && lcov --capture --directory . --output-file coverage.info'
@@ -82,7 +82,7 @@ def run_container(container_tag, work_dir):
             if not arguments.verbose:
                 commands += ' > /dev/null 2>&1'
 
-            commands += ' && genhtml filtered_coverage.info --base-directory ' + docker_volume_dir
+            commands += ' && genhtml filtered_coverage.info --prefix ' + docker_volume_dir
             commands += ' --output-directory coverage_report'
             if not arguments.verbose:
                 commands += ' > /dev/null 2>&1'
@@ -92,8 +92,8 @@ def run_container(container_tag, work_dir):
     args = ['docker', 'run',
         '--rm',
         '--name', 'cucumber_' + current_time,
-        '--volume', work_dir + '/../..:' + docker_volume_dir,
-        '--workdir', docker_volume_dir + '/simulator/unit_tests']
+        '--volume', work_dir + '/../../..:' + docker_volume_dir,
+        '--workdir', docker_volume_dir + '/Textual/simulator/unit_tests']
 
     if arguments.pseudo_tty_off:
         args.append('-i')

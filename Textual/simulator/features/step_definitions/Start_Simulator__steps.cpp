@@ -2,6 +2,7 @@
 #include <cucumber-cpp/autodetect.hpp>
 
 #include "simulator.h"
+#include "Wave.h"
 #include "Animator_Interface.h"
 
 class Animator_Mock: public Animator_Interface {
@@ -13,7 +14,8 @@ class Animator_Mock: public Animator_Interface {
 static Animator_Mock animator_mock;
 
 WHEN("^I start the simulator") {
-    simulator(&animator_mock);
+    Wave pattern;
+    simulator(&pattern, &animator_mock);
 }
 
 THEN("^the led animation starts rightaway") {
