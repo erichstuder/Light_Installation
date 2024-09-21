@@ -1,0 +1,15 @@
+on:
+    push:
+    pull_request:
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        -   name: checkout
+            uses: actions/checkout@v4
+
+        -   name: build documentation
+            run: python3 run.py --Textual --simulatur --unit_tests --test --report --pseudo_tty_off --verbose
+            # note: The report is only generated to test if it can be generated without errors.
