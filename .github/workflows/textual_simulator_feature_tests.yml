@@ -9,6 +9,8 @@ jobs:
         steps:
         -   name: checkout
             uses: actions/checkout@v4
+            with:
+                submodules: true
 
         -   name: run feature tests
             run: python3 run.py --Textual --simulator --features --test --report --pseudo_tty_off --verbose
