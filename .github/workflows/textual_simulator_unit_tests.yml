@@ -10,6 +10,6 @@ jobs:
         -   name: checkout
             uses: actions/checkout@v4
 
-        -   name: build documentation
-            run: python3 run.py --Textual --simulatur --unit_tests --test --report --pseudo_tty_off --verbose
+        -   name: run unit tests
+            run: python3 run.py --Textual --simulator --unit_tests --test --report --pseudo_tty_off --verbose
             # note: The report is only generated to test if it can be generated without errors.
