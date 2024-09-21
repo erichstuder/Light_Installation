@@ -76,11 +76,14 @@ def run_container(container_tag, work_dir):
             if not arguments.verbose:
                 commands += ' > /dev/null 2>&1'
 
-            commands += ' && lcov --remove coverage.info "/usr/include/*" "*gtest*" --output-file filtered_coverage.info'
+            commands += ' && lcov --remove coverage.info '
+            commands += ' "/usr/include/*" "*gtest*" "*gmock*" "*gnuplot-iostream*" "*unit_tests*"'
+            commands += ' --output-file filtered_coverage.info'
             if not arguments.verbose:
                 commands += ' > /dev/null 2>&1'
 
-            commands += ' && genhtml filtered_coverage.info --output-directory coverage_report'
+            commands += ' && genhtml filtered_coverage.info --base-directory ' + docker_volume_dir
+            commands += ' --output-directory coverage_report'
             if not arguments.verbose:
                 commands += ' > /dev/null 2>&1'
     else:
