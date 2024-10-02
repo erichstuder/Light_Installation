@@ -1,7 +1,8 @@
 import argparse
-import subprocess
 import pathlib
 import sys
+
+from Shared.shared import run_command
 
 scripts = {
     'doc': 'doc/run.py',
@@ -26,43 +27,37 @@ def main():
 
     work_dir = str(pathlib.Path(__file__).parent.resolve())
     if arguments.help_all:
-        result = subprocess.run(['python3', work_dir + '/run.py', '--help'])
-        if result.returncode != 0:
-            exit(result.returncode)
+        run_command(['python3', work_dir + '/run.py', '--help'])
         print('\n\n*** below are the help messages of the subscripts ***')
         for _, value in scripts.items():
             print('\n\n*** ' + value + ' ***')
             sys.stdout.flush()
-            result = subprocess.run(['python3', work_dir + '/' + value, '--help'])
-            if result.returncode != 0:
-                exit(result.returncode)
+            run_command(['python3', work_dir + '/' + value, '--help'])
+
     elif arguments.build_all:
-        result = subprocess.run(['git', 'submodule', 'update', '--init'])
-        if result.returncode != 0:
-            raise RuntimeError(f"Failed with: {result.stderr}")
+        run_command(['git', 'submodule', 'update', '--init'])
 
-        result = subprocess.run(['python3', work_dir +'/run.py', '--Textual', '--simulator', '--unit_tests', '--test', '--report', '--verbose', '--pseudo_tty_off'])
-        if result.returncode != 0:
-            raise RuntimeError(f"Failed with: {result.stderr}")
+        run_command(['python3', work_dir +'/run.py', '--Textual', '--simulator', '--unit_tests',
+                     '--test', '--report', '--verbose', '--pseudo_tty_off'])
 
-        result = subprocess.run(['python3', work_dir +'/run.py', '--Textual', '--simulator', '--features', '--test', '--report', '--verbose', '--pseudo_tty_off'])
-        if result.returncode != 0:
-            raise RuntimeError(f"Failed with: {result.stderr}")
+        run_command(['python3', work_dir +'/run.py', '--Textual', '--simulator', '--features',
+                     '--test', '--report', '--verbose', '--pseudo_tty_off'])
 
-        result = subprocess.run(['python3', work_dir +'/run.py', '--Textual', '--doc', '--build', '--verbose', '--pseudo_tty_off'])
-        if result.returncode != 0:
-            raise RuntimeError(f"Failed with: {result.stderr}")
+        run_command(['python3', work_dir +'/run.py', '--Textual', '--doc',
+                     '--build', '--verbose', '--pseudo_tty_off'])
 
-        result = subprocess.run(['python3', work_dir +'/run.py', '--doc', '--build', '--verbose', '--pseudo_tty_off'])
-        if result.returncode != 0:
-            raise RuntimeError(f"Failed with: {result.stderr}")
-    elif arguments.doc is not None:
-        exit(subprocess.run(['python3', work_dir + '/' + scripts['doc']] + arguments.doc).returncode)
-    elif arguments.Textual is not None:
-        exit(subprocess.run(['python3', work_dir + '/' + scripts['Textual']] + arguments.Textual).returncode)
+        run_command(['python3', work_dir +'/run.py', '--doc',
+                     '--build', '--verbose', '--pseudo_tty_off'])
+
+    for key in scripts:
+        script_args = getattr(arguments, key)
+        if script_args is not None:
+            run_command(['python3', work_dir + '/' + scripts[key]] + script_args)
+            break
     else:
-        print('Unknown argument')
-        exit(2)
+        raise argparse.ArgumentError('Unknown argument')
+
+    exit(0)
 
 
 if __name__ == "__main__":
