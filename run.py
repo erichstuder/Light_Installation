@@ -1,4 +1,4 @@
-from Shared.python_shared.shared import run_command, get_dispatcher
+from Shared.project_management.dispatcher import Dispatcher, run_command
 
 if __name__ == "__main__":
     scripts = {
@@ -6,7 +6,7 @@ if __name__ == "__main__":
         'Textual': 'Textual/run.py',
     }
 
-    dispatcher = get_dispatcher(scripts)
+    dispatcher = Dispatcher(scripts)
 
     dispatcher.group.add_argument(
         '--build_all',

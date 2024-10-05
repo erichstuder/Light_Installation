@@ -2,120 +2,56 @@
 # sudo groupadd docker
 # sudo gpasswd -a $USER docker
 
-import argparse
-import subprocess
-import datetime
 import pathlib
 import os
 
-def parse_arguments():
-    parser = argparse.ArgumentParser(description='Execute common documentation tasks')
+import sys
+import pathlib
 
-    parser.add_argument('-b', '--build',
-                        action='store_true',
-                        help='Build documentation.')
-
-    parser.add_argument('-a', '--autobuild',
-                        action='store_true',
-                        help='Start sphinx-autobuild.')
-
-    parser.add_argument('-p', '--pseudo_tty_off',
-                        action='store_true',
-                        help='Disable colorfull output.')
-
-    parser.add_argument('-k', '--keep_open',
-                        action='store_true',
-                        help='Enter the command line of the container.')
-
-    parser.add_argument('-v', '--verbose',
-                        action='store_true',
-                        help='Verbose output.')
-
-    global arguments
-    arguments = parser.parse_args()
-
-
-def build_container(container_tag, work_dir):
-    args = ['docker', 'build',
-        '--tag', container_tag]
-
-    if not arguments.verbose:
-        args.append('--quiet')
-        stdout = subprocess.DEVNULL
-    else:
-        stdout = None
-
-    args.append(work_dir)
-
-    print('    building container... please wait')
-    return subprocess.run(args, stdout=stdout)
-
-
-def run_container(container_tag, work_dir):
-
-    current_time = datetime.datetime.now().strftime('%Hh_%Mm_%Ss')
-
-    docker_volume_dir = '/usr/project'
-
-    prebuild_command = 'git config --global --add safe.directory ' + docker_volume_dir
-
-    work_dir_commands = 'set -e \n cd doc \n'
-
-    if arguments.keep_open:
-        commands = 'bash'
-    elif arguments.autobuild:
-        os.makedirs(work_dir+'/_build/html', exist_ok=True)
-        commands = work_dir_commands + 'sphinx-autobuild '+ ('' if arguments.verbose else '-q') +' -a --port 8000 --host 0.0.0.0 '
-        commands += '--watch ../simulator/features '
-        commands += '--re-ignore auto_generated --re-ignore _static/auto_copied source _build/html '
-        commands += '--pre-build "' + prebuild_command + '"'
-    elif arguments.build:
-        commands = work_dir_commands + prebuild_command + ' \n make html'
-    else:
-        return
-
-    args = ['docker', 'run',
-        '--rm',
-        '--name', 'doc_' + current_time,
-        '--volume', work_dir + '/../..:' + docker_volume_dir,
-        '--workdir', docker_volume_dir + '/Textual']
-
-    if arguments.autobuild:
-        args.extend([
-            '--publish', '8000:8000',
-            '--publish', '35729:35729'])
-
-    if arguments.pseudo_tty_off:
-        args.append('-i')
-    else:
-        args.append('-it')
-
-    args.extend([container_tag, 'bash', '-c', commands])
-
-    return subprocess.run(args)
-
-
-def assert_result(result):
-    if result is not None and result.returncode != 0:
-        if arguments.verbose:
-            print(result)
-        exit(result.returncode)
+sys.path.append(str(pathlib.Path(__file__).parent.parent.parent / 'Shared' / 'project_management'))
+from executor import Executor # type: ignore
 
 
 def main():
-    parse_arguments()
+    additional_arguments = [
+        {
+            'flag': '-b',
+            'name': '--build',
+            'help': 'Build documentation.'
+        },
+        {
+            'flag': '-a',
+            'name': '--autobuild',
+            'help': 'Start sphinx-autobuild.'
+        }
+    ]
 
-    work_dir = str(pathlib.Path(__file__).parent.resolve())
-    container_tag = work_dir[1:].lower().replace('/_', '/')
+    ex = Executor(additional_arguments, description='Execute common documentation tasks')
 
-    if arguments.verbose:
-        print('Container Tag: ' + container_tag)
+    ex.docker_args.extend([
+        '--volume', ex.work_dir + '/../..:' + ex.docker_volume_dir,
+        '--workdir', ex.docker_volume_dir + '/Textual'])
 
-    result = build_container(container_tag, work_dir)
-    assert_result(result)
+    if ex.arguments.autobuild:
+        ex.docker_args.extend([
+            '--publish', '8000:8000',
+            '--publish', '35729:35729'])
 
-    result = run_container(container_tag, work_dir)
-    assert_result(result)
+    prebuild_command = 'git config --global --add safe.directory ' + ex.docker_volume_dir
+    work_dir_commands = 'set -e \n cd doc \n'
+
+    if ex.arguments.autobuild:
+        os.makedirs(ex.work_dir+'/autobuild/html', exist_ok=True)
+        commands = work_dir_commands + 'sphinx-autobuild '+ ('' if ex.arguments.verbose else '-q') +' -a --port 8000 --host 0.0.0.0 '
+        commands += '--watch ../simulator/features '
+        commands += '--re-ignore auto_generated --re-ignore _static/auto_copied source autobuild/html '
+        commands += '--pre-build "' + prebuild_command + '"'
+    elif ex.arguments.build:
+        commands = work_dir_commands + prebuild_command + ' \n make html'
+    else:
+        commands = None
+
+    ex.run(commands)
 
 
 if __name__ == "__main__":
