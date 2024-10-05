@@ -1,14 +1,17 @@
 import argparse
 import subprocess
-import inspect
-import os
 import datetime
+import sys
+import pathlib
+
+sys.path.append(str(pathlib.Path(__file__).parent))
+import common
 
 class Executor:
     def __init__(self, additional_arguments, description):
         self._parse_arguments(additional_arguments, description)
 
-        self.work_dir = _get_caller_path()
+        self.work_dir = common.get_caller_path()
         self.container_tag = self.work_dir[1:].lower().replace('/_', '/')
         self.docker_volume_dir = '/usr/project'
 
@@ -78,15 +81,3 @@ class Executor:
         result = subprocess.run(self.docker_args)
         if result.returncode != 0:
             raise RuntimeError(f"Failed with result: {result}")
-
-
-# TODO: Move this function to a common module
-def _get_caller_path():
-    stack = inspect.stack()
-    caller_file = os.path.abspath(stack[1].filename)
-
-    for frame in stack[2:]:
-        source_caller = os.path.abspath(frame.filename)
-        if source_caller != caller_file:
-            return os.path.dirname(source_caller)
-    return os.path.dirname(source_caller)

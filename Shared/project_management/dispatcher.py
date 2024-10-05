@@ -1,8 +1,10 @@
 import argparse
 import subprocess
 import sys
-import inspect
-import os
+import pathlib
+
+sys.path.append(str(pathlib.Path(__file__).parent))
+import common
 
 class Dispatcher:
     def __init__(self, scripts, description=None):
@@ -22,7 +24,7 @@ class Dispatcher:
 
     def parse_args(self):
         self.arguments = self.parser.parse_args()
-        work_dir = _get_caller_path()
+        work_dir = common.get_caller_path()
 
         if self.arguments.help_all:
             run_command(['python3', work_dir + '/run.py', '--help'])
@@ -52,15 +54,3 @@ def run_command(command):
     result = subprocess.run(command)
     if result.returncode != 0:
         raise RuntimeError(f"Failed with result: {result}")
-
-
-# TODO: Move this function to a common module
-def _get_caller_path():
-    stack = inspect.stack()
-    caller_file = os.path.abspath(stack[1].filename)
-
-    for frame in stack[2:]:
-        source_caller = os.path.abspath(frame.filename)
-        if source_caller != caller_file:
-            return os.path.dirname(source_caller)
-    return os.path.dirname(source_caller)

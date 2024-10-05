@@ -12,7 +12,7 @@ sys.path.append(str(pathlib.Path(__file__).parent.parent.parent / 'Shared' / 'pr
 from executor import Executor # type: ignore
 
 
-def main():
+if __name__ == "__main__":
     additional_arguments = [
         {
             'flag': '-b',
@@ -52,7 +52,3 @@ def main():
         commands = None
 
     ex.run(commands)
-
-
-if __name__ == "__main__":
-    main()
