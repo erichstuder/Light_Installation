@@ -6,7 +6,9 @@ import sys
 
 
 class Dispatcher:
-    def __init__(self, description, scripts):
+    def __init__(self, scripts, description=None):
+        if description is None:
+            description = 'Execute common tasks (building, testing, ...)'
         self.scripts = scripts
         self.parser = argparse.ArgumentParser(description=description)
         self.group = self.parser.add_mutually_exclusive_group(required=True)
@@ -50,12 +52,18 @@ class Dispatcher:
         return os.path.dirname(current_file)
 
 
-def get_dispatcher(description, scripts):
-    return Dispatcher(description, scripts)
+def get_dispatcher(scripts, description=None):
+    return Dispatcher(scripts, description)
 
 
-def run_command(command, capture_output=True):
-    result = subprocess.run(command, capture_output=capture_output, text=True)
+def run_dispatcher(scripts, description=None):
+    dispatcher = get_dispatcher(scripts, description)
+    dispatcher.parse_args()
+    exit(0)
+
+
+def run_command(command):
+    # result = subprocess.run(command, capture_output=True, text=True)
+    result = subprocess.run(command)
     if result.returncode != 0:
-        raise RuntimeError(f"Failed with: {result.stderr}")
-    print(result.stdout)
+        raise RuntimeError(f"Failed with result: {result}")

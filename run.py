@@ -1,14 +1,12 @@
 from Shared.python_shared.shared import run_command, get_dispatcher
 
-def main():
-    description='Execute common tasks like building, testing, uploading, ...'
-
+if __name__ == "__main__":
     scripts = {
         'doc': 'doc/run.py',
         'Textual': 'Textual/run.py',
     }
 
-    dispatcher = get_dispatcher(description, scripts)
+    dispatcher = get_dispatcher(scripts)
 
     dispatcher.group.add_argument(
         '--build_all',
@@ -32,7 +30,3 @@ def main():
         run_command(['python3', work_dir +'/run.py', '--doc',
                         '--build', '--verbose', '--pseudo_tty_off'])
     exit(0)
-
-
-if __name__ == "__main__":
-    main()
