@@ -2,131 +2,56 @@
 # sudo groupadd docker
 # sudo gpasswd -a $USER docker
 
-import argparse
-import subprocess
-import datetime
 import pathlib
-import os
+import sys
 
-def parse_arguments():
-    parser = argparse.ArgumentParser(description='Execute common googletest tasks')
-
-    parser.add_argument('-t', '--test',
-                        action='store_true',
-                        help='Build and run features.')
-
-    parser.add_argument('-r', '--report',
-                        action='store_true',
-                        help='Create an html report.')
-
-    parser.add_argument('-p', '--pseudo_tty_off',
-                        action='store_true',
-                        help='Disable colorfull output.')
-
-    parser.add_argument('-k', '--keep_open',
-                        action='store_true',
-                        help='Enter the command line of the container.')
-
-    parser.add_argument('-v', '--verbose',
-                        action='store_true',
-                        help='Verbose output.')
-
-    global arguments
-    arguments = parser.parse_args()
+sys.path.append(str(pathlib.Path(__file__).parent.parent.parent.parent / 'Shared' / 'project_management'))
+from executor import Executor # type: ignore
 
 
-def build_container(container_tag, work_dir):
-    args = ['docker', 'build',
-        '--tag', container_tag]
+if __name__ == "__main__":
+    additional_arguments = [
+        {
+            'flag': '-t',
+            'name': '--test',
+            'help': 'Build and run unit-tests.'
+        },
+        {
+            'flag': '-r',
+            'name': '--report',
+            'help': 'Create an html report.'
+        }
+    ]
 
-    if not arguments.verbose:
-        args.append('--quiet')
-        stdout = subprocess.DEVNULL
-    else:
-        stdout = None
+    ex = Executor(additional_arguments, description='Execute unit-tests')
 
-    args.append(work_dir)
-
-    return subprocess.run(args, stdout=stdout)
-
-
-def run_container(container_tag, work_dir):
-
-    current_time = datetime.datetime.now().strftime('%Hh_%Mm_%Ss')
-
-    docker_volume_dir = '/usr/project'
+    ex.docker_args.extend([
+        '--volume', ex.work_dir + '/../../..:' + ex.docker_volume_dir,
+        '--workdir', ex.docker_volume_dir + '/Textual/simulator/unit_tests'])
 
     work_dir_commands = 'set -e \n'
 
-    if arguments.keep_open:
-        commands = 'bash'
-    elif arguments.test:
+    if ex.arguments.test:
         commands = work_dir_commands + ' mkdir -p build && cd build && cmake ..'
-        # if not arguments.verbose:
-        #     commands += ' > /dev/null'
-
         commands += ' && make'
-        # if not arguments.verbose:
-        #     commands += ' > /dev/null'
-
         commands += ' && ./unit_tests --gtest_output=xml:execution_report.xml'
 
-        if arguments.report:
+        if ex.arguments.report:
             commands += ' && lcov --capture --directory . --output-file coverage.info'
-            if not arguments.verbose:
+            if not ex.arguments.verbose:
                 commands += ' > /dev/null 2>&1'
 
             commands += ' && lcov --remove coverage.info '
             commands += ' "/usr/include/*" "*gtest*" "*gmock*" "*gnuplot-iostream*" "*unit_tests*"'
             commands += ' --output-file filtered_coverage.info'
-            if not arguments.verbose:
+            if not ex.arguments.verbose:
                 commands += ' > /dev/null 2>&1'
 
-            commands += ' && genhtml filtered_coverage.info --prefix ' + docker_volume_dir
+            commands += ' && genhtml filtered_coverage.info --prefix ' + ex.docker_volume_dir
             commands += ' --output-directory coverage_report'
-            if not arguments.verbose:
+            if not ex.arguments.verbose:
                 commands += ' > /dev/null 2>&1'
     else:
-        return
+        commands = None
 
-    args = ['docker', 'run',
-        '--rm',
-        '--name', 'cucumber_' + current_time,
-        '--volume', work_dir + '/../../..:' + docker_volume_dir,
-        '--workdir', docker_volume_dir + '/Textual/simulator/unit_tests']
-
-    if arguments.pseudo_tty_off:
-        args.append('-i')
-    else:
-        args.append('-it')
-
-    args.extend([container_tag, 'bash', '-c', commands])
-
-    return subprocess.run(args)
-
-
-def assert_result(result):
-    if result is not None and result.returncode != 0:
-        if arguments.verbose:
-            print(result)
-        exit(result.returncode)
-
-
-def main():
-    parse_arguments()
-
-    work_dir = str(pathlib.Path(__file__).parent.resolve())
-    container_tag = work_dir[1:].lower().replace('/_', '/')
-
-    if arguments.verbose:
-        print('Container Tag: ' + container_tag)
-
-    result = build_container(container_tag, work_dir)
-    assert_result(result)
-
-    result = run_container(container_tag, work_dir)
-    assert_result(result)
-
-
-if __name__ == "__main__":
-    main()
+    ex.run(commands)

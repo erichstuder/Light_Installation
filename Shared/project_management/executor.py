@@ -26,22 +26,22 @@ class Executor:
     def _parse_arguments(self, additional_arguments, description):
         parser = argparse.ArgumentParser(description)
 
-        parser.add_argument('-p', '--pseudo_tty_off',
-                            action='store_true',
-                            help='Disable colorfull output.')
-
-        parser.add_argument('-k', '--keep_open',
-                            action='store_true',
-                            help='Enter the command line of the container.')
+        for argument in additional_arguments:
+            parser.add_argument(argument['flag'], argument['name'],
+                                action='store_true',
+                                help=argument['help'])
 
         parser.add_argument('-v', '--verbose',
                             action='store_true',
                             help='Verbose output.')
 
-        for argument in additional_arguments:
-            parser.add_argument(argument['flag'], argument['name'],
-                                action='store_true',
-                                help=argument['help'])
+        parser.add_argument('-k', '--keep_open',
+                            action='store_true',
+                            help='Enter the command line of the container.')
+
+        parser.add_argument('-p', '--pseudo_tty_off',
+                            action='store_true',
+                            help='Disable colorfull output.')
 
         self.arguments = parser.parse_args()
 

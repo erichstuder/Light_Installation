@@ -4,9 +4,7 @@
 
 import pathlib
 import os
-
 import sys
-import pathlib
 
 sys.path.append(str(pathlib.Path(__file__).parent.parent.parent / 'Shared' / 'project_management'))
 from executor import Executor # type: ignore
