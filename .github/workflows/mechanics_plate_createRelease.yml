@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: setup
         run: sudo apt-get install -y freecad
-    
+
       - name: checkout
         uses: actions/checkout@v3
-    
+
       - name: create release
         id: create_release
         uses: actions/create-release@v1
@@ -26,13 +26,13 @@ jobs:
           release_name: ${{ github.ref_name }}
           draft: false
           prerelease: false
-          
+
       - name: prepare files
         run: |
           echo "\
           from datetime import date
           document_name = \"plate\"
-          FreeCAD.open(\"mechanics/plate/\" + document_name + \".FCStd\")
+          FreeCAD.open(\"Shared/mechanics/plate/\" + document_name + \".FCStd\")
           FreeCAD.setActiveDocument(document_name)
           t = FreeCAD.ActiveDocument.Template
           et = t.EditableTexts
@@ -43,13 +43,13 @@ jobs:
             > create_release.py
           cat create_release.py
           freecadcmd create_release.py
-          
+
       - name: upload release asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # this references to the step with id 'create_release'
-          asset_path: ./mechanics/plate/plate.FCStd
+          asset_path: ./Shared/mechanics/plate/plate.FCStd
           asset_name: ${{ github.event.repository.name }}__${{ github.ref_name }}.FCStd
           asset_content_type: application/zip

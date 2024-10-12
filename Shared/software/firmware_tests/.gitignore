@@ -1,0 +1,5 @@
+# unit test artefacts
+firmware_tests
+firmware_tests.txt
+temp/
+gcov/

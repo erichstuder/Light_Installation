@@ -1,0 +1,249 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.eclipse.org/uml2/5.0.0/Types', 'http://www.eclipse.org/uml2/5.0.0/UML', 'http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard', 'http://www.eclipse.org/papyrus/sysml/1.6/SysML')/]
+
+[comment @main/]
+[template public generate_element(element : uml::Element)]
+  [if (element.oclIsTypeOf(uml::Class) and element.eContainer(uml::Package)->at(1).name <> 'Externals')]
+    [let class = element.oclAsType(uml::Class)]
+    [if (class.getAppliedStereotype('SysML::PortsAndFlows::InterfaceBlock') <> null)]
+      [class.generate_interface()/]
+    [elseif (class.getAppliedStereotype('SysML::Blocks::Block') <> null and class.getAppliedStereotype('model::Namespace') <> null)]
+      [class.generate_namespace_header()/]
+      [class.generate_namespace()/]
+    [elseif (class.getAppliedStereotype('SysML::Blocks::Block') <> null)]
+      [class.generate_class_header()/]
+      [class.generate_class()/]
+    [/if]
+    [/let]
+  [/if]
+[/template]
+
+
+[template private generate_interface(class : uml::Class)]
+  [file (class.name + '.h', overwrite, 'UTF-8')]
+    #pragma once
+
+    [for (dependency | class.clientDependency)]
+      [if (dependency.supplier.eContainer(uml::Package)->at(1).name = 'Externals')]
+        ['#include <' + dependency.supplier.name + '.h>\n'/]
+      [else]
+        ['#include "' + dependency.supplier.name + '.h"\n'/]
+      [/if]
+    [/for]
+
+    [for (element | class.ownedElement)]
+      [if (element.oclIsTypeOf(uml::DataType))]
+        [let data_type = element.oclAsType(uml::DataType)]
+        [let operation = data_type.ownedOperation]
+        [let return_result = operation.ownedParameter->select(p | p.direction.toString() = 'return')]
+        [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
+        [let parameters = operation.ownedParameter->select(p | p.direction.toString() <> 'return')]
+        [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+          typedef [return_type/] (*[element.name/])[signature->sep('(', ', ', ');')/]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+      [/if]
+    [/for]
+
+    class [class.name/] {
+        public:
+            virtual ~[class.name/]() {}
+            [for (operation : uml::Operation | class.ownedOperation->select(op | op.visibility.toString() = 'public')) separator('        ')]
+              [let parameters = operation.ownedParameter->select(p | p.direction.toString() <> 'return')]
+              [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+              [let return_type = if (operation.getReturnResult().type <> null) then operation.getReturnResult().type.name else 'void' endif]
+                virtual [return_type/] [operation.name/][signature->sep('(', ', ', ') = 0;')/]
+              [/let]
+              [/let]
+              [/let]
+            [/for]
+    };
+  [/file]
+[/template]
+
+
+[template private generate_class_header(class : uml::Class)]
+  [file (class.name + '.h', overwrite, 'UTF-8')]
+    #pragma once
+
+    [for (dependency | class.clientDependency)]
+      [if (dependency.supplier.eContainer(uml::Package)->at(1).name = 'Externals')]
+        ['#include <' + dependency.supplier.name + '.h>\n'/]
+      [else]
+        ['#include "' + dependency.supplier.name + '.h"\n'/]
+      [/if]
+    [/for]
+
+    [for (element | class.ownedElement)]
+      [if (element.oclIsTypeOf(uml::DataType))]
+        [let data_type = element.oclAsType(uml::DataType)]
+        [let operation = data_type.ownedOperation]
+        [let return_result = operation.ownedParameter->select(p | p.direction.toString() = 'return')]
+        [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
+        [let parameters = operation.ownedParameter->select(p | p.direction.toString() <> 'return')]
+        [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+          typedef [return_type/] (*[element.name/])[signature->sep('(', ', ', ');')/]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+      [/if]
+    [/for]
+
+    [let interface_names = class.getClientDependencies()->select(d | d.oclIsTypeOf(uml::Realization)).supplier.name]
+      class [class.name/][if (interface_names->notEmpty())][interface_names->sep(' : public ',' ','')/][/if] {
+    [/let]
+        public:
+            ~[class.name/]() {}
+            [for (behavior | class.ownedBehavior->select(op | op.visibility.toString() = 'public')) separator('        ')]
+              [if (behavior.oclIsTypeOf(uml::OpaqueBehavior))]
+                [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
+                [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
+                [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
+                [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+                  [return_type/] [behavior.name/][signature->sep('(', ', ', ');')/]
+                [/let]
+                [/let]
+                [/let]
+                [/let]
+              [/if]
+            [/for]
+        private:
+            [for (property | class.ownedAttribute->select(e | e.visibility.toString() = 'private'))]
+              [property.type.name/] [property.name/];
+            [/for]
+    };
+  [/file]
+[/template]
+
+
+[template private generate_namespace_header(class : uml::Class)]
+  [file (class.name + '.h', overwrite, 'UTF-8')]
+    #pragma once
+
+    [for (dependency | class.clientDependency)]
+      [if (dependency.supplier.eContainer(uml::Package)->at(1).name = 'Externals')]
+        ['#include <' + dependency.supplier.name + '.h>\n'/]
+      [else]
+        ['#include "' + dependency.supplier.name + '.h"\n'/]
+      [/if]
+    [/for]
+
+    namespace [class.name/] {
+    [for (behavior | class.ownedBehavior->select(op | op.visibility.toString() = 'public'))]
+      [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
+      [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
+      [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
+      [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+            [return_type/] [behavior.name/][signature->sep('(', ', ', ');')/]
+      [/let]
+      [/let]
+      [/let]
+      [/let]
+    [/for]
+    }
+  [/file]
+[/template]
+
+
+[template private generate_namespace(class : uml::Class)]
+  [file (class.name + '.cpp', overwrite, 'UTF-8')]
+    #include "[class.name/].h"
+
+    namespace [class.name/] {
+
+    [for (property | class.ownedAttribute->select(e | e.visibility.toString() = 'private'))]
+      [let default_value = if (property.isSetDefault()) then ' = ' + property.getDefault() else '' endif]
+      [let const_modifier = if (property.isReadOnly) then ' const' else '' endif]
+      [let multiplicity = if (property.isMultivalued()) then '[' + (property.upper + 1) + ']' else '' endif]
+      [let pointer = if property.getAppliedStereotype('model::Array_of_Pointers') <> null then '*' else '' endif]
+            static[const_modifier/] [property.type.name/][pointer/] [property.name/][multiplicity/][default_value/];
+      [/let]
+      [/let]
+      [/let]
+      [/let]
+    [/for]
+
+
+    [for (behavior : uml::Behavior | class.ownedBehavior)]
+      [if (behavior.oclIsTypeOf(uml::OpaqueBehavior))]
+        [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
+        [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+        [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
+        [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
+        [let visibility = if (behavior.visibility.toString() = 'private') then 'static ' else '' endif]
+              [visibility/][return_type/] [behavior.name/][signature->sep('(', ', ', ') {')/]
+                  [protected (behavior.name + ' (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
+
+                    // place your code here (this comment can be removed)
+
+                  [/protected]
+              }
+
+
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+        [/let]
+      [/if]
+    [/for]
+    }
+  [/file]
+[/template]
+
+
+[template private generate_class(class : uml::Class)]
+  [file (class.name + '.cpp', overwrite, 'UTF-8')]
+    #include "[class.name/].h"
+
+    [for (behavior : uml::Behavior | class.ownedBehavior)]
+      [if (behavior.oclIsTypeOf(uml::OpaqueBehavior))]
+        [if (behavior.name = class.name)]
+          [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
+          [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+          [class.name/]::[behavior.name/][signature->sep('(', ', ', ')')/]
+            [protected (behavior.name + ' initializers (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
+
+              // begin the initializers with a : (this comment can be removed)
+
+            [/protected]
+            {
+                [protected (behavior.name + ' body (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
+
+                  // place your code here (this comment can be removed)
+
+                [/protected]
+            }
+
+
+          [/let]
+          [/let]
+        [else]
+          [let parameters = behavior.ownedParameter->select(p | p.direction.toString() <> 'return')]
+          [let signature = parameters->collect(s | s.type.name + ' ' + s.name)]
+          [let return_result = behavior.ownedParameter->select(p | p.direction.toString() = 'return')]
+          [let return_type = if (return_result->isEmpty()) then 'void' else return_result.type.name endif]
+          [return_type/] [class.name/]::[behavior.name/][signature->sep('(', ', ', ') {')/]
+                [protected (behavior.name + ' (don\'t remove the \'Start/End of user code\' markers)') startTagPrefix('// ') endTagPrefix('// ')]
+
+                  // place your code here (this comment can be removed)
+
+                [/protected]
+            }
+
+          [/let]
+          [/let]
+          [/let]
+          [/let]
+        [/if]
+      [/if]
+    [/for]
+  [/file]
+[/template]

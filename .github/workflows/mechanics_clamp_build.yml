@@ -17,20 +17,20 @@ jobs:
 
       - name: set environment variable
         run: echo MY_VERSION_ID=$(echo $GITHUB_REF_NAME | grep -oE "v[0-9]+\.[0-9]+\.[0-9]+") >> $GITHUB_ENV
-    
+
       - name: checkout
         uses: actions/checkout@v3
-    
+
       - name: build
         run: |
-          cd ./mechanics/clamp
+          cd ./Shared/mechanics/clamp
           echo version: $MY_VERSION_ID
           openscad --hardwarnings -D "ver=\"$MY_VERSION_ID\"" -o clamp.stl clamp.scad
-      
+
       - name: upload results
         uses: actions/upload-artifact@v3
         with:
           name: clamp
           path: |
-            ./mechanics/clamp/clamp.stl
-            ./mechanics/clamp/3d_print_instructions
+            ./Shared/mechanics/clamp/clamp.stl
+            ./Shared/mechanics/clamp/3d_print_instructions

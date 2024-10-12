@@ -15,13 +15,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+
     - uses: INTI-CMNB/KiBot@v2_k6
       with:
-        config: electronics/led_connector/led_connector.kibot.yaml
+        config: Shared/electronics/led_connector/led_connector.kibot.yaml
         dir: fabrication_data
-        schema: electronics/led_connector/led_connector.kicad_sch
-        board: electronics/led_connector/led_connector.kicad_pcb
+        schema: Shared/electronics/led_connector/led_connector.kicad_sch
+        board: Shared/electronics/led_connector/led_connector.kicad_pcb
 
     - name: upload results
       uses: actions/upload-artifact@v3

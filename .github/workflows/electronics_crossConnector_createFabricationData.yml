@@ -15,13 +15,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+
     - uses: INTI-CMNB/KiBot@v2_k6
       with:
-        config: electronics/cross_connector/cross_connector.kibot.yaml
+        config: Shared/electronics/cross_connector/cross_connector.kibot.yaml
         dir: fabrication_data
-        schema: electronics/cross_connector/cross_connector.kicad_sch
-        board: electronics/cross_connector/cross_connector.kicad_pcb
+        schema: Shared/electronics/cross_connector/cross_connector.kicad_sch
+        board: Shared/electronics/cross_connector/cross_connector.kicad_pcb
 
     - name: upload results
       uses: actions/upload-artifact@v3
