@@ -8,5 +8,5 @@ RUN apt update && apt install -y wget libasound2 plantuml && \
 
 RUN apt update && apt install -y xvfb tree
 RUN python3 -m pip install sphinx sphinx-autobuild sphinxcontrib-drawio sphinx-rtd-theme \
-                           sphinxcontrib-programoutput sphinxcontrib-plantuml sphinx-needs pillow \
+                           sphinxcontrib-programoutput sphinxcontrib-plantuml sphinx-needs==4.0.0 pillow \
                            sphinx-gherkindoc setuptools

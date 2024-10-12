@@ -10,6 +10,7 @@ import subprocess
 from sphinx.application import Sphinx
 from sphinx.errors import SphinxError
 from sphinx.util import logging
+from sphinx_needs.api import get_needs_view
 import os
 import sys
 import shutil
@@ -193,13 +194,12 @@ def copy_unit_test_coverage_reports(app: Sphinx):
 def validate_needs(app, exception):
     if exception is None:
         logger = logging.getLogger(__name__)
-        env = app.builder.env
-        for need in env.needs_all_needs.values():
-            if need['type'] == 'inspection':
-                if 'status' not in need or not need['status']:
-                    raise SphinxError(f'Inspection "{need["id"]}" is missing the "status" field.')
-                elif need['status'] != 'pass':
-                    logger.warning(f'Inspection "{need["id"]}" is not set to "pass".')
+        needs_view = get_needs_view(app).to_list_with_parts()
+        inspections = needs_view.filter_types(['inspection'])
+
+        for inspection in inspections:
+            if inspection['status'] != 'pass':
+                logger.warning(f'Inspection "{inspection["id"]}" is not set to "pass".')
 
 
 def setup(app):
