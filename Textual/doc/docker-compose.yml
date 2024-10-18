@@ -1,0 +1,11 @@
+services:
+  main:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../..:/usr/project
+    # prevent vs code warning by marking repo as safe and open a shell
+    command: sh -c "git config --global --add safe.directory $(pwd)/Textual/simulator/src/gnuplot-iostream && /bin/bash"
+    stdin_open: true
+    tty: true
