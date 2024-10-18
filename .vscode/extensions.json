@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "hediet.vscode-drawio",
-        "alexkrechik.cucumberautocomplete"
+        "alexkrechik.cucumberautocomplete",
+        "ms-vscode-remote.remote-containers"
     ]
 }
