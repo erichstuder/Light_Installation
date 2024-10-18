@@ -9,3 +9,5 @@ RUN apt update && apt install -y wget libasound2 && \
 RUN apt update && apt install -y xvfb tree
 RUN python3 -m pip install sphinx sphinx-autobuild sphinxcontrib-drawio sphinx-rtd-theme \
                            sphinxcontrib-programoutput
+
+WORKDIR /usr/project
