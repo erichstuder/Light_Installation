@@ -29,7 +29,7 @@ if __name__ == "__main__":
     if ex.arguments.autobuild:
         os.makedirs(ex.work_dir+'/autobuild/html', exist_ok=True)
         commands = 'sphinx-autobuild '+ ('' if ex.arguments.verbose else '-q') +' -a --port 8000 --host 0.0.0.0 '
-        commands += '--watch ../../simulator/features '
+        commands += '--watch ../simulator/features '
         commands += '--re-ignore auto_generated --re-ignore _static/auto_copied source autobuild/html '
     elif ex.arguments.build:
         commands = 'make html'
