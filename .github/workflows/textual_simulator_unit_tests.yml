@@ -19,7 +19,5 @@ jobs:
                 submodules: true
 
         -   name: run unit tests
-            env:
-                TTY: false
             run: python3 run.py --Textual --simulator --unit_tests --test --report --pseudo_tty_off --verbose
             # note: The report is only generated to test if it can be generated without errors.
