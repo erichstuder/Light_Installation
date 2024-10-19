@@ -12,5 +12,3 @@ RUN git clone https://github.com/google/googletest.git && \
     cd build && \
     cmake .. && \
     make
-
-WORKDIR /usr/project

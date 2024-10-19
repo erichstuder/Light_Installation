@@ -6,6 +6,6 @@ RUN git clone --depth 1 --branch v4.0 https://github.com/cpputest/cpputest.git .
 RUN autoreconf . -i && \
     ./configure && \
     make tdd && \
-    make install 
+    make install
 
 ENV CPPUTEST_HOME=/opt/cpputest
