@@ -42,6 +42,6 @@ class Executor:
         docker_args = ['bash', '-c', 'set -e \n ' + commands]
         yml_file_path = self.work_dir + '/docker-compose.yml'
         subprocess.run(['docker-compose', '-f', yml_file_path, 'up', '--build', '--detach'], check=True)
-        subprocess.run(['docker-compose', '-f', yml_file_path, 'exec', 'main'] + docker_args , check=True)
+        subprocess.run(['docker-compose', '-f', yml_file_path, 'exec', '-T', 'main'] + docker_args , check=True)
         print('Taking down the container in the background.')
         subprocess.Popen(["docker-compose", '-f', yml_file_path, "down"], stderr=subprocess.DEVNULL)
