@@ -9,4 +9,4 @@ services:
     # prevent vs code warning by marking repositories as safe and open a shell
     command: sh -c "git config --global --add safe.directory '*' && /bin/bash"
     stdin_open: true
-    tty: false
+    tty: true
