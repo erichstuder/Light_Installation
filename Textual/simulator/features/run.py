@@ -25,10 +25,6 @@ if __name__ == "__main__":
 
     ex = Executor(additional_arguments, description='Execute feature tests')
 
-    ex.docker_args.extend([
-        '--volume', ex.work_dir + '/../../..:' + ex.docker_volume_dir,
-        '--workdir', ex.docker_volume_dir + '/Textual/simulator/features'])
-
     if not ex.arguments.verbose:
         build_commands = 'cmake -S . -B build >/dev/null '
         build_commands += '&& cmake --build build >/dev/null '
@@ -38,11 +34,8 @@ if __name__ == "__main__":
         build_commands += '&& cmake --build build '
         build_commands += '&& (build/simulator_steps -v &) '
 
-    work_dir_commands = 'set -e \n '
-
     if ex.arguments.test:
-        commands = work_dir_commands
-        commands += build_commands
+        commands = build_commands
 
         commands += '&& cucumber --require cucumber.wire '
         if ex.arguments.verbose:

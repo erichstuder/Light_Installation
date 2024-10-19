@@ -1,8 +1,8 @@
 {
     "name": "doc",
-    "dockerComposeFile": "../../doc/docker-compose.yml",
+    "dockerComposeFile": "${localWorkspaceFolder}/doc/docker-compose.yml",
     "service": "main",
-    "workspaceFolder": "/usr/project",
+    "workspaceFolder": "/usr/project/doc",
     "customizations": {
         "vscode": {
             "settings": {

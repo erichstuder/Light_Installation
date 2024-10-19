@@ -1,8 +1,8 @@
 {
     "name": "Textual_simulator_unit_tests",
-    "dockerComposeFile": "../../Textual/simulator/unit_tests/docker-compose.yml",
+    "dockerComposeFile": "${localWorkspaceFolder}/Textual/simulator/unit_tests/docker-compose.yml",
     "service": "main",
-    "workspaceFolder": "/usr/project",
+    "workspaceFolder": "/usr/project/Textual/simulator/unit_tests",
     "customizations": {
         "vscode": {
             "settings": {

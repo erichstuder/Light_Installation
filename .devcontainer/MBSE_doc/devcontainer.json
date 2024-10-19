@@ -1,8 +1,8 @@
 {
     "name": "MBSE_doc",
-    "dockerComposeFile": "../../MBSE/doc/docker-compose.yml",
+    "dockerComposeFile": "${localWorkspaceFolder}/MBSE/doc/docker-compose.yml",
     "service": "main",
-    "workspaceFolder": "/usr/project",
+    "workspaceFolder": "/usr/project/MBSE/doc",
     "customizations": {
         "vscode": {
             "settings": {

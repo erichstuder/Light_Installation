@@ -1,15 +1,16 @@
 {
     "name": "Textual_doc",
-    "dockerComposeFile": "../../Textual/doc/docker-compose.yml",
+    "dockerComposeFile": "${localWorkspaceFolder}/Textual/doc/docker-compose.yml",
     "service": "main",
-    "workspaceFolder": "/usr/project",
+    "workspaceFolder": "/usr/project/Textual/doc",
     "customizations": {
         "vscode": {
             "settings": {
                 "terminal.integrated.shell.linux": "/bin/bash"
             },
             "extensions": [
-                "ms-python.python"
+                "ms-python.python",
+                "alexkrechik.cucumberautocomplete"
             ]
         }
     },

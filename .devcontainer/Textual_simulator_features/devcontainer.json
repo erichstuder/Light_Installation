@@ -1,8 +1,8 @@
 {
     "name": "Textual_simulator_features",
-    "dockerComposeFile": "../../Textual/simulator/features/docker-compose.yml",
+    "dockerComposeFile": "${localWorkspaceFolder}/Textual/simulator/features/docker-compose.yml",
     "service": "main",
-    "workspaceFolder": "/usr/project",
+    "workspaceFolder": "/usr/project/Textual/simulator/features",
     "customizations": {
         "vscode": {
             "settings": {

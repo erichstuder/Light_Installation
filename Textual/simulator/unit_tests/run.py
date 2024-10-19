@@ -25,14 +25,8 @@ if __name__ == "__main__":
 
     ex = Executor(additional_arguments, description='Execute unit-tests')
 
-    ex.docker_args.extend([
-        '--volume', ex.work_dir + '/../../..:' + ex.docker_volume_dir,
-        '--workdir', ex.docker_volume_dir + '/Textual/simulator/unit_tests'])
-
-    work_dir_commands = 'set -e \n'
-
     if ex.arguments.test:
-        commands = work_dir_commands + ' mkdir -p build && cd build && cmake ..'
+        commands = 'mkdir -p build && cd build && cmake ..'
         commands += ' && make'
         commands += ' && ./unit_tests --gtest_output=xml:execution_report.xml'
 
@@ -47,7 +41,7 @@ if __name__ == "__main__":
             if not ex.arguments.verbose:
                 commands += ' > /dev/null 2>&1'
 
-            commands += ' && genhtml filtered_coverage.info --prefix ' + ex.docker_volume_dir
+            commands += ' && genhtml filtered_coverage.info --prefix /usr/project'
             commands += ' --output-directory coverage_report'
             if not ex.arguments.verbose:
                 commands += ' > /dev/null 2>&1'

@@ -5,6 +5,11 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ..:/usr/project
-    command: /bin/bash
+    working_dir: /usr/project/MBSE/doc
+    ports:
+      - "8000:8000"
+      - "35729:35729"
+    # prevent vs code warning by marking repositories as safe and open a shell
+    command: sh -c "git config --global --add safe.directory '*' && /bin/bash"
     stdin_open: true
     tty: true
