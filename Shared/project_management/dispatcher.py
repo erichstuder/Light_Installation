@@ -51,6 +51,4 @@ def run_dispatcher(scripts, description=None):
 
 
 def run_command(command):
-    result = subprocess.run(command)
-    if result.returncode != 0:
-        raise RuntimeError(f"Failed with result: {result}")
+    subprocess.run(command, check=True)
