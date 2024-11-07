@@ -9,3 +9,6 @@ RUN apt-get update && apt-get install -y wget libasound2 && \
 RUN apt-get update && apt-get install -y xvfb tree
 RUN python3 -m pip install sphinx sphinx-autobuild sphinxcontrib-drawio sphinx-rtd-theme \
                            sphinxcontrib-programoutput
+
+RUN echo "umask 0000" >> /root/.bashrc
+ENV BASH_ENV=/root/.bashrc

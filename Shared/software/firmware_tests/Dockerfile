@@ -9,3 +9,6 @@ RUN autoreconf . -i && \
     make install
 
 ENV CPPUTEST_HOME=/opt/cpputest
+
+RUN echo "umask 0000" >> /root/.bashrc
+ENV BASH_ENV=/root/.bashrc

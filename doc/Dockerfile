@@ -3,3 +3,6 @@ FROM python:latest
 
 RUN apt-get update && apt-get install -y tree
 RUN python3 -m pip install sphinx sphinx-autobuild sphinx-rtd-theme sphinxcontrib-programoutput
+
+RUN echo "umask 0000" >> /root/.bashrc
+ENV BASH_ENV=/root/.bashrc

@@ -12,3 +12,6 @@ RUN git clone https://github.com/google/googletest.git && \
     cd build && \
     cmake .. && \
     make
+
+RUN echo "umask 0000" >> /root/.bashrc
+ENV BASH_ENV=/root/.bashrc

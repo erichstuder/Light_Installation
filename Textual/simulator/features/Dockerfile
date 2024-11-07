@@ -27,3 +27,6 @@ RUN git submodule init && \
     cmake --build build --target test && \
     cmake --build build --target install
 #returns an error and is ignored for the moment as these are "only" tests:   cmake --build build --target features
+
+RUN echo "umask 0000" >> /root/.bashrc
+ENV BASH_ENV=/root/.bashrc
