@@ -1,7 +1,3 @@
-# You must run this script without sudo. To run docker without sudo do the following:
-# sudo groupadd docker
-# sudo gpasswd -a $USER docker
-
 import pathlib
 import sys
 
