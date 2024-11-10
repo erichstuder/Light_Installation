@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from Shared.project_management.dispatcher import Dispatcher, run_command
 
 if __name__ == "__main__":
