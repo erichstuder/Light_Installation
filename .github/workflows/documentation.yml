@@ -31,7 +31,7 @@ jobs:
                 fetch-depth: 0  # Fetch all history to determine the last file hashes during build
 
         -   name: build documentation
-            run: python3 run.py --build_all
+            run: ./run.py --build_all
 
         -   name: Setup Pages
             uses: actions/configure-pages@v5
