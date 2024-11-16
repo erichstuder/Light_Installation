@@ -27,18 +27,18 @@ class Dispatcher:
         work_dir = common.get_caller_path()
 
         if self.arguments.help_all:
-            run_command(['python3', work_dir + '/run.py', '--help'])
+            run_command([work_dir + '/run.py', '--help'])
             print('\n\n*** below are the help messages of the subscripts ***')
             for _, value in self.scripts.items():
                 print('\n\n*** ' + value + ' ***')
                 sys.stdout.flush()
-                run_command(['python3', work_dir + '/' + value, '--help'])
+                run_command([work_dir + '/' + value, '--help'])
 
         else:
             for key in self.scripts:
                 script_args = getattr(self.arguments, key)
                 if script_args is not None:
-                    run_command(['python3', work_dir + '/' + self.scripts[key]] + script_args)
+                    run_command([work_dir + '/' + self.scripts[key]] + script_args)
                     break
 
         return work_dir
